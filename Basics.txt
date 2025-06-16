@@ -1,4 +1,4 @@
-basic of Computers : 
+Basic of Computers : 
  Hardware and Software components
 
 Role of Operating System : a) User Interface
@@ -106,7 +106,7 @@ DHCP : Dynamic Host Control protocol
 Load Balancers 
 Security Services
 
-
+Happy Learning
 
  
 
