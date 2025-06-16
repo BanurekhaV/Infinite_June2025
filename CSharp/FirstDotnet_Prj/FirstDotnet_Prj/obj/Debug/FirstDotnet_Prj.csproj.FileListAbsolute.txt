@@ -1,0 +1,7 @@
+C:\Banu\Infinite_June25\CSharp\FirstDotnet_Prj\FirstDotnet_Prj\obj\Debug\FirstDotnet_Prj.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite_June25\CSharp\FirstDotnet_Prj\FirstDotnet_Prj\bin\Debug\FirstDotnet_Prj.exe.config
+C:\Banu\Infinite_June25\CSharp\FirstDotnet_Prj\FirstDotnet_Prj\bin\Debug\FirstDotnet_Prj.exe
+C:\Banu\Infinite_June25\CSharp\FirstDotnet_Prj\FirstDotnet_Prj\bin\Debug\FirstDotnet_Prj.pdb
+C:\Banu\Infinite_June25\CSharp\FirstDotnet_Prj\FirstDotnet_Prj\obj\Debug\FirstDotnet_Prj.exe
+C:\Banu\Infinite_June25\CSharp\FirstDotnet_Prj\FirstDotnet_Prj\obj\Debug\FirstDotnet_Prj.pdb
+C:\Banu\Infinite_June25\CSharp\FirstDotnet_Prj\FirstDotnet_Prj\obj\Debug\FirstDotnet_Prj.csproj.AssemblyReference.cache
