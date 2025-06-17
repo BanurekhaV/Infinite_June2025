@@ -11,7 +11,9 @@ namespace Day1Csharp
             // Program.ConversionFunction();
             //Program prog = new Program();
             //prog.SampleTernary();
-            TestTryParse.tryParse_Function();
+            //TestTryParse.tryParse_Function();
+            //TestTryParse.Implicit_Types();
+            TestTryParse.NullableEg();
             Console.Read();
         }
         public static void ConversionFunction()  // static member or class member
@@ -105,13 +107,41 @@ namespace Day1Csharp
         {
             int x;
             x = 8;
-
+            
             var v = 3.4f;
+            var s = "hello";
+            Console.WriteLine(v);
+            char c;
+            c = 'a';
             dynamic d;
 
             d = 5;
+            Console.WriteLine(d);
             d = "AA";
+            Console.WriteLine(d);
             d = false;
+            Console.WriteLine(d);
+        }
+
+        public static void NullableEg()
+        {
+            string s = null;
+            int ? number = null; // enabling a value type to have null values
+            int total;
+
+            if (number == null)
+                total = 0;
+            else
+               // total =(int)number;   //or
+               total = number.Value;
+            Console.WriteLine(total);
+            Console.WriteLine("--------------");
+
+            //the above decision clause can be replaced with coalescing operator
+            total = number ?? 0;
+  
+
+            Console.WriteLine(total);
         }
     }
 }

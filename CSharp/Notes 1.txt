@@ -34,8 +34,24 @@ Conversion between value types and reference types
  2. Unboxing : Converting reference type to value type
 
 --Implicitly Typed data types
-   - var
-   - dynamic
+   - var : is a type that can take up any other type
+           - we need to assign a value at the time of declaration itself
+           - once assigned, cannot alter the type
+
+   - dynamic : are reference types that remains dynamic (during compilation)
+               - need not initialize at the time of declaration
+               - can be assigned any data
+               - undergoes boxing/unboxing(conversions) during runtime (performance overhead)
+               - advised to minimize the usage of dynamic types
+
+-- Null Literals : as of C# 7.0 all reference types are by default null
+
+Nullables : Generally are unknown information. We can assign normal range of values as well as null values using nullable ('?')
+
+- nullable types bridge the difference between C# types and the database types
+- Transformation of nulls and non nulls
+
+Null Coalescing (??)operator can minimize the code of working with nullable values
 
 Operators :
 
@@ -44,6 +60,23 @@ Arithmetic
 Relational
 Logical
 Null
+Misc - sizeof(), typeof()
+
+Control Statement : execution path of a program 
+
+  - Selection Statements
+         if, switch
+
+  - Iteration Statements
+         while, do while, for, foreach
+       - Initial value
+         condition
+         termination
+  
+  - Jump Statements
+         break, continue, goto, return, throw
+  
+
 
 
 
