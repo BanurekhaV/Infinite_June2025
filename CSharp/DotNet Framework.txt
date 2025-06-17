@@ -1,0 +1,31 @@
+.Net Framework / dotnet Framework
+
+ - a software component that provides tools and libraries, that enables developers to create software much easier and faster (RAD Tool - Rapid Application Development)
+
+
+Points to remember :
+
+ IL also known as CIL/MSIL/Managed code
+ Assemblies are fundamental unit of deployment, version control, and reusable .net applications.   They are of 2 types (.exe / .dll) depending upon the type of application
+   - consists of IL, Manifest File(Metadata), PE header, CLR header
+   - can be private or shared
+   
+In conclusion dotnet is the Microsoft web services strategy to connect information, people, systems and devices through software
+
+Type of Application :
+ 
+Desktop - deployed in each machine
+    Console, Windows 
+Web  - Internet based application accessed thru browsers
+    Asp.net winforms, Asp.net MVC and Asp.net Core
+Mobile - Xamarin
+
+
+CSharp: is a modern general purpose, object oriented programming lang by Microsoft
+  - Was developed by Anders Hejlsberg and his team during the development of dotnet framework
+  - Is designed for Common Lang Infrastructure which consists of executable code, runtime environment, allowing various high level languages on different Platforms and architecture
+
+Namespace : is a logical way to organize our programs
+            is a collection of other namespaces, Classes, Interfaces, Events , Delegates, Structures, Enums etc. 
+            provides assistance to avoid name clashes
+  

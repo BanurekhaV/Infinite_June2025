@@ -1,0 +1,51 @@
+Global Assembly Cache  GAC - Shared assemblies
+
+Assembler Tools : ILDASM - IL Disassembler
+                  ILASM - IL Assembler
+
+Data Types : are basically either
+   1. Value Types -  All integral data types (int, char, float, long, byte, double, decimal etc)
+                     are derived from System.ValueType
+                     stores data directly
+                     are stored in stack memory
+
+   2. Reference Types - All objects of classes, interfaces, Arrays, delegates, etc..
+                       contains the memory address of the place where the data is
+                       are stored in heap memory
+
+
+Literals in C# 
+   String Literal   == Hello World
+   Character   
+   Integer
+   Null      '/0'
+   Real
+   Boolean  true/false
+
+Type Conversions  : are of 2 types 
+  1. Implicit  - Compiler handles on its own (lower data type to a higher type)
+  2. Explicit - using a typecast or conversion functions by the user (may have data loss or can be just different data type conversion)
+
+--Parse() and tryParse()
+
+Conversion between value types and reference types 
+ 1. Boxing : Converting a value type to a reference type
+
+ 2. Unboxing : Converting reference type to value type
+
+--Implicitly Typed data types
+   - var
+   - dynamic
+
+Operators :
+
+Assignment
+Arithmetic
+Relational
+Logical
+Null
+
+
+
+
+

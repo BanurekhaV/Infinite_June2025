@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{927BD7AA-2385-4654-8B25-2A9FF8E64827}</ProjectGuid>
+    <ProjectGuid>{ED160EE5-0EFF-4A6E-9FB1-A98295291830}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>FirstDotnet_Prj</RootNamespace>
-    <AssemblyName>FirstDotnet_Prj</AssemblyName>
+    <RootNamespace>Day1Csharp</RootNamespace>
+    <AssemblyName>Day1Csharp</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>FirstDotnet_Prj.Program</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,9 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FirstFile.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SecondFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

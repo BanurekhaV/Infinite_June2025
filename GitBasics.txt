@@ -45,3 +45,11 @@ Every repository has a primary branch that can be thought of as the official ver
 
 Say you want to make some new features but are worried about making changes to the main project while developing the feature, Then this is where git branches come in. 
 
+
+Branches :
+git branch < branchname> - to create a new branch
+git branch or git branch --list  - to show all branches 
+git checkout <branchname>  - to switch between branches
+git branch -d <branchname> - to delete a branch
+git merge <branchname>  - to merge changes
+
