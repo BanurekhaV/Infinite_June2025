@@ -1,0 +1,13 @@
+Classes and Objects : Class is a structural declaration of what is needed and how it is needed/accessed
+
+Object is an working copy of the class (instance of the class)
+
+Constructors : Are special function/s of the class
+               They have the same name as that of the class
+               They do not have any return type 
+               They can be overloaded 
+               They are meant for initializing the members
+               They can be called like a normal function
+               They have to be either public or internal
+
+

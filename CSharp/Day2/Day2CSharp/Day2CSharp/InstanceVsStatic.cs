@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Day2CSharp
 {
@@ -57,10 +54,15 @@ namespace Day2CSharp
             Console.WriteLine(str3);
             Console.WriteLine("str is :{0} and str3 is {1}", str.GetHashCode(), str3.GetHashCode());
             str2 = "I am String.";
-
+           
             char[] carr = new char[] { 'H', 'e', 'l', 'l', 'o' };
             string s4 = new string(carr);
             Console.WriteLine("s4 hashcode is " + " " + s4.GetHashCode());
+            Console.WriteLine("-----String Builder------");
+            StringBuilder sb = new StringBuilder("Hello ");
+            Console.WriteLine("hashcode of Sb : {0} and value of sb : {1}", sb.GetHashCode(), sb);
+            sb.Append("World");
+            Console.WriteLine("hashcode of Sb : {0} and value of sb : {1}", sb.GetHashCode(), sb);
             Console.Read();
         }
     }
