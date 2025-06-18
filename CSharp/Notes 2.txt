@@ -1,0 +1,37 @@
+Arrays : are continuous memory allocation of the same type with a fixed size
+         are reference types
+
+Types of arrays : Single Dimension
+ ex int[] a = new int[5];
+int[] a = new int[]{1,2,3,4,5};
+int[] a = new int[]={10,20,30,40,50};
+
+                  Two Dimension / Multi
+ex : int[,]table = new int[4,3];
+
+                  Jagged Arrays :
+- are often called array of arrays
+- every element of jagged array is an array itself
+
+ex : int[][] jarr = new int[3][];
+  jarr[0] = new int[]{1,2,3};
+jarr[1]= new int[]{4,5,6,7,8};
+jarr[2]= new int[]{9,10};
+
+
+Instance Members: are members that are avilable as a copy to each and every object that is created.
+                  They are accessed only with the object reference
+
+ Static members : are known as class members
+                  only one copy exists for the entire class
+                  they are managed and mainted by the CLR
+                  are accessed only with the class name 
+
+
+Strings :
+- are a collection of characters
+- are predefined reference types
+- memory is allocated on the heap
+- strings have fixed size
+- strings are immutable
+- strings memory cannot be changed

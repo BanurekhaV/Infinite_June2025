@@ -76,7 +76,9 @@ Control Statement : execution path of a program
   - Jump Statements
          break, continue, goto, return, throw
   
-
+goto : are used for transfer of control within the function. 
+       They are identified with a valid name followed by a ':'
+       unstructured control of flow of statements
 
 
 

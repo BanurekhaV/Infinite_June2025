@@ -20,7 +20,8 @@ namespace Day1Csharp
             // loops.DoWhileLoop();
             // Console.WriteLine("************");
             // loops.ForLoop();
-            loops.ForEachLoop();
+            // loops.ForEachLoop();
+            loops.GotoEg();
             Console.Read();
         }
         #endregion
@@ -117,6 +118,34 @@ namespace Day1Csharp
             {
                 Console.WriteLine(x);
             }
+        }
+
+        public void GotoEg()
+        {
+            Console.WriteLine( "First Statement");
+            goto infinite;
+            Console.WriteLine("Second Statement");
+            Console.WriteLine("Third Statement");
+
+        infinite:
+            Console.WriteLine("Infinite Welcomes all the new Associates...");
+            goto label1;
+
+            Console.WriteLine("You are here....");
+            Console.WriteLine("see you soon ...");
+
+        label1:
+            Console.WriteLine("Hello");
+
+        doagain:
+            Console.WriteLine("enter a number less than 10");
+            int num = Convert.ToInt32(Console.ReadLine());
+            if(num >=10)
+            {
+                Console.WriteLine("Number should be less tha 10");
+                goto doagain;
+            }
+            Console.WriteLine(num + " is less than 10");
         }
     }
 }
