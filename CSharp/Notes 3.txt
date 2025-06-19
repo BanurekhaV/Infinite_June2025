@@ -1,13 +1,43 @@
 Classes and Objects : Class is a structural declaration of what is needed and how it is needed/accessed
 
 Object is an working copy of the class (instance of the class)
+          Data, behaviour and state
+
+This : is a pointer that points to the current instance/object 
+
+OOP - WYSIWYG
+
+- Encapsulation : Unit of Info. that consists of fields and functions
+                  Is a process of enclosing one or more items within a physical or logical package
+                  It prevents access to implementation details
+                  Is achieved using access specifiers
+
+- Abstraction :   Giving away only required data and hiding the rest
+
+- Inheritance :   Extensions
+
+- Polymorphism : Existing in many forms /different forms
+
 
 Constructors : Are special function/s of the class
                They have the same name as that of the class
                They do not have any return type 
                They can be overloaded 
                They are meant for initializing the members
-               They can be called like a normal function
-               They have to be either public or internal
+               They are explicitly called like a normal function
+               They have to be either public or internal or protected, but not private
 
+Destructors : is a special function of the class
+              has the same name as that of the class preceded with a 'tilde ~'
+              no return type, no access specifiers 
+              cannot be overloaded ( only one per class)
+              cannot be called explicitly
+              are meant for deallocation of memory
 
+Note : since the Framework supports Garbage Collection to dispose any un utilized memory, there is no need for explicit destructor
+
+-- Methods and Parameters : In C# we have the following types to pass parameters
+ 1. Value
+ 2. Reference
+ 3. Out
+ 4. Parameter Array

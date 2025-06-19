@@ -19,12 +19,12 @@ jarr[1]= new int[]{4,5,6,7,8};
 jarr[2]= new int[]{9,10};
 
 
-Instance Members: are members that are avilable as a copy to each and every object that is created.
+Instance Members: are members that are available as a copy to each and every object that is created.
                   They are accessed only with the object reference
 
  Static members : are known as class members
                   only one copy exists for the entire class
-                  they are managed and mainted by the CLR
+                  they are managed and maintained by the CLR
                   are accessed only with the class name 
 
 
