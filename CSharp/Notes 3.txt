@@ -67,3 +67,6 @@ Access Specifiers : defines the scope and visibility of a class member. C# suppo
                   Protected to all the derived classes in other assembly
   
 Note : Initializing the base class members thru the derived class constructor by passing the values to the base class using ':base' keyword, when the base class has only parametrized constructor
+
+
+--this keyword
