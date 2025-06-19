@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{308F2B08-1099-4CA5-9457-2680EAADE342}</ProjectGuid>
+    <ProjectGuid>{120AE3B6-E535-4B98-AE3C-0A9088210A72}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day3CSharp</RootNamespace>
-    <AssemblyName>Day3CSharp</AssemblyName>
+    <RootNamespace>AccessTest_Prj</RootNamespace>
+    <AssemblyName>AccessTest_Prj</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>Day3CSharp.InheritanceEg</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,14 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccessSepecifiersEg.cs" />
-    <Compile Include="InheritanceEg.cs" />
-    <Compile Include="MethodsnParameters.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="AccesTest_Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Day3CSharp\Day3CSharp.csproj">
+      <Project>{308f2b08-1099-4ca5-9457-2680eaade342}</Project>
+      <Name>Day3CSharp</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

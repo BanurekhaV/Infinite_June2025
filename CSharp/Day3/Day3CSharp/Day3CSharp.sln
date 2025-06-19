@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.34931.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day3CSharp", "Day3CSharp\Day3CSharp.csproj", "{308F2B08-1099-4CA5-9457-2680EAADE342}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessTest_Prj", "AccessTest_Prj\AccessTest_Prj.csproj", "{120AE3B6-E535-4B98-AE3C-0A9088210A72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{308F2B08-1099-4CA5-9457-2680EAADE342}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{308F2B08-1099-4CA5-9457-2680EAADE342}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{308F2B08-1099-4CA5-9457-2680EAADE342}.Release|Any CPU.Build.0 = Release|Any CPU
+		{120AE3B6-E535-4B98-AE3C-0A9088210A72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{120AE3B6-E535-4B98-AE3C-0A9088210A72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{120AE3B6-E535-4B98-AE3C-0A9088210A72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{120AE3B6-E535-4B98-AE3C-0A9088210A72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

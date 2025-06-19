@@ -46,3 +46,24 @@ Note : since the Framework supports Garbage Collection to dispose any un utilize
                      we need to use 'params' keyword to indicate it is an parameter array
                      only one params is allowed per function
                      params keyword should be the last in the argument list
+
+Note : All classes are internal by default
+       All Members of the class are private by default
+
+Access Specifiers : defines the scope and visibility of a class member. C# supports
+
+ a) Private : Accessible only in the class where it is declared . No access from anywhere else
+
+ b) Public : Accessible within or outside the assembly, with or without derivation.
+             We just need an object of the class to access
+
+ c) Protected : Accessible by the class where it is declared and all its derived classes
+                The derived classes may be in the same assembly or in another assembly
+                They are accessed using the object of the derived/sub/child class only
+
+ d) Internal : Are like public, which allows access within the assembly, and not other assemblies
+
+ e) Internal protected / Protected Internal : Internal to all the derived and non-derived classes of the current assembly 
+                  Protected to all the derived classes in other assembly
+  
+Note : Initializing the base class members thru the derived class constructor by passing the values to the base class using ':base' keyword, when the base class has only parametrized constructor
