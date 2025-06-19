@@ -37,7 +37,12 @@ Destructors : is a special function of the class
 Note : since the Framework supports Garbage Collection to dispose any un utilized memory, there is no need for explicit destructor
 
 -- Methods and Parameters : In C# we have the following types to pass parameters
- 1. Value
- 2. Reference
- 3. Out
- 4. Parameter Array
+ 1. Value  : where a copy of the parameter/argument value is passed
+ 2. Reference : where the address of the parameters value is passed
+ 3. Out  : Where we expect more than one result from a function 
+            Since a function can return only one type
+ 4. Parameter Array : Supports in providing an array of parameters values which can vary (0,1,2,or more)
+                     the parameter list is separated by a comma
+                     we need to use 'params' keyword to indicate it is an parameter array
+                     only one params is allowed per function
+                     params keyword should be the last in the argument list
