@@ -42,6 +42,9 @@ Interface: are like classes, which contains properties, methods, delegates and e
           - The class that implements an interface will have to provide implementation to all members of the interface
           - A class can implement from multiple interfaces
           - One interface can implement other interfaces
-          - We cannot instantiate an interface.
+          - We cannot instantiate an interface, but reference objects can be created 
+
+Explicit Implementation of interface methods
+   - when 1 or more interface has similar signature of methods, and we would like to implement them separately
 
  

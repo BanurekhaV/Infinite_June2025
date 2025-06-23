@@ -41,7 +41,7 @@ namespace Day4CSharp
         }
     }
 
-    class Circle : Shape, IDisposable
+    class Circle : Shape
     {
         public void GetRadius()
         {

@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day4CSharp.Properties</StartupObject>
+    <StartupObject>Day4CSharp.InterfaceTester</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ICustomer.cs" />
     <Compile Include="OperatorOverloadingEg.cs" />
     <Compile Include="OverloadingEg.cs" />
     <Compile Include="OverridingEg.cs" />

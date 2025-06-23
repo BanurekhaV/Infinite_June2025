@@ -5,7 +5,7 @@ namespace Day4CSharp
 {
     class Employee 
     {
-        private string ecode = "N.A.";
+       private string ecode = "N.A.";
         private string name = "Unknown";
        public int age { get; set; }  //automatic implementation of properties
 
