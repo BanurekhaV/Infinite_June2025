@@ -17,13 +17,13 @@ Polymorphism : Ability of an object to respond differently to different messages
          - we can achieve static polymorphism/compile time polymorphism/early binding (function resolution)          
  
                   2)operator overloading :
+              - are also seen within a class
+              - are meant to give similar effects as that of systemic types
+              - have to be declared always as public and static only
+              - the return type is also the same as the enclosing type
+              - we can get static polymorphism 
 
-       int a=5, b=6,c=0;
-  c = a+b;  //11
-
-class example { }
-
- example e1, e2, e3;
-e3=e1+e2;
-
-  - Overriding :
+  - Overriding : is seen across related classes
+                - the signature has to be always the same
+                - does not allow us to change the access specifier, modifier, return type, argument type/nos.
+                - derived class has to always use the override modifier, and the base class has to mark the function as virtual

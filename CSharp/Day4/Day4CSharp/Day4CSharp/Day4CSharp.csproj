@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day4CSharp.OperatorOverloadingEg</StartupObject>
+    <StartupObject>Day4CSharp.OverridingEg</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="OperatorOverloadingEg.cs" />
     <Compile Include="OverloadingEg.cs" />
+    <Compile Include="OverridingEg.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
