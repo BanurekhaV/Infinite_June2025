@@ -27,3 +27,21 @@ Polymorphism : Ability of an object to respond differently to different messages
                 - the signature has to be always the same
                 - does not allow us to change the access specifier, modifier, return type, argument type/nos.
                 - derived class has to always use the override modifier, and the base class has to mark the function as virtual
+                - we can achieve dynamic polymorphism thru co-variance/late binding
+
+Properties :  are named members of classes, structures and interfaces
+              they are extensions of field
+              they are accessed using the accessors (get/set)
+              properties do not name the storage locations, instead have accessors that read, write , manipulate or compute values of the fields
+              they are always public
+              they have the same datatype as that of the field for which we are creating property
+
+Interface: are like classes, which contains properties, methods, delegates and events - but only declarations and no implementation
+          - Interface members are public by default
+          - They do not allow explicit access modifiers
+          - The class that implements an interface will have to provide implementation to all members of the interface
+          - A class can implement from multiple interfaces
+          - One interface can implement other interfaces
+          - We cannot instantiate an interface.
+
+ 

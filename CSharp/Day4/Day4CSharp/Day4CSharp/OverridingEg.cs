@@ -8,11 +8,13 @@ namespace Day4CSharp
 
         public virtual float Area()
         {
+            Console.WriteLine("Area of Shape is being determined...");
             return 3.14f * R * R;
         }
 
         public virtual float Circumference()
         {
+            Console.WriteLine("Circumference of Shape is calculated..");
             return 2 * 3.14f * R;
         }
     }
@@ -39,7 +41,7 @@ namespace Day4CSharp
         }
     }
 
-    class Circle : Shape
+    class Circle : Shape, IDisposable
     {
         public void GetRadius()
         {
@@ -50,22 +52,38 @@ namespace Day4CSharp
         {
             return 11.45f;
         }
+
+        public override float Circumference()
+        {
+            return 5.5f;
+        }
+
     }
 
     class OverridingEg
     {
         static void Main()
         {
-            Rectangle rectangle = new Rectangle();
-            Console.WriteLine("Area of Rectangle is {0}", rectangle.Area());
-            Console.WriteLine("Rectangle Circumference is {0}", rectangle.Circumference());
-            Circle circle = new Circle();
-            Console.WriteLine("Area and Circumference of Circle {0} , {1}", circle.Area(), circle.Circumference());
+            //Rectangle rectangle = new Rectangle();
+            //Console.WriteLine("Area of Rectangle is {0}", rectangle.Area());
+            //Console.WriteLine("Rectangle Circumference is {0}", rectangle.Circumference());
+            //Circle circle = new Circle();
+            //Console.WriteLine("Area and Circumference of Circle {0} , {1}", circle.Area(), circle.Circumference());
 
-            Console.WriteLine("-----------------");
-            circle.GetRadius();
-            Console.WriteLine("Area and Circumference of Circle {0} , {1}", circle.Area(), circle.Cicumference());
+            //Console.WriteLine("-----------------");
+            //circle.GetRadius();
+            //Console.WriteLine("Area and Circumference of Circle {0} , {1}", circle.Area(), circle.Cicumference());
+            Shape shape = new Shape();
+            Console.WriteLine(shape.Area());
+            Console.WriteLine(shape.Circumference());
 
+            shape = new Rectangle(); //co variance
+            Console.WriteLine(shape.Area());
+            Console.WriteLine(shape.Circumference());
+
+            shape = new Circle();
+            Console.WriteLine(shape.Area());
+            Console.WriteLine(shape.Circumference());
             Console.Read();
         }
     }
