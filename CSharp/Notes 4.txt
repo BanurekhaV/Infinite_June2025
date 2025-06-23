@@ -1,0 +1,29 @@
+Inheritance : extensions of the capabilities of a class
+
+are of the following types
+ 1. Single
+ 2. Multi level
+ 3. Hybrid
+No multiple inheritance is supported in C#
+
+There are 2 types of relations broadly 
+  1. 'is a relationship' - inheritance
+  2. 'has a relationship' (composition/aggregation)
+
+Polymorphism : Ability of an object to respond differently to different messages/ different objects responding differently to the same message
+  - Overloading : 1)function overloading
+         - are functions with the same name and different signatures in terms of the arguments(i.e. either in the number of arguments or in the data type) 
+         - is a concept with a single class
+         - we can achieve static polymorphism/compile time polymorphism/early binding (function resolution)          
+ 
+                  2)operator overloading :
+
+       int a=5, b=6,c=0;
+  c = a+b;  //11
+
+class example { }
+
+ example e1, e2, e3;
+e3=e1+e2;
+
+  - Overriding :

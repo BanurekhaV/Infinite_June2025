@@ -19,21 +19,6 @@ OOP - WYSIWYG
 - Polymorphism : Existing in many forms /different forms
 
 
-Constructors : Are special function/s of the class
-               They have the same name as that of the class
-               They do not have any return type 
-               They can be overloaded 
-               They are meant for initializing the members
-               They are explicitly called like a normal function
-               They have to be either public or internal or protected, but not private
-
-Destructors : is a special function of the class
-              has the same name as that of the class preceded with a 'tilde ~'
-              no return type, no access specifiers 
-              cannot be overloaded ( only one per class)
-              cannot be called explicitly
-              are meant for deallocation of memory
-
 Note : since the Framework supports Garbage Collection to dispose any un utilized memory, there is no need for explicit destructor
 
 -- Methods and Parameters : In C# we have the following types to pass parameters
@@ -65,8 +50,35 @@ Access Specifiers : defines the scope and visibility of a class member. C# suppo
 
  e) Internal protected / Protected Internal : Internal to all the derived and non-derived classes of the current assembly 
                   Protected to all the derived classes in other assembly
+
+Constructors : Are special function/s of the class
+               They have the same name as that of the class
+               They do not have any return type 
+               They can be overloaded 
+               They are meant for initializing the members
+               They are explicitly called like a normal function
+               They have to be either public or internal or protected, but not private
+
+Destructors : is a special function of the class
+              has the same name as that of the class preceded with a 'tilde ~'
+              no return type, no access specifiers 
+              cannot be overloaded ( only one per class)
+              cannot be called explicitly
+              are meant for deallocation of memory
+
   
 Note : Initializing the base class members thru the derived class constructor by passing the values to the base class using ':base' keyword, when the base class has only parametrized constructor
 
 
---this keyword
+--this keyword usage in calling chain of constructors of the same class
+
+--static constructor : are used to initialize static members of the class
+                       they are invoked as soon as the class is referenced for the first time, unlike a instance constructor that is used to create a new instance for each object with the new keyword
+                       does not take any arguments
+                       does not take any modifiers
+                       does not initialize non-static members
+                       static constructor of a class executes at most one time during a single program instantiation
+                       eg: log file entries 
+ 
+
+ 
