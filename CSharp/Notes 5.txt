@@ -1,0 +1,34 @@
+Overriding and Hiding : Overriding is when the base type marks the members as virtual, allowing the derived types to redefine functionality ( using override keyword)
+
+Hiding is when the base type does not mark its members as virtual, and the derived type would have to redefine functionalities, then it can hide the definition by using the same signature as that of the base type but prefixing with a 'new' keyword
+
+Abstract class : is a class that has at least one abstract method. 
+                 Can include non abstract methods also
+                 Cannot be instantiated
+                 Can be inherited
+                 Inherited class will provide implementation to the abstract methods
+
+
+Abstract method : is a method that has only declaration/signature and no implementation
+
+
+    Base Type  Abstract
+               1.  public abstract void method1(); // abstract method
+               2.  public virtual void method2() { "hi"; } // non abstract virtual method
+               3.  public void method3(){"hello";} // non abstract non-virtual method
+
+    Sub Type : Base Type
+               1. public override void method1(){  }
+               2. may or may not override method2()
+               3. may not do anything or 
+                      redefine the method3() with a new keyword
+
+With Base type object referring to sub type then
+             method1() of subtype will be executed
+             method2() of base type will be executed if the subtype has not overridden, else method2() of subtype will be executed
+             method3() of base type only will be executed
+
+with subtype object
+                 method1() of subtype will be executed
+                method2() of base type will be executed if the subtype has not overridden, else method2() of subtype will be executed
+                 method3() of subtype will be executed
