@@ -5,7 +5,7 @@ namespace Day5Csharp
 {
     interface IName
     {
-        string Name { get; set; }  //decl of property 
+        string Name { get; set; }  //decl of property        
     }
 
     class Employee : IName

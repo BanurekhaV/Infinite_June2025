@@ -4,6 +4,8 @@ namespace Day5Csharp
 {
     abstract class Shapes
     {
+        int datafield;
+        const float currtime = 3.32f;
         public string prop1 { get; set; }
 
         //abstract property
@@ -67,7 +69,7 @@ namespace Day5Csharp
             Console.WriteLine("-----With Sub Type Object-------");
             Square s = new Square(10, "Base Shape");
             Console.WriteLine("Area of Square using Square Object " + s.Area()); 
-            s.DrawShape();
+            s.DrawShape();           
             Console.Read();
         }
     }
