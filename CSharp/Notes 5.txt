@@ -18,10 +18,10 @@ Abstract method : is a method that has only declaration/signature and no impleme
                3.  public void method3(){"hello";} // non abstract non-virtual method
 
     Sub Type : Base Type
-               1. public override void method1(){  }
-               2. may or may not override method2()
+               1. public override void method1(){  } // compulsory implementation
+               2. may or may not override method2()  // optional override
                3. may not do anything or 
-                      redefine the method3() with a new keyword
+                      redefine the method3() with a new keyword  // method hiding
 
 With Base type object referring to sub type then
              method1() of subtype will be executed
@@ -34,3 +34,9 @@ with subtype object
                  method3() of subtype will be executed
 
 
+Indexers : allows an object to be indexed as an array. When we define indexers for a class, the class behaves similar to virtual array. We can access them using array accessor of the object as ([]).
+           Declaration and behaviour of an indexer is to some extent similar to a property
+           We have get and set accessors
+           We do not have any name unlike properties, and uses the 'this' keyword (current object)
+           While properties return or set a specific data member, indexers returns or sets a particular value from the object instance ( basically it breaks the instance data into smaller parts and indexes each part and gets and sets each part
+      

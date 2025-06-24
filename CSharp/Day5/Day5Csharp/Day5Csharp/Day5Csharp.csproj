@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day5Csharp.IndexersEg</StartupObject>
+    <StartupObject>Day5Csharp.IndexersEg2</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="AbstractClassEg.cs" />
     <Compile Include="Employees.cs" />
+    <Compile Include="IndexersEg2.cs" />
     <Compile Include="Interfacewith_Properties.cs" />
     <Compile Include="NameHiding.cs" />
     <Compile Include="ObjectInitializerEg.cs" />
