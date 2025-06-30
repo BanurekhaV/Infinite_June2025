@@ -1,0 +1,42 @@
+Garbage Collector : GC always works on the Managed Heap. It internally has an engine 'Optimization Engine'. garbage collection occurs if at least one of the below condition is satisfied
+  - if the system has low physical memory
+  - if the memory allocated to various objects in the heap memory exceeds a pre-set threshold
+  - if forceful collection using GC.Collect() is called
+
+3 Phases of GC :
+  1. Marking Phase : list of all live objects created
+  2. Re locating Phase : Live objects references are updates
+  3. Compacting Phase : heap gets compacted and space occupied by the dead objects are released
+
+3 Generation of GC :
+  Generation 0 : Newly allocated object
+  Generation 1 : Objects left after generation 0 Garbage Collection
+  Generation 2 : Objects left after generation 1 Garbage Collection
+
+Important Methods of GC :
+  1. GC.GetGeneration() : This method returns the generation number
+  2. GC.GetTotalMemory(): This method returns the number of bytes that were allocated
+  3. GC.Collect()
+
+
+ Dispose Vs Finalize
+
+Dispose : is usually called by our code. The resources are freed instantly on call. If in case the programmer forgets to call dispose, then we can use the ' using{ }' block, which  calls the Dispose method automatically
+ - In order to implement Dispose(), the class has to implement the IDisposable interface
+ 
+Finalize :  is meant to be called by the garbage collector and not by our code
+
+
+DeepCopy vs Shallow Copy :
+
+Both are 2 methods for duplicating objects. They differ in handling the references to other objects
+
+Shallow Copy : Creates a new object, but copies references to the original members
+              - Changes to the original will effect the shallow copy
+              - We use MemberwiseClone() for shallow copy
+              - Faster and used for immutable objects
+
+DeepCopy : Creates a new object and recursively copies all object reference of the original
+           - Changes does not effect the deep copy
+           - Implemented manually or by using serialization
+           - Used for complex objects with multiple nested references
