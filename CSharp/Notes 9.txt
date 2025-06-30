@@ -43,3 +43,10 @@ DeepCopy : Creates a new object and recursively copies all object reference of t
 
 Object Pooling :
  is a design pattern to manage the objects allocation and deallocation. It is effient in terms of memory management
+
+
+
+File Handling : 
+  Class objects data are volatile and are not available for future use. So we may want to persists the data for futeure use.
+  - classes to handle files and serialization are in the namespace System.IO
+

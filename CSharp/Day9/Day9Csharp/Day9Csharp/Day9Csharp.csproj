@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day9Csharp.ObjectPooling</StartupObject>
+    <StartupObject>Day9Csharp.FileEg1</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DeepvsShallow.cs" />
+    <Compile Include="FileEg1.cs" />
     <Compile Include="GarbageEg.cs" />
     <Compile Include="GenericDelegates.cs" />
     <Compile Include="ObjectPooling.cs" />
