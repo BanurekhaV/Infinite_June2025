@@ -32,7 +32,7 @@ DeepCopy vs Shallow Copy :
 Both are 2 methods for duplicating objects. They differ in handling the references to other objects
 
 Shallow Copy : Creates a new object, but copies references to the original members
-              - Changes to the original will effect the shallow copy
+              - Changes to the original will effect the shallow copy and vice versa
               - We use MemberwiseClone() for shallow copy
               - Faster and used for immutable objects
 
@@ -40,3 +40,6 @@ DeepCopy : Creates a new object and recursively copies all object reference of t
            - Changes does not effect the deep copy
            - Implemented manually or by using serialization
            - Used for complex objects with multiple nested references
+
+Object Pooling :
+ is a design pattern to manage the objects allocation and deallocation. It is effient in terms of memory management
