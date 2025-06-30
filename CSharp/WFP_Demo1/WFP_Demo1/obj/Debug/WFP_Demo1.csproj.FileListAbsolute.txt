@@ -1,0 +1,11 @@
+D:\OnlineTraining\C#_June25\WFP_Demo1\WFP_Demo1\bin\Debug\WFP_Demo1.exe.config
+D:\OnlineTraining\C#_June25\WFP_Demo1\WFP_Demo1\bin\Debug\WFP_Demo1.exe
+D:\OnlineTraining\C#_June25\WFP_Demo1\WFP_Demo1\bin\Debug\WFP_Demo1.pdb
+D:\OnlineTraining\C#_June25\WFP_Demo1\WFP_Demo1\obj\Debug\WFP_Demo1.csproj.AssemblyReference.cache
+D:\OnlineTraining\C#_June25\WFP_Demo1\WFP_Demo1\obj\Debug\WFP_Demo1.Form1.resources
+D:\OnlineTraining\C#_June25\WFP_Demo1\WFP_Demo1\obj\Debug\WFP_Demo1.Properties.Resources.resources
+D:\OnlineTraining\C#_June25\WFP_Demo1\WFP_Demo1\obj\Debug\WFP_Demo1.csproj.GenerateResource.cache
+D:\OnlineTraining\C#_June25\WFP_Demo1\WFP_Demo1\obj\Debug\WFP_Demo1.csproj.CoreCompileInputs.cache
+D:\OnlineTraining\C#_June25\WFP_Demo1\WFP_Demo1\obj\Debug\WFP_Demo1.exe
+D:\OnlineTraining\C#_June25\WFP_Demo1\WFP_Demo1\obj\Debug\WFP_Demo1.pdb
+D:\OnlineTraining\C#_June25\WFP_Demo1\WFP_Demo1\obj\Debug\WFP_Demo1.Form2.resources

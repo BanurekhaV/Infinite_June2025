@@ -1,0 +1,92 @@
+Scenario: Employee Management System (Console-Based)
+-----------------------------------------------------
+You are tasked with developing a simple console-based Employee Management System using C# that allows users to manage a list of employees. Use a menu-driven approach to perform CRUD operations on a List<Employee>.
+
+Each Employee has the following properties:
+
+int Id
+
+string Name
+
+string Department
+
+double Salary
+ Functional Requirements
+Design a menu that repeatedly prompts the user to choose one of the following actions:
+
+
+===== Employee Management Menu =====
+1. Add New Employee
+2. View All Employees
+3. Search Employee by ID
+4. Update Employee Details
+5. Delete Employee
+6. Exit
+====================================
+Enter your choice:
+
+ Task:
+Write a C# program using:
+
+A class Employee with the above properties.
+
+A List<Employee> to hold all employee records.
+
+A menu-based loop to allow the user to perform the following:
+
+✅ Expected Functionalities (CRUD)
+
+1.Prompt the user to enter details for a new employee and add it to the list.
+
+
+2.Display all employees 
+
+3.Allow searching an employee by Id and display their details.
+
+4.Search for an employee by Id, and if found, allow the user to update name, department, or salary.
+
+5.Search for an employee by Id and remove the employee from the list.
+
+6.Cleanly exit the program.
+
+Use Exception handling Mechanism
+
+
+
+
+
+----------------------------------------------------------------------------
+
+
+Events and Delegates
+
+
+Scenario: Mobile Phone – Ring Notification System
+You are simulating a mobile phone that can ring when someone calls. Different parts of the phone (like ringtone player, screen display, and vibration motor) need to react to the ring event.
+
+To model this, use delegates and events.
+
+🎯 Task:
+Implement the following in C#:
+
+1. MobilePhone class
+Has a delegate RingEventHandler and an event OnRing.
+
+Has a method ReceiveCall() which triggers the OnRing event.
+
+2. Subscriber classes (handlers):
+RingtonePlayer – prints: "Playing ringtone..."
+
+ScreenDisplay – prints: "Displaying caller information..."
+
+VibrationMotor – prints: "Phone is vibrating..."
+
+3. In the Main() method:
+Create an instance of MobilePhone.
+
+Subscribe all three components to the OnRing event.
+
+Call ReceiveCall() to simulate an incoming call.
+
+https://forms.office.com/r/N5cfwFVW0K
+

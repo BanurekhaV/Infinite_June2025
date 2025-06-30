@@ -1,0 +1,13 @@
+D:\OnlineTraining\C#_June25\StudentMarkEntryApp\StudentMarkEntryApp\bin\Debug\StudentMarkEntryApp.exe.config
+D:\OnlineTraining\C#_June25\StudentMarkEntryApp\StudentMarkEntryApp\bin\Debug\StudentMarkEntryApp.exe
+D:\OnlineTraining\C#_June25\StudentMarkEntryApp\StudentMarkEntryApp\bin\Debug\StudentMarkEntryApp.pdb
+D:\OnlineTraining\C#_June25\StudentMarkEntryApp\StudentMarkEntryApp\obj\Debug\StudentMarkEntryApp.Form1.resources
+D:\OnlineTraining\C#_June25\StudentMarkEntryApp\StudentMarkEntryApp\obj\Debug\StudentMarkEntryApp.Properties.Resources.resources
+D:\OnlineTraining\C#_June25\StudentMarkEntryApp\StudentMarkEntryApp\obj\Debug\StudentMarkEntryApp.csproj.GenerateResource.cache
+D:\OnlineTraining\C#_June25\StudentMarkEntryApp\StudentMarkEntryApp\obj\Debug\StudentMarkEntryApp.csproj.CoreCompileInputs.cache
+D:\OnlineTraining\C#_June25\StudentMarkEntryApp\StudentMarkEntryApp\obj\Debug\StudentMarkEntryApp.exe
+D:\OnlineTraining\C#_June25\StudentMarkEntryApp\StudentMarkEntryApp\obj\Debug\StudentMarkEntryApp.pdb
+D:\OnlineTraining\C#_June25\StudentMarkEntryApp\StudentMarkEntryApp\obj\Debug\StudentMarkEntryApp.Form2.resources
+D:\OnlineTraining\C#_June25\StudentMarkEntryApp\StudentMarkEntryApp\obj\Debug\StudentMarkEntryApp.csproj.AssemblyReference.cache
+D:\OnlineTraining\C#_June25\StudentMarkEntryApp\StudentMarkEntryApp\obj\Debug\StudentMarkEntryApp.Form3.resources
+D:\OnlineTraining\C#_June25\StudentMarkEntryApp\StudentMarkEntryApp\obj\Debug\StudentMarkEntryApp.Form4.resources
