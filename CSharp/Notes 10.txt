@@ -1,0 +1,17 @@
+Anonymous function calls : can be called using a delegate
+
+Types of Delegates :
+  1. Function Delegate : is an inbuilt-type
+                        - must return a value
+                        - can have 0 - 16 input parameters
+                        - does not allow ref and out parameters
+                        - can be used with anonymous methods and lambda expressions
+
+ 2. Action Delegates : encapsulates a method that does not return any data type
+                       -may not take parameters(non-generic) or can take a parameter(generic)
+     
+ 3. Predicate Delegates : encapsulates methods that return a Boolean type
+                         - used for filtering list of values
+                         - takes one parameter 
+
+

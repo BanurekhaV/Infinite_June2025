@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day10Csharp.Fileseg2</StartupObject>
+    <StartupObject>Day10Csharp.AnonymousMethods</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
