@@ -15,3 +15,51 @@ Types of Delegates :
                          - takes one parameter 
 
 
+Shapes {} - Less Derived Type
+Rectangle : Shapes{} - More Derived Type
+
+Shapes s = new Rectangle(); 
+Covariance  : allowing an object, variable or parameter of more derived type to be assigned to a less derived type
+           - is a concept in c# that helps in preserving assignment compatibility
+           - is an implicit operation
+
+Contravariance : is the reverse assignment of covariance compatibility
+                 allowing an object of less derived type to be assigned to a more derived type
+                - is applied more to parameters than objects and variables
+          
+Base Type : generally has common information  (less derived type but bigger object)
+Sub Types : have common info + specific to sub type info (more derived type, but smaller object)
+
+
+Threads : Threads are defined as the execution path of a program
+          They are light weight process
+          Each Thread defines a unique flow of control
+          The Thread that executes first is the Main Thread (which is created automatically)
+          The Main thread will create child threads to perform some simple tasks
+          The CurrentThread property of the Thread class is used to access the thread
+
+Important Properties of  a Thread :
+       - CurrentThread
+       - Is Alive
+       - Name
+       - ThreadState
+       - IsThreadPoolThread
+       - IsBackGround
+       - MangedThreadID
+
+Functionalities of a Thread :
+      - Sleep
+      - Abort
+      - Suspend
+      - Resume
+      - Start
+
+Life Cycle of a Thread 
+   - Unstarted
+   - Runnable
+   - Running
+   - Not Runnable
+   - Dead
+
+
+        

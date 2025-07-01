@@ -50,3 +50,12 @@ File Handling :
   Class objects data are volatile and are not available for future use. So we may want to persists the data for futeure use.
   - classes to handle files and serialization are in the namespace System.IO, System.Runtime.Serialization
 
+-Serialization : The process of converting object types into byte streams
+-Deserialization : is reverse process of serialization
+ 
+ There are multiple formats for serialization :
+  - Binary Serialization
+  - XML "
+  - SOAP " (Simple Object Access Protocol)
+  - JSON  : (JavaScript Object Notation)
+Attributes/Annotations/Meta data/Decorator : are classes that provide additional info about objects and its members

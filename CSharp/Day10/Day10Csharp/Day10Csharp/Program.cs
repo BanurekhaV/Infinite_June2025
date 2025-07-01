@@ -8,7 +8,7 @@ using System.IO;
 
 namespace Day10Csharp
 {
-    class Program
+    class Program 
     {
         static void WriteBinary()
         {
