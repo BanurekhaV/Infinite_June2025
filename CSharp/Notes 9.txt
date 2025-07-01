@@ -48,5 +48,5 @@ Object Pooling :
 
 File Handling : 
   Class objects data are volatile and are not available for future use. So we may want to persists the data for futeure use.
-  - classes to handle files and serialization are in the namespace System.IO
+  - classes to handle files and serialization are in the namespace System.IO, System.Runtime.Serialization
 

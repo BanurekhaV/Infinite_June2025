@@ -14,17 +14,19 @@ namespace Day9Csharp
     {
         public int CID;
         public string CustName;
+        [NonSerialized]
+        public float CustRating;
     }
     class FileEg1
     {
         public static void Main()
         {
-            Customer customer = new Customer() { CID = 101,CustName="Monali" };
+            Customer customer = new Customer() { CID = 101,CustName="Monali", CustRating=4.5f };
 
             //IFormatter or Binary Formatter
             IFormatter formatter = new BinaryFormatter();
 
-            Stream stream = new FileStream(@"C:\Banu\Infinite_June25\CSharp\Day9\FirstFile.txt",
+            Stream stream = new FileStream(@"C:\Banu\Infinite_June25\CSharp\Day9\SecondFile.txt",
                 FileMode.Create, FileAccess.Write);
 
             formatter.Serialize(stream, customer);
@@ -32,11 +34,11 @@ namespace Day9Csharp
 
             Console.WriteLine("-----Reading from file------");
 
-            stream = new FileStream(@"C:\Banu\Infinite_June25\CSharp\Day9\FirstFile.txt",
+            stream = new FileStream(@"C:\Banu\Infinite_June25\CSharp\Day9\SecondFile.txt",
                 FileMode.Open, FileAccess.Read);
 
             Customer dcust = (Customer)formatter.Deserialize(stream);
-            Console.WriteLine(dcust.CID + " " + dcust.CustName);
+            Console.WriteLine(dcust.CID + " " + dcust.CustName + " " + dcust.CustRating);
             Console.Read();
 
         }
