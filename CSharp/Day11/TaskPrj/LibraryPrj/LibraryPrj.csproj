@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E1711360-45CD-44AF-A5C2-69BA80EDAE83}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>TaskPrj</RootNamespace>
-    <AssemblyName>TaskPrj</AssemblyName>
+    <ProjectGuid>{2A6640FE-D760-4804-86DF-6F9748DC8CDD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LibraryPrj</RootNamespace>
+    <AssemblyName>LibraryPrj</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,13 +30,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>TaskPrj.TestExtension</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ExtensionLibrary">
-      <HintPath>..\..\ExtensionLibrary\ExtensionLibrary\bin\Debug\ExtensionLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,19 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EasyExtension.cs" />
-    <Compile Include="TaskEg.cs" />
+    <Compile Include="LibClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestLibrary.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\LibraryPrj\LibraryPrj.csproj">
-      <Project>{2a6640fe-d760-4804-86df-6f9748dc8cdd}</Project>
-      <Name>LibraryPrj</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
