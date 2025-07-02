@@ -1,0 +1,6 @@
+C:\Banu\Infinite_June25\CSharp\Day11\Day11Csharp\Day11Csharp\bin\Debug\Day11Csharp.exe.config
+C:\Banu\Infinite_June25\CSharp\Day11\Day11Csharp\Day11Csharp\bin\Debug\Day11Csharp.exe
+C:\Banu\Infinite_June25\CSharp\Day11\Day11Csharp\Day11Csharp\bin\Debug\Day11Csharp.pdb
+C:\Banu\Infinite_June25\CSharp\Day11\Day11Csharp\Day11Csharp\obj\Debug\Day11Csharp.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite_June25\CSharp\Day11\Day11Csharp\Day11Csharp\obj\Debug\Day11Csharp.exe
+C:\Banu\Infinite_June25\CSharp\Day11\Day11Csharp\Day11Csharp\obj\Debug\Day11Csharp.pdb

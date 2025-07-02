@@ -62,6 +62,20 @@ Life Cycle of a Thread
    - Dead
 
 
+Thread Synchronization : is a mechanism where only one process/job by a thread is allowed to access critical resources at a time, and the rest of the threads will have to wait for their turn
+
+Methods to manage Synchronization
+  1. Blocking Methods
+  2. Locking Constructs
+  3. Signalling
+  4. No Block Synchronizations
+
+
+Thread Pool :  is a collection of threads that can be reused for tasks, by making use of the ThreadPool static class and method known as QueueUserWorkItem(waitcallback obj)
+The above method allocates threads to process if available, else it will call back on availability.
+Till such time the process will be put in a queue.
+
+
 Sowmya
 Syam
 Satya Sai
