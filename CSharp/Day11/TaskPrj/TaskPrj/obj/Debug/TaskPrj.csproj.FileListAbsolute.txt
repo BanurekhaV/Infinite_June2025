@@ -1,0 +1,7 @@
+C:\Banu\Infinite_June25\CSharp\Day11\TaskPrj\TaskPrj\bin\Debug\TaskPrj.exe.config
+C:\Banu\Infinite_June25\CSharp\Day11\TaskPrj\TaskPrj\bin\Debug\TaskPrj.exe
+C:\Banu\Infinite_June25\CSharp\Day11\TaskPrj\TaskPrj\bin\Debug\TaskPrj.pdb
+C:\Banu\Infinite_June25\CSharp\Day11\TaskPrj\TaskPrj\obj\Debug\TaskPrj.csproj.AssemblyReference.cache
+C:\Banu\Infinite_June25\CSharp\Day11\TaskPrj\TaskPrj\obj\Debug\TaskPrj.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite_June25\CSharp\Day11\TaskPrj\TaskPrj\obj\Debug\TaskPrj.exe
+C:\Banu\Infinite_June25\CSharp\Day11\TaskPrj\TaskPrj\obj\Debug\TaskPrj.pdb

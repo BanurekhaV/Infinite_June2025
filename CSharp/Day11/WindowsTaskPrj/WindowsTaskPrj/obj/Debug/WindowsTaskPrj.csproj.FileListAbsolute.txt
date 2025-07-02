@@ -1,0 +1,10 @@
+C:\Banu\Infinite_June25\CSharp\Day11\WindowsTaskPrj\WindowsTaskPrj\bin\Debug\WindowsTaskPrj.exe.config
+C:\Banu\Infinite_June25\CSharp\Day11\WindowsTaskPrj\WindowsTaskPrj\bin\Debug\WindowsTaskPrj.exe
+C:\Banu\Infinite_June25\CSharp\Day11\WindowsTaskPrj\WindowsTaskPrj\bin\Debug\WindowsTaskPrj.pdb
+C:\Banu\Infinite_June25\CSharp\Day11\WindowsTaskPrj\WindowsTaskPrj\obj\Debug\WindowsTaskPrj.csproj.AssemblyReference.cache
+C:\Banu\Infinite_June25\CSharp\Day11\WindowsTaskPrj\WindowsTaskPrj\obj\Debug\WindowsTaskPrj.Form1.resources
+C:\Banu\Infinite_June25\CSharp\Day11\WindowsTaskPrj\WindowsTaskPrj\obj\Debug\WindowsTaskPrj.Properties.Resources.resources
+C:\Banu\Infinite_June25\CSharp\Day11\WindowsTaskPrj\WindowsTaskPrj\obj\Debug\WindowsTaskPrj.csproj.GenerateResource.cache
+C:\Banu\Infinite_June25\CSharp\Day11\WindowsTaskPrj\WindowsTaskPrj\obj\Debug\WindowsTaskPrj.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite_June25\CSharp\Day11\WindowsTaskPrj\WindowsTaskPrj\obj\Debug\WindowsTaskPrj.exe
+C:\Banu\Infinite_June25\CSharp\Day11\WindowsTaskPrj\WindowsTaskPrj\obj\Debug\WindowsTaskPrj.pdb
