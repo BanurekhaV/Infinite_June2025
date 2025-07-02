@@ -1,0 +1,42 @@
+Task : A task is used to implement asynchronous programming. It is an object that typically executes asynchronously on a thread pool, rather than synchronously on the Main thread of the application
+- There is a Task Scheduler responsible for starting the task and managing it
+- Task Parallel Library (TPL) - a set of public types and API's
+- TPL simplifies the process of parallelism and concurrency to applications, there by making the developers job more productive.
+- TPL handles partitioning of the work, scheduling of threads on the pool, cancellation support, state management, and other low level details 
+
+Tasks          					  Vs              Threads
+
+A task represents asynchronous Operations                   Is used for creating and manipulating          								flow of work
+Tasks can return results				    Cannot directly return values
+Tasks can have multiple process happening at the same time  Threads can have only one task at a time
+
+Tasks are higher level concepts than Threads
+
+Async and await : are code markers that help in parallel programming, where a task can keep continuing its work even if it has called another task/function
+These keyword offer a convenient way to write async. code that looks similar to sync. code, thereby making it easier to read and maintain
+
+
+Class Library : are applications/project types that creates .dll assemblies. They cannot be executed on their own. In order to execute they need a Host (exe)
+
+Extensions Methods : are additional functionalities that are provided as a part of the original object
+
+- Are methods that are always marked static, but when they are bound with other class/structure, they convert into non-static 
+- We can also add extension methods to sealed classes
+- When an extension method is defined with the same name and signature of the existing method, then the compiler will resolve only the existing method, and not the extension method (Hence extension methods do not support overriding)
+
+
+Types of Classes :
+  - Normal internal : Accessible through out the assembly
+  - Static : Cannot Inherit and cannot instantiate. All members have to be static.
+  - Abstract : Can be inherited but cannot be instantiated.
+  - Sealed : Cannot be inherited, but can be instantiated
+  - Partial : Can be defined in multiple files, to enable multiple developers to work parallelly
+
+  -Partial Methods :
+       are methods whose declaration and definition can be in separate partial class
+       can be declared only in the partial class
+       declaration ahs to start with partial modifier
+       can have only void return types
+       can support ref, but not out parameters
+       it is implicitly private 
+       can be a static method    

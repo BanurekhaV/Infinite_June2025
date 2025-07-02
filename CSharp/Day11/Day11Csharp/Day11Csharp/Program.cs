@@ -11,7 +11,7 @@ namespace Day11Csharp
     {
         static void Main(string[] args)
         {
-            //Using Threa Pool
+            //Using Thread Pool
             for (int i = 0; i < 10; i++)
             {
                 ThreadPool.QueueUserWorkItem(new WaitCallback(MyMethod));
@@ -33,5 +33,11 @@ namespace Day11Csharp
                 $" {thread.IsThreadPoolThread}, Name of the Thread {thread.Name} and the Thread ID : {thread.ManagedThreadId}";
             Console.WriteLine(message);
         }
+    }
+
+    partial class Employee
+    {
+        public void f2() { }
+         partial void Add(ref int a);  // decl
     }
 }
