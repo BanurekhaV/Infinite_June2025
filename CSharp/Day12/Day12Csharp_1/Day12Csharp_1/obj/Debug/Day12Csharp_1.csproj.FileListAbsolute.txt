@@ -1,0 +1,7 @@
+C:\Banu\Infinite_June25\CSharp\Day12\Day12Csharp_1\Day12Csharp_1\bin\Debug\Day12Csharp_1.exe.config
+C:\Banu\Infinite_June25\CSharp\Day12\Day12Csharp_1\Day12Csharp_1\bin\Debug\Day12Csharp_1.exe
+C:\Banu\Infinite_June25\CSharp\Day12\Day12Csharp_1\Day12Csharp_1\bin\Debug\Day12Csharp_1.pdb
+C:\Banu\Infinite_June25\CSharp\Day12\Day12Csharp_1\Day12Csharp_1\obj\Debug\Day12Csharp_1.csproj.AssemblyReference.cache
+C:\Banu\Infinite_June25\CSharp\Day12\Day12Csharp_1\Day12Csharp_1\obj\Debug\Day12Csharp_1.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite_June25\CSharp\Day12\Day12Csharp_1\Day12Csharp_1\obj\Debug\Day12Csharp_1.exe
+C:\Banu\Infinite_June25\CSharp\Day12\Day12Csharp_1\Day12Csharp_1\obj\Debug\Day12Csharp_1.pdb
