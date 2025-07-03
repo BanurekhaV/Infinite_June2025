@@ -59,6 +59,8 @@ namespace Day12Csharp_1
                 new Student{Id = 101, Name="Naveen", EMail="Naveen@gmail.com"},
                 new Student{Id = 102, Name="Nithin", EMail="Nithin@gmail.com"},
                 new Student{Id = 103, Name="Nikitha", EMail="Nikitha@gmail.com"},
+                 new Student{Id = 105, Name="Porna", EMail="Poorna@gmail.com"},
+                new Student{Id = 104, Name="Rahul", EMail="Rahul@gmail.com"},
             };
             //Student s1 = new Student { Id = 101, Name = "Naveen", EMail = "Naveen@gmail.com" };
             //stdlist.Add(s1);

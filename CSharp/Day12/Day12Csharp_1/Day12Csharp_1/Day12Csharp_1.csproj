@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day12Csharp_1.QueryExpressions</StartupObject>
+    <StartupObject>Day12Csharp_1.ProductFilter</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ProductFilter.cs" />
+    <Compile Include="ExpressionTrees.cs" />
+    <Compile Include="LambdaExpressions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryExpressions.cs" />
