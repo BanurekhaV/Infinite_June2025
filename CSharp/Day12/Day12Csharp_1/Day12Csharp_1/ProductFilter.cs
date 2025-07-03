@@ -56,7 +56,7 @@ namespace Day12Csharp_1
         static void Expr2()
         {
             BinaryExpression be1 = Expression.Power(Expression.Constant(2d), Expression.Constant(3d));
-
+           
             //let us create a lambda for the expression
             Expression<Func<double>> explambda = Expression.Lambda<Func<double>>(be1);
 

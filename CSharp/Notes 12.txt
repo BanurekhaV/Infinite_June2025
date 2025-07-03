@@ -1,0 +1,24 @@
+Nested Classes : A Technique of grouping logical classes, which are used only once
+                 Encapsulation features can be enhanced
+                 Readable code, and easy maintenance
+                 
+
+Query Expressions : Are queries expressed with certain predefined key words 
+
+
+Lambda expressions :  are used like anonymous functions, with the difference that in Lambda expressions you don't need to specify the type of the value that you input thus making it more flexible to use. 
+
+A lambda expression can be of any of the following two forms:
+
+Expression lambda that has an expression as its body:
+
+Statement lambda that has a statement block as its body:
+
+
+Expression Trees : Allows us to represent code as data. They are tree like data structures where each node in the expression tree represents operations, variables, constants, expressions, and other code elements.
+-It is not a compiled and executable code
+- We have to compile to create a delegate that executes the expression body
+- They may return values(Func<>) or may just call some function(action<>)
+
+Note : Only expression trees that represent lambda expressions can be executed .
+

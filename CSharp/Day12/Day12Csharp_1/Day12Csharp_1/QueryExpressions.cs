@@ -52,6 +52,12 @@ namespace Day12Csharp_1
         public string Name { get; set; }
         public string EMail { get; set; }
 
+        //public Student(int id, string nm, string em)
+        //{
+        //    Id = id;
+        //    Name = nm;
+        //    EMail = em;
+        //}
         public static List<Student> GetStudents()
         {
             List<Student> stdlist = new List<Student>() 

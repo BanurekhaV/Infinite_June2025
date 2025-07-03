@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day12Csharp_1.ProductFilter</StartupObject>
+    <StartupObject>Day12Csharp_1.NamednOptional</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NamednOptional.cs" />
     <Compile Include="ProductFilter.cs" />
     <Compile Include="ExpressionTrees.cs" />
     <Compile Include="LambdaExpressions.cs" />
