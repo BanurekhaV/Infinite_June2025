@@ -18,7 +18,26 @@ namespace Day12Csharp_1
             var result = stringJoinExpr.Compile()("Banu", "Rekha");
             Console.WriteLine(result);
 
-            //create an expression tree that takes 2 int and returns the sum of the 2 
+            //creating expression trees using API
+            //1. create parameter
+            ParameterExpression n1 = Expression.Parameter(typeof(int), "n1");
+            ParameterExpression n2 = Expression.Parameter(typeof(int), "n2");
+
+            //2. Create expression parameters
+            ParameterExpression[] parameters = new ParameterExpression[] { n1, n2 };
+
+            //3. Create expression body
+            BinaryExpression exprbody = Expression.Add(n1, n2);
+
+            //4. Create the expression
+            Expression<Func<int, int, int>> expr = Expression.Lambda<Func<int, int, int>>(exprbody, parameters);
+
+            //5. Compile the expression
+            Func<int, int, int> compiledexpr = expr.Compile();
+
+            //6. Execute the expression
+            int res = compiledexpr(10, 20);
+            Console.WriteLine("Expression using API resulted in {0}", res);
 
             Console.Read();
         }

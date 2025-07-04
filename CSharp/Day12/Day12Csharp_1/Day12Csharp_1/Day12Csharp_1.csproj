@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day12Csharp_1.NamednOptional</StartupObject>
+    <StartupObject>Day12Csharp_1.ExpressionTrees</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
