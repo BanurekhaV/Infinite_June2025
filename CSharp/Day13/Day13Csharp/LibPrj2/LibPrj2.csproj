@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9C2FAE45-9D7D-4683-B7F0-726B11DCA84C}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Day13Csharp</RootNamespace>
-    <AssemblyName>Day13Csharp</AssemblyName>
+    <ProjectGuid>{1713ABF2-1F06-48D1-86F9-2B97EDA720BF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LibPrj2</RootNamespace>
+    <AssemblyName>LibPrj2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,16 +23,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>Day13Csharp.Tuples</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,30 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Async_Await.cs" />
-    <Compile Include="ExceptionFiltersEg.cs" />
-    <Compile Include="ExpressionBodied.cs" />
-    <Compile Include="LocalFunctions_Usecase.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="LibClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestAliases.cs" />
-    <Compile Include="ThrowsExpr.cs" />
-    <Compile Include="Tuples.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\LibPrj1\LibPrj1.csproj">
-      <Project>{74a05e00-4696-4af2-9050-9d6f2a60acfc}</Project>
-      <Name>LibPrj1</Name>
-      <Aliases>Lib1</Aliases>
-    </ProjectReference>
-    <ProjectReference Include="..\LibPrj2\LibPrj2.csproj">
-      <Project>{1713abf2-1f06-48d1-86f9-2b97eda720bf}</Project>
-      <Name>LibPrj2</Name>
-      <Aliases>Lib2</Aliases>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

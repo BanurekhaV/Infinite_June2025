@@ -5,3 +5,8 @@ C:\Banu\Infinite_June25\CSharp\Day13\Day13Csharp\Day13Csharp\obj\Debug\Day13Csha
 C:\Banu\Infinite_June25\CSharp\Day13\Day13Csharp\Day13Csharp\obj\Debug\Day13Csharp.csproj.CoreCompileInputs.cache
 C:\Banu\Infinite_June25\CSharp\Day13\Day13Csharp\Day13Csharp\obj\Debug\Day13Csharp.exe
 C:\Banu\Infinite_June25\CSharp\Day13\Day13Csharp\Day13Csharp\obj\Debug\Day13Csharp.pdb
+C:\Banu\Infinite_June25\CSharp\Day13\Day13Csharp\Day13Csharp\bin\Debug\LibPrj1.dll
+C:\Banu\Infinite_June25\CSharp\Day13\Day13Csharp\Day13Csharp\bin\Debug\LibPrj2.dll
+C:\Banu\Infinite_June25\CSharp\Day13\Day13Csharp\Day13Csharp\bin\Debug\LibPrj1.pdb
+C:\Banu\Infinite_June25\CSharp\Day13\Day13Csharp\Day13Csharp\bin\Debug\LibPrj2.pdb
+C:\Banu\Infinite_June25\CSharp\Day13\Day13Csharp\Day13Csharp\obj\Debug\Day13Csharp.csproj.CopyComplete

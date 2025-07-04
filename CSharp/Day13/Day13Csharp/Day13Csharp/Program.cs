@@ -21,7 +21,7 @@ namespace Day13Csharp
             {
                 x = x + a;  // can access variables of the enclosing type
                 y = y + b;
-                int z = 100;
+                int z = 100; // not acessible to the parent function
                 return x + y;
             }
 

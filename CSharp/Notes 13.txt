@@ -19,7 +19,22 @@ Extern Alias : When we have name clashes between 1 or more libraries that are in
 
 Dictionary Initilizers: are enhancements to initializing Dictionary Objects
 
-Tuples
+Async and Await in catch/Finally blocks: 
+
+Throws Expression  : enhancement of code to throw an exception thru an expression 
+
+Tuples: Is a data structure that contains a sequence of elements of different data types. It can hold objects with its properties, and we don't have to create a separate type for it
+
+Why Tuples : If we wish to have multiple return values from a method, then we can use tuples
+
+Different ways in which we can return multiple values 
+1. Using Custom Datatype : Eg student object . We can return multiple values(properties) from a method using a custom object (i.e class). But in some scenarios, we may not need all the date.
+
+2. using Ref and out : We can return multiple values from a method using 'out', but understanding and internal implementations are a bit difficult. out and ref are not allowed with async methods
+
+3. Use Dynamic type : We can return multiple values from a method using dynamic datatype. But from performance point of view, we may not want to use Dynamic types
+
+Hence preference is to go for tuples
 
 Pattern matching :
 

@@ -1,0 +1,6 @@
+C:\Banu\Infinite_June25\CSharp\Day13\Day13Csharp\LibPrj1\bin\Debug\LibPrj1.dll
+C:\Banu\Infinite_June25\CSharp\Day13\Day13Csharp\LibPrj1\bin\Debug\LibPrj1.pdb
+C:\Banu\Infinite_June25\CSharp\Day13\Day13Csharp\LibPrj1\obj\Debug\LibPrj1.csproj.AssemblyReference.cache
+C:\Banu\Infinite_June25\CSharp\Day13\Day13Csharp\LibPrj1\obj\Debug\LibPrj1.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite_June25\CSharp\Day13\Day13Csharp\LibPrj1\obj\Debug\LibPrj1.dll
+C:\Banu\Infinite_June25\CSharp\Day13\Day13Csharp\LibPrj1\obj\Debug\LibPrj1.pdb
