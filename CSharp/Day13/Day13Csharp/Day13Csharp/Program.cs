@@ -30,7 +30,26 @@ namespace Day13Csharp
                 return x - y;
             }
             Console.WriteLine("Press any key to exit..");
+
+            Console.WriteLine("******************Dictionary*************");
+           
+            //before C# 6.0
+            Dictionary<string, string> dict = new Dictionary<string, string>()
+            {
+                {"Emp001", "Taraka" },
+                {"Emp002", "LakshmiSri" },
+                {"Thamarai","Emp003" },
+            };
+
+            //with C# 6.0
+            Dictionary<string, string> dict1 = new Dictionary<string, string>()
+            {
+                ["Emp001"] = "Taraka",
+                ["Emp005"] = "Syam",
+            };
             Console.Read();
         }
     }
+
+        
 }

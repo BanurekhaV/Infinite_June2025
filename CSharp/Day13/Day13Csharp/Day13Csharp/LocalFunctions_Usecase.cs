@@ -12,7 +12,7 @@ namespace Day13Csharp
         public string Name { get; set; }
         public string Gender { get; set; }
         public double Salary { get; set; }
-        public string Department { get; set; }
+        public string  Department { get; set; }
     }
     class LocalFunctions_Usecase
     {

@@ -1,0 +1,26 @@
+Local Functions : If we want to execute some piece of code multiple times within a function, then we can place such codes as inner functions called as local function
+ Note : 1. We cannot overload Local Functions
+        2. Cannot alter access modifiers such as private, public, protected, internal etc
+        3. All variables in the enclosing scope, including local variables can be accessed
+        4. Compiler throws a warning, if the parent function does not call the local function
+
+Nameof : Expression produces the name of a variable, type, or member as string constants
+         Is used to point out errors if any in our code during compilation time and has no effect during runtime
+
+Exception Filters : allows us to specify conditional clause for each catch block
+                    Provides a structured way to handle exceptions on specific criteria, hence enhances exception management
+                
+
+Expression Bodied members : is a feature that simplifies/reduces the programming code by creating expression bodies for functions and properties. It is similar to that of lambda expressions
+
+Non Nullable References : It is an attempt to ensure that Objects have valid references, else we have to make it nullable either by using '?' or Nullable<T> type . By default the framework allows null for reference types. if we want to have non nullable references, then we have to enable Nullable option in the property group of the applications project file (.csproj)
+
+Extern Alias : When we have name clashes between 1 or more libraries that are included in a project, then we may avoid the ambiguity by creating extern aliases. (Are alias names given to libraries that have same class names/function names/member names)
+
+Dictionary Initilizers: are enhancements to initializing Dictionary Objects
+
+Tuples
+
+Pattern matching :
+
+         
