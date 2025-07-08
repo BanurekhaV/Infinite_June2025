@@ -1,10 +1,8 @@
-Remoting : 
-
-
-
-
-
--provides services like
+Remoting : is a mechanism for communication, between objects of various applications that are not in the same process(Domain), nor in the same system
+ - The applications may be using different transport protocols, Serialization Formats etc.
+ - Is a Microsoft framework for communication between remote objects
+ - Provides ways to hide various aspects of remote communication viz. managing connections, marshalling of data, reading writing xml/soap messages 
+ - Provides services like
    - object activation
    - life time support of objects
    - communication channels

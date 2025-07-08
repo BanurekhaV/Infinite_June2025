@@ -1,0 +1,13 @@
+Software Engineering Principles : guides the development of software system to ensure quality, maintainability, efficiency of code, reusability etc..
+
+ 1. Separation of Concern : Divide the program into distinct sections, thereby enhancing the modularity
+ 2. Abstraction (what rather than how)
+ 3. Anticipation of Change : 
+        - Generality (de-coupled codes)
+        - Incremental Development
+        - Consistency of Look and feel
+ 4. DRY : Do Not Repeat Yourselves
+ 5. KISS : Keep it Simple ! Stupid
+ 6. YAGNI : You Aren't Gonna Need It (avoid features and functions that are not required)
+ 7. SOLID :
+     
