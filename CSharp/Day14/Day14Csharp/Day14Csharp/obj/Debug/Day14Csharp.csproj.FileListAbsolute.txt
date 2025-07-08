@@ -1,0 +1,7 @@
+C:\Banu\Infinite_June25\CSharp\Day14\Day14Csharp\Day14Csharp\obj\Debug\Day14Csharp.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite_June25\CSharp\Day14\Day14Csharp\Day14Csharp\bin\Debug\Day14Csharp.exe.config
+C:\Banu\Infinite_June25\CSharp\Day14\Day14Csharp\Day14Csharp\bin\Debug\Day14Csharp.exe
+C:\Banu\Infinite_June25\CSharp\Day14\Day14Csharp\Day14Csharp\bin\Debug\Day14Csharp.pdb
+C:\Banu\Infinite_June25\CSharp\Day14\Day14Csharp\Day14Csharp\obj\Debug\Day14Csharp.exe
+C:\Banu\Infinite_June25\CSharp\Day14\Day14Csharp\Day14Csharp\obj\Debug\Day14Csharp.pdb
+C:\Banu\Infinite_June25\CSharp\Day14\Day14Csharp\Day14Csharp\obj\Debug\Day14Csharp.csproj.AssemblyReference.cache

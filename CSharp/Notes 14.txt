@@ -1,0 +1,38 @@
+Pattern Matching : allows testing an expression for a given pattern. Results in either matching or not (true or a false )
+
+- pattern matching operations
+  1. type checking (type pattern)
+  2. null checking (constant pattern)
+  3. comparison checking (relational pattern)
+  4. object deconstruction (positional pattern)
+  5. comparing and checking property values (property pattern)
+  6. we can male expressions reuse the variable creation (var pattern)
+
+ 1. is operator
+ 2. switch expression
+    expression switch{
+     pattern1 => value1,
+     pattern2 => value2,
+
+   pattern => valueN,
+   _=>defaultvalue
+}
+
+static void PrintUppCase(object o)
+{
+  if(o is string)
+    { 
+       cw(o.ToUpper());
+}
+ else { cw("not a string");}
+}
+
+static void Main()
+{
+  string str = "Hello";
+   int num =45;
+   object obj1 = str;
+   object obj2 = num;
+
+PrintUpperCase(obj1); 
+PrintUpperCase(obj2);
