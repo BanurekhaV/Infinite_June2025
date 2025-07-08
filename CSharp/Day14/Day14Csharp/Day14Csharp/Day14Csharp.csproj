@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Day14Csharp.PatternMatching2</StartupObject>
+    <StartupObject>Day14Csharp.IteratorsEg</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Deconstruction.cs" />
+    <Compile Include="IteratorsEg.cs" />
     <Compile Include="PatternMatching.cs" />
     <Compile Include="PatternMatching2.cs" />
     <Compile Include="Program.cs" />

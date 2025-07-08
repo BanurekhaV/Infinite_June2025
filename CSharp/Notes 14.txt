@@ -36,3 +36,14 @@ static void Main()
 
 PrintUpperCase(obj1); 
 PrintUpperCase(obj2);
+
+Iterators( C# 2.0) : are methods in c# used in any collections to retrieve one element at a time. 
+It makes use of yield return statement to return an element at current location Uses yield break to stop iteration
+
+- the return type of this method is IEnumerable, IEnumerable<T>, IEnumerator, IEnumerator<T>. The method automatically creates the above interface
+   IEnumerator interface has current property and movenext(), dispose();
+
+-- can be used with methods and on properties (get accessor)
+-- cannot be used with events, instance and static constructors
+-- iterator method cannot have ref or out parameters
+-- yield is not a keyword, but when used with either return or break, has a special meaning
