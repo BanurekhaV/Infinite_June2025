@@ -1,0 +1,10 @@
+C:\Banu\Infinite_June25\CSharp\Remoting\RemoteClient\RemoteClient\bin\Debug\RemoteClient.exe.config
+C:\Banu\Infinite_June25\CSharp\Remoting\RemoteClient\RemoteClient\bin\Debug\RemoteClient.exe
+C:\Banu\Infinite_June25\CSharp\Remoting\RemoteClient\RemoteClient\bin\Debug\RemoteClient.pdb
+C:\Banu\Infinite_June25\CSharp\Remoting\RemoteClient\RemoteClient\bin\Debug\InfiniteRemotingServer.dll
+C:\Banu\Infinite_June25\CSharp\Remoting\RemoteClient\RemoteClient\bin\Debug\InfiniteRemotingServer.pdb
+C:\Banu\Infinite_June25\CSharp\Remoting\RemoteClient\RemoteClient\obj\Debug\RemoteClient.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite_June25\CSharp\Remoting\RemoteClient\RemoteClient\obj\Debug\RemoteClient.csproj.CopyComplete
+C:\Banu\Infinite_June25\CSharp\Remoting\RemoteClient\RemoteClient\obj\Debug\RemoteClient.exe
+C:\Banu\Infinite_June25\CSharp\Remoting\RemoteClient\RemoteClient\obj\Debug\RemoteClient.pdb
+C:\Banu\Infinite_June25\CSharp\Remoting\RemoteClient\RemoteClient\obj\Debug\RemoteClient.csproj.AssemblyReference.cache

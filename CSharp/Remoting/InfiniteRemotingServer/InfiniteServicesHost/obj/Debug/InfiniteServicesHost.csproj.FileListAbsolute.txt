@@ -1,0 +1,10 @@
+C:\Banu\Infinite_June25\CSharp\Remoting\InfiniteRemotingServer\InfiniteServicesHost\bin\Debug\InfiniteServicesHost.exe.config
+C:\Banu\Infinite_June25\CSharp\Remoting\InfiniteRemotingServer\InfiniteServicesHost\bin\Debug\InfiniteServicesHost.exe
+C:\Banu\Infinite_June25\CSharp\Remoting\InfiniteRemotingServer\InfiniteServicesHost\bin\Debug\InfiniteServicesHost.pdb
+C:\Banu\Infinite_June25\CSharp\Remoting\InfiniteRemotingServer\InfiniteServicesHost\bin\Debug\InfiniteRemotingServer.dll
+C:\Banu\Infinite_June25\CSharp\Remoting\InfiniteRemotingServer\InfiniteServicesHost\bin\Debug\InfiniteRemotingServer.pdb
+C:\Banu\Infinite_June25\CSharp\Remoting\InfiniteRemotingServer\InfiniteServicesHost\obj\Debug\InfiniteServicesHost.csproj.AssemblyReference.cache
+C:\Banu\Infinite_June25\CSharp\Remoting\InfiniteRemotingServer\InfiniteServicesHost\obj\Debug\InfiniteServicesHost.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite_June25\CSharp\Remoting\InfiniteRemotingServer\InfiniteServicesHost\obj\Debug\InfiniteServicesHost.csproj.CopyComplete
+C:\Banu\Infinite_June25\CSharp\Remoting\InfiniteRemotingServer\InfiniteServicesHost\obj\Debug\InfiniteServicesHost.exe
+C:\Banu\Infinite_June25\CSharp\Remoting\InfiniteRemotingServer\InfiniteServicesHost\obj\Debug\InfiniteServicesHost.pdb

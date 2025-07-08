@@ -1,0 +1,44 @@
+Remoting : 
+
+
+
+
+
+-provides services like
+   - object activation
+   - life time support of objects
+   - communication channels
+   - transport messages
+
+Domain : When an Application is loaded onto the memory, a process is created within that application. This is Application Domain
+
+Contexts : Application Domain is divided into various contexts. 
+           A context is a set of common constraints, usage, access, functionalities within the object
+
+Proxies : is an instance of the remote object directly available to the consumer/client. It does all the marshalling across context and then forwards the request to the actual remote object
+
+Marshalling : Specifies how a remote object is exposed to the client. The process of passing parameters from one context to another is of 2 types
+   - Marshal by value : the server creates a copy of the object and passes the copy to the client
+   - MarshalByRef : the client creates a proxy for the object and then uses the proxy for further processing
+
+Channels : is a mechanism that allows data transfers through a stream of bytes
+           HttpChannel, TcpChannel
+
+Types of Remote objects :
+ 1. Single Call : Objects that server one request
+ 2. Singleton : Objects that serve multiple requests of multiple clients. The server maintains the state of each client
+ 3. Client Activated Objects : Upon clients request for a remote object, the instance of the required object is activated, and the reference of the object is sent back to the client. A proxy object gets created at the client. All calls/request are executed on the proxy.
+
+Technologies for Remote applications
+ -Remote procedure calls (RPC)
+ - DCOM (Distributed COM)
+ - Remoting - replace of DCOM
+ - Web Services
+ - WCF
+ - API
+
+steps for Remoting :
+ 1. Class Library where all remote objects are created
+ 2. Console Application - Server (Host the remote application/objects)
+ 3. Client Application
+ 
