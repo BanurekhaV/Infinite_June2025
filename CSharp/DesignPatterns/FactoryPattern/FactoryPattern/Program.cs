@@ -14,21 +14,21 @@ namespace FactoryPattern
             //get the type of card from the user
             Console.WriteLine("Enter Card Type:");
             string cardType = Console.ReadLine();
-            ICreditCard cardDetails = null;
+            ICreditCard cardDetails = CreditCardFactory.GetCreditCard(cardType);
 
             //based on the card type we will create appropriate objects
-            if(cardType=="MoneyBack")
-            {
-                cardDetails = new MoneyBack();
-            }
-            else if(cardType=="Platinum")
-            {
-                cardDetails = new Platinum();
-            }
-            else if(cardType=="Titanium")
-            {
-                cardDetails = new Titanium();
-            }
+            //if(cardType=="MoneyBack")
+            //{
+            //    cardDetails = new MoneyBack();
+            //}
+            //else if(cardType=="Platinum")
+            //{
+            //    cardDetails = new Platinum();
+            //}
+            //else if(cardType=="Titanium")
+            //{
+            //    cardDetails = new Titanium();
+            //}
 
             if (cardDetails != null)
             {
