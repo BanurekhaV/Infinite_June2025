@@ -9,5 +9,51 @@ Software Engineering Principles : guides the development of software system to e
  4. DRY : Do Not Repeat Yourselves
  5. KISS : Keep it Simple ! Stupid
  6. YAGNI : You Aren't Gonna Need It (avoid features and functions that are not required)
- 7. SOLID :
+ 7. SOLID : Are design Principles
+
+   S - Single Responsibility Principle (SRP) - A class, structure in the code should have always one job to do
+   O - Open Close Principle (OCP) - a S/W component is open for extensions and closed for modifications
+   L - Liskov's Substitution Principle (LSP) - is an extension of OCP, where derived types should not change the behaviour of the base type (Usage of Interfaces)
+   I - Interface Segregation Principle (ISP) - In order not to force the Implementing class to implement all methods, of the interface, create multiple thin interfaces with minimal methods
+   D - Dependency Inversion principle (DIP) - States that high level modules/classes (consumer/client) should not depend on low level modules/classes (implementing classes). Both should depend on Abstraction (abstract class/interface - Layered architecture)
+
+DIP as a design principle suggests solution to the dependency problem, but does not specify any technique for the same
+
+IoC : Inversion of Control  - is the actual mechanism to implement DIP
+
+DI - Dependency Injection - is a design pattern that can inject the concrete implementations of the low level module components into high level modules
+
+Ioc is a principle and DI is the implementation.
+
+DI can be used as below :
+  1. Constructor Injection : Instance of the dependency type can be passed as an argument to the constructor of the dependent type
+  2. Method Injection : Instance of the dependency type can be passed as an argument to the method of a dependent type
+  3. Property Injection : Instance of the dependency type can be passed as an argument to the specific property of the dependent type
+
+Based on the SOLID principles, we have software design patterns
+-------------------------------------------------------------------
+Benefits of Design Pattern Usage either in small or large enterprise applications
+
+Code Quality - clean, maintainable, reusable code
+Scalability - capable of handling future demands
+Flexibility - enables easier modifications(extensions) and enhancements to the code
+Separation of Concerns - improves modularity and reduces tight coupling
+Code Consistency - can lead to more consistent and readable code
+
+
+
+1. Creational Pattern: 
+
+   - Factory Pattern
+   - Abstract Factory Pattern
+   - SingleTon Pattern
+
+
+2. Structural pattern :
+
+
+3. Behavioural Pattern :
+
+
+
      
