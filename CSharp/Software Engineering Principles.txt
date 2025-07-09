@@ -44,8 +44,38 @@ Code Consistency - can lead to more consistent and readable code
 
 1. Creational Pattern: 
 
-   - Factory Pattern
-   - Abstract Factory Pattern
+   - 1. Factory Pattern : Suggests to have a factory where types of objects required by the user are created and initialized
+     
+       1.1  Factory Method Pattern : Provides an abstraction for creating objects in a super class, but allows the subclasses to decide the type of objects and create them. 
+
+   - Abstract Factory Pattern : As per GOF, this pattern provides a way to encapsulate a group of factories with a common theme without specifying their concrete classes
+          Car and the Bike Details
+
+  Abstract Products : interfaces for creating abstract products ( ICar and IBike)
+  Concrete Products : classes that implement the abstract product (RegularBike, RegularCar, SportsBike, SportsCar)
+  Abstract Factory : interface that creates abstract products (IvehicleFactory)
+  Concrete Factory : classes that implement the abstract factory interface (RegularVehicleFactory, SportsVehicleFactory)
+  Client : uses abstract factory and abstract product to create a family of similar themed products
+
+Hands On : Design a C# application that makes use of the Abstract Factory Pattern in a Furniture Shop
+
+Modern Furniture's  (Chair and Sofa)
+Vintage Furniture's (Chair and Sofa)
+
+ IChair {
+      void SitOn(); }
+
+ ISofa {
+       void LayOn(); }
+
+ IFurnitureFactory { 
+          Ichair CreateChair()
+          ISofa CreateSofa()
+}
+
+ModernFurnitureFactory { }
+VintageFurnitureFactory{}
+
    - SingleTon Pattern
 
 
