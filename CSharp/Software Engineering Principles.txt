@@ -1,36 +1,76 @@
 Software Engineering Principles : guides the development of software system to ensure quality, maintainability, efficiency of code, reusability etc..
 
- 1. Separation of Concern : Divide the program into distinct sections, thereby enhancing the modularity
- 2. Abstraction (what rather than how)
- 3. Anticipation of Change : 
-        - Generality (de-coupled codes)
-        - Incremental Development
-        - Consistency of Look and feel
- 4. DRY : Do Not Repeat Yourselves
- 5. KISS : Keep it Simple ! Stupid
- 6. YAGNI : You Aren't Gonna Need It (avoid features and functions that are not required)
- 7. SOLID : Are design Principles
+ Software Engineering Principles :
+1. Separation of concern
+2. Modularization
+3. Abstractions (what rather than how)
+4. Anticipation of Changes :
+        -Generality (de-coupled codes)
+        -Incremental Development
+        -Consistency of Look and Feel
+5. DRY : Do Not Repeat Yourselves
+6. KISS : Keep it Simple Stupid
+7. YAGNI : You Aren't Gonna need it (avoid features and functions that are not required)
+8. SOLID : Are Design Principles
 
-   S - Single Responsibility Principle (SRP) - A class, structure in the code should have always one job to do
-   O - Open Close Principle (OCP) - a S/W component is open for extensions and closed for modifications
-   L - Liskov's Substitution Principle (LSP) - is an extension of OCP, where derived types should not change the behaviour of the base type (Usage of Interfaces)
-   I - Interface Segregation Principle (ISP) - In order not to force the Implementing class to implement all methods, of the interface, create multiple thin interfaces with minimal methods
-   D - Dependency Inversion principle (DIP) - States that high level modules/classes (consumer/client) should not depend on low level modules/classes (implementing classes). Both should depend on Abstraction (abstract class/interface - Layered architecture)
+ S : Single Responsibility Principle (SRP) : a class, structure in the code should always have one job to do
 
-DIP as a design principle suggests solution to the dependency problem, but does not specify any technique for the same
+ O : Open Close Principle (OCP) : a s/w module/class is open for extensions, but closed for modifications
 
-IoC : Inversion of Control  - is the actual mechanism to implement DIP
+ L : Liskov's Substitution Principle (LSP) : it is an extension of OCP, where derived classes extending from Base should not change the behaviour of the base class (Usage of Interface Methods)
 
-DI - Dependency Injection - is a design pattern that can inject the concrete implementations of the low level module components into high level modules
+ I : Interface Segregation Principle (ISP) : Not to force the implementing classes to implement all the methods of the Interface. Instead of fat one fat interface, create many small/thin interfaces with minimum methods
 
-Ioc is a principle and DI is the implementation.
+ D : Dependency Inversion Principle (DIP) : States that high level modules/classes(consumers/clients) should not depend on low level modules/classes(implementing classes). Both should depend on Abstraction (Layered architecture)
 
-DI can be used as below :
-  1. Constructor Injection : Instance of the dependency type can be passed as an argument to the constructor of the dependent type
-  2. Method Injection : Instance of the dependency type can be passed as an argument to the method of a dependent type
-  3. Property Injection : Instance of the dependency type can be passed as an argument to the specific property of the dependent type
+- DIP as a design principle suggests solution to the dependency problem, but does not specify any technique for the same.
 
-Based on the SOLID principles, we have software design patterns
+- IoC : Inversion of Control : is the actual mechanism to implement DIP
+
+- DI : Dependency Injection : is the design pattern to inject concrete implementation of the low level module components into high level components
+
+Ioc is a Principle and DI is Implementation
+
+DI can be used as below:
+  1. Constructor Injection : Instance of the dependency type can be passed as an argument to the constructor of dependent type 
+  
+ 2. Method Injection : Instance of the dependency type can be passed as an argument to the method of a class
+
+ 3. Property Injection : Instance of the dependency type can be passed as an argument to the specific property of the dependent type
+
+
+Based on the SOLID Principles, we have Software Design Patterns
+-------------------------------------------------------------------
+
+
+Design Patterns : are solutions to common problems in software designs. Is a tested document providing solutions for recurring problems in any given context
+
+History and Evolution : Four authors famously knows as Gang of Four, introduced the design pattern concepts in their book 'Elements of Reusable Object-Oriented Software
+
+The GOF categorised the design patterns into 3
+
+1. Creational Pattern : Object creation and initialization without exposing the logic for creation
+  
+      1: Factory Pattern : Suggests to have a factory where types of object required by the user are created and initialized
+   
+1.1  Factory Method Design pattern : Provides an interface for creating objects in a super class, but allows the subclasses to alter or decide the type of objects that will be created
+
+      2. Abstract Factory Pattern : As per GOF, this pattern provides a way to encapsulate a group of factories with a common theme without specifying their concrete classes(implementing classes)
+
+      components involved
+       1. Abstract Factory : declares an interface for operations that create abstract products
+       2. Concrete Factory : Implements the operations to create concrete objects
+       3. Abstract Product : an interface for a type of product
+       4. Concrete Product : that implements the abstract product methods
+       5. Client           : uses interfaces declared by abstract factory and product to create a family of products
+    
+      3. Singleton Pattern : 
+
+
+2. Structural Pattern : Structural changes of Classes and Interfaces  (Adapter, Bridge, Decorator, proxy)
+
+3. Behavioural Pattern : Relationships between objects and its communication (Iterator, Observer)
+
 -------------------------------------------------------------------
 Benefits of Design Pattern Usage either in small or large enterprise applications
 
@@ -40,16 +80,9 @@ Flexibility - enables easier modifications(extensions) and enhancements to the c
 Separation of Concerns - improves modularity and reduces tight coupling
 Code Consistency - can lead to more consistent and readable code
 
+Eg :
 
-
-1. Creational Pattern: 
-
-   - 1. Factory Pattern : Suggests to have a factory where types of objects required by the user are created and initialized
-     
-       1.1  Factory Method Pattern : Provides an abstraction for creating objects in a super class, but allows the subclasses to decide the type of objects and create them. 
-
-   - Abstract Factory Pattern : As per GOF, this pattern provides a way to encapsulate a group of factories with a common theme without specifying their concrete classes
-          Car and the Bike Details
+    Car and the Bike Details
 
   Abstract Products : interfaces for creating abstract products ( ICar and IBike)
   Concrete Products : classes that implement the abstract product (RegularBike, RegularCar, SportsBike, SportsCar)
@@ -79,11 +112,8 @@ VintageFurnitureFactory{}
    - SingleTon Pattern
 
 
-2. Structural pattern :
-
-
-3. Behavioural Pattern :
-
-
+https://refactoring.guru/design-patterns
 
      
+
+
