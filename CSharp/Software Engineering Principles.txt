@@ -64,7 +64,14 @@ The GOF categorised the design patterns into 3
        4. Concrete Product : that implements the abstract product methods
        5. Client           : uses interfaces declared by abstract factory and product to create a family of products
     
-      3. Singleton Pattern : 
+      3. Singleton Pattern : Ensures that a class has only one instance providing a global access point. Used in scenarios where we need exactly one instance (Eg. Configuration settings, shared resources like file system or database connection, Logging, Caching etc.)
+  -Guidelines for implementing SingleTon design
+
+        - private parameter less constructor : this will only instantiate within the class
+        - sealed class : To avoid inheritance
+        - static variable : the object that holds the instance has to be private and static
+        - public static methods/properties : 
+
 
 
 2. Structural Pattern : Structural changes of Classes and Interfaces  (Adapter, Bridge, Decorator, proxy)
