@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SingleTonPattern
 {
-   public class SingleTonClass
+   public sealed class SingleTonClass
    {
         //private field to increment a counter every time object is created
         private static int counter = 0;
@@ -37,10 +37,11 @@ namespace SingleTonPattern
             Console.WriteLine(msg);
         }
 
-        public class DerivedSingleTon : SingleTonClass
-        {
+        //nested class without and with sealed parent
+        //public class DerivedSingleTon : SingleTonClass
+        //{
 
-        }
+        //}
     }
 
     

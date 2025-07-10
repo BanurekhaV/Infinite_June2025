@@ -14,4 +14,10 @@ Layered Architecture :
   BAL - Business Access Layer 
   DAL - Data Access Layer  ( All classes and methods to work with the database)
 
-Unity Framework : 
+Unity Framework : is a general purpose Inversion of Control container, which is an extensible open source, licenced under Apache 2.0
+
+Roles and Responsibilities of the Ioc Container : 
+- Specifies the type of objects that are created and injected
+- Registering all such above types
+- Resolving concrete types with the registered types (implementing types with the interface types)
+
