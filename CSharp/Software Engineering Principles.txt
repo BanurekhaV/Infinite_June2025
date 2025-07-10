@@ -69,10 +69,14 @@ The GOF categorised the design patterns into 3
 
         - private parameter less constructor : this will only instantiate within the class
         - sealed class : To avoid inheritance
-        - static variable : the object that holds the instance has to be private and static
-        - public static methods/properties : 
+        - private static variable : the object that holds the instance has to be private and static
+        - public static method: That helps in object creation for the first time
+        - public instance method/s & properties : that have specific functionalities to be performed 
+Hands On:
 
-
+1. Change the AddorUpdate method to update the velue for a given key
+2. Write implementation in the singletoncache class for iterating the collection and return the collection object
+3. In the client make a call to the GetAll() and iterate the returned collection
 
 2. Structural Pattern : Structural changes of Classes and Interfaces  (Adapter, Bridge, Decorator, proxy)
 
@@ -97,26 +101,6 @@ Eg :
   Concrete Factory : classes that implement the abstract factory interface (RegularVehicleFactory, SportsVehicleFactory)
   Client : uses abstract factory and abstract product to create a family of similar themed products
 
-Hands On : Design a C# application that makes use of the Abstract Factory Pattern in a Furniture Shop
-
-Modern Furniture's  (Chair and Sofa)
-Vintage Furniture's (Chair and Sofa)
-
- IChair {
-      void SitOn(); }
-
- ISofa {
-       void LayOn(); }
-
- IFurnitureFactory { 
-          Ichair CreateChair()
-          ISofa CreateSofa()
-}
-
-ModernFurnitureFactory { }
-VintageFurnitureFactory{}
-
-   - SingleTon Pattern
 
 
 https://refactoring.guru/design-patterns

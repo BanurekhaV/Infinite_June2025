@@ -36,5 +36,12 @@ namespace SingleTonPattern
         {
             Console.WriteLine(msg);
         }
-   }
+
+        public class DerivedSingleTon : SingleTonClass
+        {
+
+        }
+    }
+
+    
 }

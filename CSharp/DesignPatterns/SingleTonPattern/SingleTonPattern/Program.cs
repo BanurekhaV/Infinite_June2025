@@ -10,17 +10,32 @@ namespace SingleTonPattern
     {
         static void Main(string[] args)
         {
-            SingleTonClass trainer = SingleTonClass.GetInstance();
 
-            trainer.Show("Working with single Object instance of the trainer...");
+            //object instances to test singleton objects
 
-            //let us create another instance
-            SingleTonClass trainee = SingleTonClass.GetInstance();
+            //SingleTonClass trainer = SingleTonClass.GetInstance();
 
-            trainee.Show("Working with single Object instance of the trainee...");
+            //trainer.Show("Working with single Object instance of the trainer...");
 
-            SingleTonClass manager = SingleTonClass.GetInstance();
-            manager.Show("Invoking the object for the third time...");
+            ////let us create another instance
+            //SingleTonClass trainee = SingleTonClass.GetInstance();
+
+            //trainee.Show("Working with single Object instance of the trainee...");
+
+            //SingleTonClass manager = SingleTonClass.GetInstance();
+            //manager.Show("Invoking the object for the third time...");
+
+            //testing singleton object instances with a nested class
+
+            SingleTonClass teacher = SingleTonClass.GetInstance();
+            teacher.Show("This is from the Teacher..");
+
+            SingleTonClass student = SingleTonClass.GetInstance();
+            teacher.Show("This is from the Student..");
+
+            //instantiating the nested class
+            SingleTonClass.DerivedSingleTon derivedobj = new SingleTonClass.DerivedSingleTon();
+            derivedobj.Show("This is from Derived Object of the SingleTon...");
             Console.Read();
         }
     }
