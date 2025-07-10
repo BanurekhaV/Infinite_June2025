@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.Concurrent;
 
 namespace SingleTon_Caching
 {
@@ -12,5 +13,7 @@ namespace SingleTon_Caching
         bool AddOrUpdate(object key, object value);
         bool Remove(object key);
         object Get(object key);
+
+        ConcurrentDictionary<object, object> GetAll();
     }
 }

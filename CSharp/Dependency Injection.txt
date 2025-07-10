@@ -1,0 +1,17 @@
+Dependency Injection : is a process of providing dependency object to the dependent object via constructor, method or properties
+
+DI pattern insists that the dependency object is always interface based
+Every DI pattern involves 3 types of classes
+  - Client Class : Consumer(dependent class)
+  - Service Class : Provider (dependency class)
+  - Injector Class : aids dependency object to be injected to the dependant object
+
+DI Framework's in the market : Unity(Ioc), Castle Windsor, Spring.Net, Ninject, StructureMap etc..
+
+Layered Architecture :
+
+  UI  - User Interface
+  BAL - Business Access Layer 
+  DAL - Data Access Layer  ( All classes and methods to work with the database)
+
+Unity Framework : 

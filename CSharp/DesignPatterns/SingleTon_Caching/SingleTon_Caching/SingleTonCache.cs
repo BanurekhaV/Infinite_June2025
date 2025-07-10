@@ -73,7 +73,7 @@ namespace SingleTon_Caching
 
         public ConcurrentDictionary<object,object>GetAll()
         {
-
+            return cd;
         }
     }
 }
