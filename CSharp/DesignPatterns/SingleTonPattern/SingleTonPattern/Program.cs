@@ -34,8 +34,8 @@ namespace SingleTonPattern
             teacher.Show("This is from the Student..");
 
             //instantiating the nested class
-            SingleTonClass.DerivedSingleTon derivedobj = new SingleTonClass.DerivedSingleTon();
-            derivedobj.Show("This is from Derived Object of the SingleTon...");
+           // SingleTonClass.DerivedSingleTon derivedobj = new SingleTonClass.DerivedSingleTon();
+           // derivedobj.Show("This is from Derived Object of the SingleTon...");
             Console.Read();
         }
     }
