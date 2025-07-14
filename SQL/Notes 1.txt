@@ -1,0 +1,67 @@
+Database and DBMS : Database can be defined as the storage of inter related data that has been organized in such a fashion, that retrieval becomes efficient and effective
+
+DBMS : are a set of programs to access and manipulate data. It is an environment which is both convenient and efficient
+
+Draw Backs of using file system :
+   - Data Redundancy and Inconsistencies
+   - Data Isolation - multiple files and formats
+   - Difficulty in accessing data
+   - Integrity problems
+   - Concurrent Usage
+   - Security Problems 
+
+Data Model : is a collection of tools for describing
+    - Data
+    - Data Relationships
+    - Data Semantics
+    - Data Constraints
+
+Types of Data Model :
+  - HDBMS - Hierarchical DBMS
+  - NDBMS - Network DBMS
+  - RDBMS - Relational DBMS
+  - ORDBMS - Object Relational DBMS
+              - Multimedia
+              - Hyper text based databases
+
+Terms in RDBMS :
+- Relation - a table
+- Tuple - a row of a table
+- Attribute - a column of a table
+- Degree - number of attributes
+- Cardinality - number of tuples
+
+E-R Modelling
+  Entity : is anything that exists and is distinguishable
+  Entity Set : a group of similar entities
+  Relationship : an association between the entities
+
+Types of Relationships :
+  one to one :
+  one to many :
+  many to many :
+
+SQL - structured query language.
+Components of SQL
+   - DDL (Data Definition Lang - create, alter, drop, truncate)
+   - DML (Data Manipulation Lang - insert, update, delete)
+   - DQL (Data Query Lang - select)
+   - DCL (Data Control Lang - grant, revoke)
+   - TCL (Transaction Control Lang - commit, rollback)
+
+Keys Concept of RDBMS :
+  - Candidate Key
+  - Primary Key
+  - Alternate Key
+  - Composite/compounded Key
+  - Foreign Key
+  - Unique Key
+
+Integrity Constraints : are rules enforced on the data columns of a table. 
+  3 types :
+  1. Domain Integrity : check, default, null
+  2. Entity Integrity : primary key cannot be null/duplicates (primary key)
+  3. Referential Integrity : a tuple in one relation refers to another relation (must refer to an existing tuple in that relation) foreign key
+
+
+ 

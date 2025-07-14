@@ -1,0 +1,76 @@
+create database InfiniteDB
+
+use InfiniteDB
+
+drop table department
+
+create table Department
+( Deptid int primary key,
+DeptName varchar(30) not null,
+DeptBudget float )
+
+select * from Department
+
+--insert some rows into department
+insert into Department values(2,'HR',15000),(4,'Operations',20000),
+(6,'Accounts',10000),(3,'Admin',50000), (5,'Testing',12000)
+
+--update some value in the table
+update Department set DeptBudget = 75000 where Deptid=1
+
+sp_help Department
+
+drop table Employee
+
+create table Employee
+(EmpId int not null,
+EmpName varchar(50)not null,
+Gender char(7),
+Salary decimal,
+DepartmentId int references Department(deptid)
+)
+
+select * from Employee
+insert into Employee(EmpId,EmpName,gender,Salary,DepartmentId) values(105,'Shreya','Female',6000,null),
+(102,'Hemachandra','Male',6200,1)
+
+
+insert into employee values(104,'Nithin','Male',5800,1,'12345')
+--altering table to add a primary key constraint
+alter table Employee
+add constraint pkemp primary key(EmpId)
+
+--drop the primary key constraint
+alter table Employee
+drop constraint pkemp
+
+--drop the foreign key constraint from Employee
+alter table Employee
+drop constraint [FK__Employee__Depart__29572725]
+
+--add foreign key constraint
+alter table employee
+add constraint fkdeptid foreign key(departmentid) references Department (Deptid)
+
+--drop a unique key constraint
+alter table employee
+drop constraint UQ__Employee__5C7E359EBCF4F2E9
+
+--adding a column after table creation
+/* column name , size, constraints */
+
+alter table Employee
+add Phone varchar(12) 
+
+--dropping a column from a table
+alter table employee
+drop column phone
+
+alter table employee
+add constraint uphone unique(phone)
+
+--adding check constraint
+alter table employee
+add constraint salcheck check(salary >=6000)
+
+sp_help Employee

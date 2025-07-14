@@ -1,0 +1,6 @@
+C:\Banu\Infinite_June25\CSharp\Testing\MOQ_Project\MOQ_Project\bin\Debug\MOQ_Project.dll
+C:\Banu\Infinite_June25\CSharp\Testing\MOQ_Project\MOQ_Project\bin\Debug\MOQ_Project.pdb
+C:\Banu\Infinite_June25\CSharp\Testing\MOQ_Project\MOQ_Project\obj\Debug\MOQ_Project.csproj.AssemblyReference.cache
+C:\Banu\Infinite_June25\CSharp\Testing\MOQ_Project\MOQ_Project\obj\Debug\MOQ_Project.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite_June25\CSharp\Testing\MOQ_Project\MOQ_Project\obj\Debug\MOQ_Project.dll
+C:\Banu\Infinite_June25\CSharp\Testing\MOQ_Project\MOQ_Project\obj\Debug\MOQ_Project.pdb
