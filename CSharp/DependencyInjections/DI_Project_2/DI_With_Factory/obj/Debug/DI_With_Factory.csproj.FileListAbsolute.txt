@@ -1,0 +1,7 @@
+C:\Banu\Infinite_June25\CSharp\DependencyInjections\DI_Project_2\DI_With_Factory\bin\Debug\DI_With_Factory.exe.config
+C:\Banu\Infinite_June25\CSharp\DependencyInjections\DI_Project_2\DI_With_Factory\bin\Debug\DI_With_Factory.exe
+C:\Banu\Infinite_June25\CSharp\DependencyInjections\DI_Project_2\DI_With_Factory\bin\Debug\DI_With_Factory.pdb
+C:\Banu\Infinite_June25\CSharp\DependencyInjections\DI_Project_2\DI_With_Factory\obj\Debug\DI_With_Factory.csproj.AssemblyReference.cache
+C:\Banu\Infinite_June25\CSharp\DependencyInjections\DI_Project_2\DI_With_Factory\obj\Debug\DI_With_Factory.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite_June25\CSharp\DependencyInjections\DI_Project_2\DI_With_Factory\obj\Debug\DI_With_Factory.exe
+C:\Banu\Infinite_June25\CSharp\DependencyInjections\DI_Project_2\DI_With_Factory\obj\Debug\DI_With_Factory.pdb

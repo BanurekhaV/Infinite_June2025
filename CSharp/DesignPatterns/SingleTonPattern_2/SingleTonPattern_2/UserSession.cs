@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace SingleTonPattern_2
 {
-    public class UserSession
+    public sealed class UserSession
     {
         //static private instance for singleton
 
         private static readonly UserSession _userinstance = new UserSession();
 
-        //properties to store session data
+         //properties to store session data
         public string UserName { get; private set; }
         public string[] Roles { get; private set; }
 
         //private constructor
-        private UserSession() { }
+         private UserSession() { }
 
         //public methods
         public void Initialize(string uname, string[] roles)

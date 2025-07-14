@@ -1,0 +1,6 @@
+C:\Banu\Infinite_June25\CSharp\Testing\NUnit_Project\NUnit_Project\bin\Debug\NUnit_Project.dll
+C:\Banu\Infinite_June25\CSharp\Testing\NUnit_Project\NUnit_Project\bin\Debug\NUnit_Project.pdb
+C:\Banu\Infinite_June25\CSharp\Testing\NUnit_Project\NUnit_Project\obj\Debug\NUnit_Project.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite_June25\CSharp\Testing\NUnit_Project\NUnit_Project\obj\Debug\NUnit_Project.dll
+C:\Banu\Infinite_June25\CSharp\Testing\NUnit_Project\NUnit_Project\obj\Debug\NUnit_Project.pdb
+C:\Banu\Infinite_June25\CSharp\Testing\NUnit_Project\NUnit_Project\obj\Debug\NUnit_Project.csproj.AssemblyReference.cache

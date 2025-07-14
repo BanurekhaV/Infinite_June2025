@@ -1,0 +1,65 @@
+Software Development Life Cycle : SDLC is a process for developing software.
+
+Development Models:
+Waterfall
+Prototype
+Iteration 
+V-Shaped
+Spiral 
+
+
+The various phases involved :
+1. Initiation : Begins when a sponsor identifies a need or an opportunity. Concept proposal is created
+2. System Concept Development : Defines the scope or boundary of the concepts. Includes system , document, cost benefit analysis, risk analysis, feasibility study etc
+3. Planning : Developing Project Management Plan (acquire resources, documents, specify timelines)
+4. Requirement Analysis : User needs are analysed. Functional Requirement document
+5. Design : Transforming of requirements into system design
+6. Development : Designs undergo transformation into IT(Test Driven Development)
+7. Integration and Testing : All s/ws are integrated and tested for confirmation to required (quality assurance)
+8. Implementation : Preparation of the systems onto the production server
+9. Operations and Maintenance : Post Implementation and In-process Reviews
+10. Disposition : End of System activities
+
+Testing : Is a process of validating and verifying a software application / product
+
+Unit Testing : Unit is a small piece of code
+
+NUnit : is an open source testing framework under MIT license
+
+Every unit testing will include a well known structure of Triple A's
+  - Arrange : Arrange all objects, variables required to test
+  - Act : Invoke the methods
+  - Assert : checking for correctness of the code
+
+Example :
+//arrange
+var a = 5;
+var b = 5;
+var c;
+
+//act 
+c = sum(a,b)
+
+//assert
+Assert.AreEqual(c,10)  
+
+- Include Nunit and Nunitadapters3 from nuget package manager
+- Write classes and functions to be tested (console/library application)
+- Crete another class/project to test the functionalities using test cases
+
+- All the test cases should be only public and void(no other modifier or return type allowed)
+- All test cases to be decorated with [Test]
+- All test cases should be meaningfully named, suggesting what is the test going to be
+- Some Attributes for tests are
+
+[TestFixture] - to mark the class as testable
+[Test] - are marked for the tests that have to be executed by the test runner. if not marked, will not run
+[SetUp] - Methods marked with setup gets executed before every test
+[Ignore] - this marks the test to be ignored, and not execute (can give some meaningful details for ignoring)
+
+MS Test : is a Microsoft Testing Framework
+
+ - Install MStest from NugetPackage Manager
+ - Include the namespace 'using Microsoft.VisualStudio.TestTools.UnitTesting;' in the .cs file which will be doing unit test
+
+

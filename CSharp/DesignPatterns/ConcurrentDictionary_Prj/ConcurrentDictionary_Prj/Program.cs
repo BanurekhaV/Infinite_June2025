@@ -30,12 +30,14 @@ namespace ConcurrentDictionary_Prj
             t1.Join();
             t2.Join();
 
-            Console.WriteLine($"Results in the Dictionay Object : {_mydic.Values}");
+            Console.WriteLine($"Results in the Dictionay Object : {_mydic.Values.Count}");
             Console.WriteLine("*************************************************");
             Console.WriteLine($"Results in the Concurrent Dictionay Object : {_mycondic.Values.Count}");
+                      
             Console.Read();
         }
 
+        
         static void InsertData()
         {
             for(int i=0; i<100;i++)

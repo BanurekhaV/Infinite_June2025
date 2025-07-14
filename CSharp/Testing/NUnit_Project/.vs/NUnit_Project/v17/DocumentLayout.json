@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Banu\\Infinite_June25\\CSharp\\Testing\\NUnit_Project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{66F4D13A-44EB-4BD8-B4F2-0C28325C6328}|NUnit_Project\\NUnit_Project.csproj|c:\\banu\\infinite_june25\\csharp\\testing\\nunit_project\\nunit_project\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66F4D13A-44EB-4BD8-B4F2-0C28325C6328}|NUnit_Project\\NUnit_Project.csproj|solutionrelative:nunit_project\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C739FF6-FECC-47D5-B901-3CD53068B89B}|NUnit_Testing_Project\\NUnit_Testing_Project.csproj|c:\\banu\\infinite_june25\\csharp\\testing\\nunit_project\\nunit_testing_project\\testclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C739FF6-FECC-47D5-B901-3CD53068B89B}|NUnit_Testing_Project\\NUnit_Testing_Project.csproj|solutionrelative:nunit_testing_project\\testclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66F4D13A-44EB-4BD8-B4F2-0C28325C6328}|NUnit_Project\\NUnit_Project.csproj|c:\\banu\\infinite_june25\\csharp\\testing\\nunit_project\\nunit_project\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66F4D13A-44EB-4BD8-B4F2-0C28325C6328}|NUnit_Project\\NUnit_Project.csproj|solutionrelative:nunit_project\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Banu\\Infinite_June25\\CSharp\\Testing\\NUnit_Project\\NUnit_Project\\User.cs",
+              "RelativeDocumentMoniker": "NUnit_Project\\User.cs",
+              "ToolTip": "C:\\Banu\\Infinite_June25\\CSharp\\Testing\\NUnit_Project\\NUnit_Project\\User.cs",
+              "RelativeToolTip": "NUnit_Project\\User.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAABgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-14T04:38:54.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Banu\\Infinite_June25\\CSharp\\Testing\\NUnit_Project\\NUnit_Project\\Employee.cs",
+              "RelativeDocumentMoniker": "NUnit_Project\\Employee.cs",
+              "ToolTip": "C:\\Banu\\Infinite_June25\\CSharp\\Testing\\NUnit_Project\\NUnit_Project\\Employee.cs",
+              "RelativeToolTip": "NUnit_Project\\Employee.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-14T04:24:50.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TestClass.cs",
+              "DocumentMoniker": "C:\\Banu\\Infinite_June25\\CSharp\\Testing\\NUnit_Project\\NUnit_Testing_Project\\TestClass.cs",
+              "RelativeDocumentMoniker": "NUnit_Testing_Project\\TestClass.cs",
+              "ToolTip": "C:\\Banu\\Infinite_June25\\CSharp\\Testing\\NUnit_Project\\NUnit_Testing_Project\\TestClass.cs",
+              "RelativeToolTip": "NUnit_Testing_Project\\TestClass.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAAAE0AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-14T04:25:33.666Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

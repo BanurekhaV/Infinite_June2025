@@ -11,7 +11,7 @@ namespace SingleTonPattern_2
         static void Main(string[] args)
         {
             UserSession.usobj.Initialize("Banurekha", new[] { "Admin", "User" });
-
+            
             //accessing the session information 
             Console.WriteLine(UserSession.usobj.UserName);
 
