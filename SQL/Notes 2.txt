@@ -67,3 +67,19 @@ Guidelines for using subqueries:
   - Enclose subqueries in parenthesis
   - place the subqueries on the right hand side of the comparison operator
   - use single row operators for single row subquery and multi row operators for multi row subquery
+
+Single Row Operators : =, >, <, <>, <=, >=
+
+Multi Row Operators :
+  in : Matches any member in the list (works like a logical or)
+
+  any : Compares value with each values returned by the subquery, to see if any one value matches the criteria
+        - can be used in conjunction with single row operators
+
+  all : Compares value with each values returned by the subquery, to see if all values matches the criteria
+        - can be used in conjunction with single row operators
+
+
+--group by in subqueries 
+
+  

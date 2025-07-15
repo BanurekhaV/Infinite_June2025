@@ -289,3 +289,58 @@ select deptname,empname,salary
  select t1.empname as 'Supervisors Name', t2.empname as 'Subordinates Name'
  from employee t1 join employee t2
  on t1.EmpId = t2.mgrid
+
+--find all employees who earn more than 'Hemachandra'
+ select salary from employee where empname ='hemachandra'
+ select * from employee where salary > 6200
+
+ --subquery
+ select * from employee where salary >   --main query
+                          (select salary from employee where empname ='hemachandra') --subquery
+
+--multi row subquery
+select empname,salary from employee where salary >any
+                                     (select salary from employee where departmentid in(1,3))
+
+select empname,salary from employee where salary <any  --(6000,6200,6250)
+                                     (select salary from employee where departmentid in(1,3))
+
+
+select empname,salary from employee where salary <all  --(6000,6200,6250)
+                                     (select salary from employee where departmentid in(1,3))
+
+select empname,salary from employee where salary >all  --(6000,6200,6250)
+                                     (select salary from employee where departmentid in(1,3))
+
+
+select empname,salary from employee where salary =any  --(6000,6200,6250)
+                                     (select salary from employee where departmentid in(1,3))
+
+
+select empname,salary from employee where salary in  --(6000,6200,6250)
+                                     (select salary from employee where departmentid in(1,3))
+
+
+select empname,salary from employee where salary in
+                                     (select salary from employee where empname like '_[ieh]%' )
+
+--display list of employees who work in dept as that of employee 102 and earns salary >  employee 100
+-- this involves 2 separate subqueries joined with alogical and
+
+select empname,salary,DepartmentId from employee where DepartmentId = --1 and salary > 6000
+                                               (select departmentid from employee where empid=102)
+								  and salary > (select salary from employee where empid=100)
+
+--find employees name and salary, whose salary is equal to the minimum salary 
+select empname, salary from employee where salary =
+                                        (select min(salary) from employee)
+
+-- group by and having clause in subqueries
+--list dept wise minimum salary that are > than the minimum salary of dept 3
+
+select departmentid , min(salary) MinimumSalary from employee 
+group by DepartmentId
+having min(salary) > 6000
+                  (select min(salary) as Minimum from employee where DepartmentId= 3)
+
+
