@@ -171,3 +171,121 @@ order by [Average Salary]
 select departmentid, gender, avg(salary) as Average from employee
 group by departmentid,gender
 order by DepartmentId
+
+--count no.of males and females 
+
+select gender,count(gender) from employee
+group by gender
+
+--count no of males and females per department
+select departmentid, gender,count(*) from employee
+group by DepartmentId,gender
+order by DepartmentId
+
+--write a query to find all employees who earn more than the average of the salary
+
+--find dept wise avg salary where avg salary > 5700
+select departmentid, avg(salary) 'Average Salary' from employee
+group by DepartmentId
+having avg(salary) >5700
+
+--deptwise count of male and female employees where the count is  >=2
+select Departmentid, Gender, count(*) 'Employee Count' from employee
+group by DepartmentId, gender
+having count(*) >=2
+
+--rewrite the above query to list deptname wise avg salary being > 5700
+--the query involves 2 tables
+
+select * from department
+select * from employee
+
+select DeptName, avg(salary) as 'Average Salary' from employee, Department
+where employee.DepartmentId = Department.Deptid
+group by deptname having avg(salary)> 5700
+order by deptname
+
+--above query with table aliases and references
+select d.DeptName, avg(e.salary) as 'Average Salary' 
+from Department d, employee e
+where d.Deptid = e.DepartmentId
+group by deptname having avg(salary)> 5700
+order by deptname
+
+--for each deptname, find the sum of salary where sum > 11000
+select d.DeptName, sum(e.salary) as 'Average Salary' 
+from Department d, employee e
+where d.Deptid = e.DepartmentId
+group by deptname having sum(salary)> 11000
+order by deptname
+
+select round(45.926,2)
+
+--joins
+/*
+-- cross joins  (cartesian product)
+-- Equi/Natural/Inner Join (exact matching of records from 2 or more tables)
+-- Non Equi Join
+-- outer Join (matching + non matching records)
+    -- left outer join
+	-- right outer join
+	-- full outer join
+-- self join */
+
+--1. cross join
+ select * from employee, department
+
+ --or
+ select * from employee cross join Department
+
+ --2. Equi/Natural/Inner Join
+ select deptname, empname,salary 
+ from department,employee where department.Deptid = employee.DepartmentId
+
+ --or
+ select deptname,empname,salary 
+ from department inner join employee
+ on Department.Deptid = Employee.DepartmentId
+
+ --or
+  select deptname,empname,salary 
+ from department join employee
+ on Department.Deptid = Employee.DepartmentId
+
+ --3. outer join
+    --left outer
+select deptname,empname,salary 
+ from department left outer join employee
+ on Department.Deptid = Employee.DepartmentId
+
+ --or
+ select deptname,empname,salary 
+ from department left join employee
+ on Department.Deptid = Employee.DepartmentId
+
+ --right outer join
+ select deptname,empname,salary 
+ from department right outer join employee
+ on Department.Deptid = Employee.DepartmentId
+
+ --or
+ select deptname,empname,salary 
+ from department right join employee
+ on Department.Deptid = Employee.DepartmentId
+
+ --full outer join
+ select deptname,empname,salary 
+ from department full outer join employee
+ on Department.Deptid = Employee.DepartmentId
+
+ --or
+ select deptname,empname,salary 
+ from department full join employee
+ on Department.Deptid = Employee.DepartmentId
+
+ --self join
+ --display all supervisors names and their subordinate names 
+
+ select t1.empname as 'Supervisors Name', t2.empname as 'Subordinates Name'
+ from employee t1 join employee t2
+ on t1.EmpId = t2.mgrid

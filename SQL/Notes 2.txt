@@ -46,3 +46,24 @@ Group by - divide the tuples of a relation into sub sets/smaller data sets
          - we can apply groups by clause on columns that are not a part of the select list(may not get meaningful results that convey the status)
 
 note : cannot have aggregates to the RHS of a where clause
+
+Having clause : restricts the no. of groups, where as 'where' clause restricts no. of rows
+- when we need to restrict some sub sets from the output, we filter them using having clause
+
+
+query execution goes like below :
+  - from
+  - where
+  - group by
+  - having
+  - order by
+  - select
+
+sub queries : are nested queries that can be nested upto 16 levels
+  - the inner query executes first and the result are used by the main query
+  - after the inner queries execution, it is removed from the program scope
+
+Guidelines for using subqueries:
+  - Enclose subqueries in parenthesis
+  - place the subqueries on the right hand side of the comparison operator
+  - use single row operators for single row subquery and multi row operators for multi row subquery
