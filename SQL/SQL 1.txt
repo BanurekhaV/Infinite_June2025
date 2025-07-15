@@ -7,7 +7,7 @@ drop table department
 create table Department
 ( Deptid int primary key,
 DeptName varchar(30) not null,
-DeptBudget float )
+DeptBudget float ) 
 
 select * from Department
 

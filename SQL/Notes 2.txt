@@ -1,0 +1,48 @@
+	delete   		       vs            truncate
+1.  Is a DML command                              Is a DDL command
+2.  Can apply where predicate			 Cannot apply any predicates as it operates on the schema objects
+3.  Can Rollback				 Cannot Rollback
+4.  Is slower than truncate                      Is faster
+5.  Retains the Structure                        Retains the structure
+
+Note : Truncated details with data can be also rolled back as a part of the transaction using 
+  - Log files,
+  - Backup files  by using Sql recovery tool
+
+RDBMS are based on the Relational Algebra Principles
+- selection
+- projection
+- join
+- union
+- difference
+- divide
+
+Operators :
+ - Arithmetic
+ - Relational
+ - Logical
+
+Rules of Precedence on the operators
+1. Arithmetic
+2. Concatenation
+3. Comparison
+4. Is[not] null, like, not[in]
+5. [not] between
+6. Not, And, Or
+
+to override the precedence , use parenthesis ()
+
+Sorting of rows/tuples/records
+order by - used to sort the output of a query
+         - sort in asc or desc (default is asc)
+         - sort multiple columns using a ','
+         - sort by alias name 
+         - sort by a column that is not in the select list
+
+Group by - divide the tuples of a relation into sub sets/smaller data sets
+         - can group on multiple columns
+         - cannot group on alias names
+         - we have to group on all columns that are a part of the select list except for aggregates
+         - we can apply groups by clause on columns that are not a part of the select list(may not get meaningful results that convey the status)
+
+note : cannot have aggregates to the RHS of a where clause
