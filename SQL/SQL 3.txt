@@ -90,3 +90,84 @@ insert into dummy values('C')
 
 delete from dummy where dummyid=6
 select * from dummy
+
+select * from dummy
+select * from dummy2
+
+alter table dummy2 add dummycity varchar(20)
+sp_help dummy
+--bulk copy
+insert into dummy2 select * from dummy
+
+insert into dummy2(dummyid, dummyname) select dummyid, dummyname from dummy
+
+--case : 
+create table casetable(cid int, cname varchar(20))
+
+insert into casetable values(5,'White'),(3,'Blue'),(2,'Green'),(4,'Red')
+
+--simple case
+select cid, cname,
+ case cname
+   when 'Red' then 'Danger'
+   when 'Blue' then 'Primary'
+   when 'Green' then 'Success'
+ end as 'Color Remarks'
+ from casetable
+
+ --simple case with else
+ select cid, cname,
+ case cname
+   when 'Red' then 'Danger'
+   when 'Blue' then 'Primary'
+   when 'Green' then 'Success'
+   else 'No Remarks'
+ end as 'Color Remarks'
+ from casetable
+
+ --searched case
+ select cid, cname,
+ case 
+   when cname = 'Red' then 'Danger'
+   when cname = 'Blue' then 'Primary'
+   when cname = 'Green' then 'Success'
+   else 'Invalid Color'
+ end as 'Color Status'
+ from casetable
+
+ --nested case
+ --@@ - global variables
+ --@ - local variables
+
+ declare @totsales int   -- decl . a int variable 
+ set @totsales = 600
+ select case
+  when @totsales >=500 then 'Bumper Sales'
+    when @totsales <500 then
+	   case 
+	      when @totsales between 100 and 200 then 'Poor Sales'
+		  when @totsales between 201 and 300 then 'Ok Sales'
+		  when @totsales between 301 and 400 then 'Good Sales'
+		  when @totsales between 401 and 499 then 'Very Good Sales'
+		  else 'No Sales'
+		end
+	end as SalesDetails
+
+--nested case with if else
+declare @sales int
+set @sales = 245
+select @sales as 'Total Sales'
+
+print 'The Total Sales made is ' + ' ' + cast(@sales as varchar(5))
+if @sales >= 500
+ select 'Bumper Sales'
+ else
+  begin
+    select case 
+	when @sales between 100 and 200 then 'Poor Sales'
+		  when @sales between 201 and 300 then 'Ok Sales'
+		  when @sales between 301 and 400 then 'Good Sales'
+		  when @sales between 401 and 499 then 'Very Good Sales'
+		  else 'No Sales'
+	end as 'Sales Status'
+ end
