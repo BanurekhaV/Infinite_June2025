@@ -1,0 +1,92 @@
+--self join with output
+select t1.ename as 'Supervisors Name', t2.ename as 'Subordinates Name'
+ from emp t1 join emp t2
+ on t1.Empno = t2.mgr_id
+
+
+ --exists operator
+
+ --check if employees have a reporting manager
+select * from emp
+select empno, mgr_id as Manager, job,ename,deptno from emp tout
+where not exists(select 'x' from emp where empno = tout.mgr_id)
+
+select empno ,mgr_id as Manager, job,ename,deptno  from emp tout
+where exists(select mgr_id from emp where empno = tout.mgr_id)
+
+--find managers who have atleast one employee reporting to them
+select empno ,mgr_id as Manager, job,ename,deptno  from emp 
+where empno  in(select mgr_id from emp where mgr_id is not null)
+
+select empno ,mgr_id as Manager, job,ename,deptno  from emp 
+where empno  not in(select mgr_id from emp where mgr_id is not null)
+
+select empno, mgr_id as Manager, job,ename,deptno from emp tout
+where empno in(select mgr_id from emp where empno = tout.mgr_id)
+
+select empno, mgr_id as Manager, job,ename,deptno from emp tout
+where empno not in(select mgr_id from emp where empno = tout.mgr_id)
+
+select * from employee select * from department
+
+--find all the depts that have employees
+
+ select deptid,deptname from department
+ where exists(select 'z' from employee where DepartmentId = Department.Deptid)
+
+ select deptid,deptname from department
+ where deptid in (select DepartmentId from employee where DepartmentId = Department.Deptid)
+
+ select deptid,deptname from department
+ where not exists(select 'z' from employee where DepartmentId = Department.Deptid)
+
+ select deptid,deptname from department
+ where deptid not in (select DepartmentId from employee where DepartmentId = Department.Deptid)
+
+ --find all employees who are not salesman and whose salary is less than 
+ --any of the employee who is a salesman
+
+
+ --Corelated subquery: 
+ select empname,salary from employee where salary in  --(6000,6200,6250)
+                                     (select salary from employee where departmentid in(1,3))
+	
+	--2nd highest problem
+	insert into employee values(106,'Syam','Male',6250,3,'334455')
+
+	--simple way is by sorting
+	select * from employee
+	order by salary desc
+
+	--using corelated subquery
+	select e1.empname, e1.salary from employee e1
+	where 2=(select count(distinct(salary)) from employee e2 where e2.salary >=e1.salary)
+
+	--ex 2
+	--get all employees who earn more than their departments average salary
+
+	select e1.empno,e1.ename,e1.salary,e1.deptno from emp e1
+	where salary > (select avg(salary) from emp e2 where e2.deptno = e1.deptno)
+
+	--with inner joins
+
+	select e1.empno,e1.ename,e1.salary,e1.deptno from emp e1
+	inner join (select deptno, avg(salary) as Average from emp group by deptno) as e2 
+	on e1.deptno=e2.deptno where e1.salary > e2.Average
+
+	--for updation
+	--update the salary for all employees, whose salary is minimum in that department
+	update employee set salary = salary + 500
+	from employee e1 where salary =
+	                   (select min(e2.salary) from employee e2 where e2.DepartmentId =e1.DepartmentId)
+
+
+drop table dummy
+
+create table dummy (dummyid int identity(2,2),
+dummyname varchar(10))
+
+insert into dummy values('C')
+
+delete from dummy where dummyid=6
+select * from dummy
