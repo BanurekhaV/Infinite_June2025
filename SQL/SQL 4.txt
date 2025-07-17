@@ -244,3 +244,55 @@ create procedure sp_greetings
  end
 
  sp_employeedata
+
+ sp_helptext sp_employeedata
+
+ create or alter proc sp_dmlops
+ as
+ begin
+  insert into employee values(108,'Naveen','Male',6300,1,'123456789')
+  select * from employee
+
+  update employee set salary = salary +10 where empid=108
+   select * from employee
+
+  delete from employee where empid =108
+  select * from employee
+ end
+
+ sp_dmlops
+
+
+ --proc with parameters input
+ create or alter proc sp_Welcome @name varchar(20)
+ as
+ begin
+ select concat('Hello ', @name)
+ end
+
+ sp_welcome 'Infinite Associates'
+
+ --write a procedure to find all employees of a given dept
+
+ create or alter proc sp_getEmpbyDept @dept int, @sal float
+ as 
+ begin
+  select * from employee where DepartmentId=@dept and salary >@sal
+  end
+
+  sp_getEmpbydept 1,6550
+
+  --with input and output parameter
+  --given an employee name, get the salary of that employee from a procedure
+  create or alter proc GetSal_byName
+  (@ename varchar(20), @salary float output)
+  as
+  begin
+   select @salary=salary from employee where empname = @ename
+   end
+
+   --to execute the above proc with both input and output parameter
+   declare @empsal float
+   exec getsal_byname 'Shreya', @empsal output
+   select @empsal
+   print 'Salary is : ' + ' ' +  cast(@empsal as varchar(6))
