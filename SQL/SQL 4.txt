@@ -121,3 +121,126 @@ select e.empno, e.ename,e.mgr_id, oq.emplevel + 1   -- recursive values
   select MonthNumber + 1,
    datename(month, dateadd(month, Monthnumber, '2025-01-01'))
    from monthcte where monthnumber < 12)
+
+select * from monthcte
+
+
+ --create a resursive query to display values from 1 to 10
+   with ctr(initialvalue) as
+   (select 1
+    union all
+	select initialvalue + 1 from ctr
+	where initialvalue < 10)
+	select * from ctr
+
+	--T-Sql
+	--eg 1. 
+
+	begin
+	declare @v1 int=50, @v2 int=100
+	declare @sum int =@v1
+	--set @sum = @v1
+	print @sum
+	if(@v1 > @v2)
+	  print 'V1 is greater'
+	else
+	  print 'V2 is greater'
+	end
+
+
+--eg 2. using tsql increase the salary of all employees who are earning less than 106
+
+begin
+ declare @esal decimal
+ declare @name varchar(30)  
+ select @name= empname, @esal=salary from employee where empid=106  -- 6250 syam
+
+ if(@esal <= 6250)
+  begin
+   set @esal = @esal + 100
+    print 'The revised Salary of ' + @name + ' is ' + ' ' + cast(@esal as varchar(8))
+  end
+  else
+   begin
+    print 'Current Salary is OK'
+   end
+end
+   --eg 3 while
+   declare @ctr int =1
+   while @ctr < =5
+    begin
+	  print @ctr
+	  set @ctr = @ctr+1
+    end
+
+	--while with break
+declare @ctr1 int =0
+   while @ctr1 <=5
+    begin
+	 set @ctr1 = @ctr1 + 1if @ctr1 = 4
+	  break
+	  print @ctr1
+	  end
+	  --while with continue
+declare @ctr2 int =0
+   while @ctr2 <=5
+    begin
+	 set @ctr2 = @ctr2 + 1
+	 if @ctr2 = 4
+	  --break
+	  continue
+	  print @ctr2
+	  end
+	 
+-- updating records using while loop
+select * from employee
+
+declare @min_id int
+select @min_id = min(empid) from employee
+print @min_id
+
+declare @row_count bigint = 0
+declare @sal float, @rsal float
+
+--get the count of total rows to process
+--select @row_count = (select count(empid) from employee)
+print @row_count
+select @row_count = max(empid) from employee
+ select @sal = salary from employee where empid =@min_id
+--print @row_count
+while @min_id <= @row_count
+ begin
+  select @rsal = salary from employee where empid =@min_id  
+  if(@rsal < @sal)
+   begin
+    update employee set salary = @rsal + 100
+	where empid = @min_id
+	end
+	else
+	begin
+	 print 'Salary seems to be ok'
+	 end
+	 set @min_id = @min_id + 1
+end
+
+insert into employee values(110,'Banurekha','Female',6000,2,'666666')
+select * from employee
+
+--stored procedures
+create procedure sp_greetings
+ as
+ begin
+  select 'Hello and Welcome to SQL Procedures '
+  end
+
+   --to execute th eprocedure
+  execute sp_greetings 
+  exec sp_greetings
+ sp_greetings
+ 
+ create proc sp_employeedata
+ as begin
+ select * from employee where DepartmentId=2
+ end
+
+ sp_employeedata

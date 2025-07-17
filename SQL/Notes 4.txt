@@ -29,7 +29,27 @@ Recursive CTE's : syntax
     as
     (  --Anchor member / initial query
        union all
-       --recursive memeber that references the <expression name>
+       --recursive member that references the <expression name>
        recursive query
+       -- includes a terminator
    )
-TSQL
+
+TSQL : programming with sql
+ - variables
+ - if and else
+ - case
+ - while
+ - break, continue
+
+Query : Any query will have to be parsed, compiled with a query plan for execution, and then execute the plan
+
+vs 
+Stored Procedures : Are SQL statements that are parsed, compiled with an execution plan. Once executed, the plan along with the query will be saved as an object in the database schema
+- this allows reusability
+- provides better performance than queries
+- can take input parameters
+- can give away output parameters
+- every procedure returns an integer value only
+- can be used to implement DML operations
+- can call other procedures from within
+- can call other functions
