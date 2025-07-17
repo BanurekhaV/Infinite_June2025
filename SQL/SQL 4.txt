@@ -87,3 +87,37 @@ as (select deptid, deptname, deptbudget from department)
 
 delete from dmlcte where DepartmentNumber =10
 select * from Department
+
+
+--recursive ctes
+with cte_week(n, wkDay)
+as(select 0, DATENAME(dw,0)
+union all
+select n + 1, datename(dw,1) from cte_week where n <6)
+
+--using the cte
+select n,wkDay from cte_week
+
+--Hierarchial queries with recursive cte
+with hcte(EmpNo,EName,Manager,EmpLevel)
+as(select empno,ename,mgr_id, 1 EmpLevel
+  from emp where mgr_id is null         -- initial or first level / anchor member
+  --select * from hcte
+union all
+select e.empno, e.ename,e.mgr_id, oq.emplevel + 1   -- recursive values
+ from emp e join hcte oq on e.mgr_id = oq.empno where e.mgr_id is not null)
+ --using the above cte
+ select * from hcte
+ order by EmpLevel
+
+  select * from hcte
+
+  --ex
+  --write a simple recursive CTE to find out all the months in a year
+
+  with monthcte as( select 1 as 'MonthNumber',
+  Datename(month, cast('2025-01-01' as Date)) as 'MonthName'
+  union all
+  select MonthNumber + 1,
+   datename(month, dateadd(month, Monthnumber, '2025-01-01'))
+   from monthcte where monthnumber < 12)

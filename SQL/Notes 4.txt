@@ -23,4 +23,13 @@ Advantages : Reusability
              More readable
              Does not occupy memory
              Used for Complex queries that can be broken into multiple CTE's
+
+Recursive CTE's : syntax
+    with <expression name>(columnlist)
+    as
+    (  --Anchor member / initial query
+       union all
+       --recursive memeber that references the <expression name>
+       recursive query
+   )
 TSQL
