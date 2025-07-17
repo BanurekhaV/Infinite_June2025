@@ -1,0 +1,26 @@
+Set Commands : are operators that can work with multiple result sets
+Rules for using set commands :
+  - The result set of 2 queries must have same number of columns
+  - The datatypes of the columns of both the result set should be same
+  - The positional ordering of the columns returned as a result of the query must be same
+  - We can order only the final result
+
+
+  Union  -- combines 2 result sets and removes duplicates if any
+  Union All -- includes duplicates also
+  Intersect -- includes only the common vales of 2 result sets
+  Except -- includes the unique values of the first result set as against the 2nd result set
+
+CTE : Common table Expression
+  - Are expressions that allow us to define the query output as a temporary storage, which is available only within the execution scope
+  - We can perform DML operations
+  - We can have multiple CTE's separated with a ','
+  - One CTE can refer to another CTE
+  - We can recursive CTE's
+  - On being referred or used once the CTE will no longer be available
+
+Advantages : Reusability
+             More readable
+             Does not occupy memory
+             Used for Complex queries that can be broken into multiple CTE's
+TSQL

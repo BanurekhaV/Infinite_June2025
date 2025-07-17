@@ -1,0 +1,89 @@
+use infinitedb
+
+--set commands
+
+create table Utable1(uid int identity, uname varchar(20), ugrade char(1), upercentage int)
+
+insert into Utable1 values('Manoj','A',85),('Nandini','A',80),('Mehrun','B',65),('Nithin','B',60)
+
+create table Utable2(uid int identity, uname varchar(20), ugrade char(1), upercentage int)
+
+insert into Utable2 values('Yogesh','A',85),('Susmitha','A',82),('Monali','B',65),('Mahesh','B',60)
+
+select * from utable1
+select * from utable2
+
+--union
+select uname,ugrade,upercentage from utable1 
+union 
+select uname,ugrade,upercentage from utable2
+
+update utable2 set uname='Manoj' where uname is null
+
+select uname,ugrade,upercentage from utable1 
+union all
+select uname,ugrade,upercentage from utable2
+
+--intersect
+select uname,ugrade,upercentage from utable1 
+intersect
+select uname,ugrade,upercentage from utable2
+
+select uname,ugrade,upercentage from utable2
+except
+select uname,ugrade,upercentage from utable1
+
+--for except
+create table empdata(Id int identity, Ename varchar(20),Age int, City varchar(20))
+
+insert into empdata values('Rahul',21,'Noida'),('Vikram',21,'Chennai'),('Dinesh',21,'Vizag')
+
+create table BonusData(Bid int, Eid int, BonusAmt int)
+
+insert into BonusData values(100,4,5000),(101,2,6000),(102,1,7000)
+
+select * from empdata
+select * from BonusData
+
+select Id, Ename,BonusAmt from empdata left join  BonusData on empdata.Id = BonusData.Eid
+except
+select Id, Ename,BonusAmt from empdata right join  BonusData on empdata.Id = BonusData.Eid
+
+
+select Id, Ename,BonusAmt from empdata right join  BonusData on empdata.Id = BonusData.Eid
+except
+select Id, Ename,BonusAmt from empdata left join  BonusData on empdata.Id = BonusData.Eid
+
+--CTE's
+--constructing our first cte
+with firstcte(EmployeeName, AnnualSalary,DepartmentName)
+as (select empname,(salary*12), department.DeptName from employee join department
+on employee.DepartmentId = Department.Deptid),   -- ',' is used to include multiple cte
+--main query
+--select * from firstcte where AnnualSalary >78000
+
+--query 2
+cte2 as ( select DepartmentName, avg(AnnualSalary) 'Dept Annual Salary' from firstcte
+group by departmentname having avg(annualsalary )>76000)
+
+--using the above 2 ctes
+select * from cte2 where [Dept Annual Salary] > 76500
+
+
+-- eg 2 of cte
+--dml with cte
+with dmlcte(DepartmentNumber, DepartmentName, NewBudget)
+as (select deptid, deptname, deptbudget from department)
+
+--insertion
+--insert into dmlcte values(10,'New Department',2500000)
+--select * from department
+
+--updation
+--update dmlcte set NewBudget = 0 where DepartmentNumber = 10
+--select * from department
+
+--deletion
+
+delete from dmlcte where DepartmentNumber =10
+select * from Department
