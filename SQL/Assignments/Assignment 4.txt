@@ -1,0 +1,32 @@
+1.	Write a T-SQL Program to find the factorial of a given number.
+
+2.	Create a stored procedure to generate multiplication table that accepts a number and generates up to a given number. 
+
+3. Create a function to calculate the status of the student. If student score >=50 then pass, else fail. Display the data neatly
+
+student table
+
+Sid       Sname   
+1         Jack
+2         Rithvik
+3         Jaspreeth
+4         Praveen
+5         Bisa
+6         Suraj
+
+Marks table
+
+Mid      Sid     Score
+1        1        23
+2        6        95
+3        4        98
+4        2        17
+5        3        53
+6        5        13
+
+
+
+
+
+
+      

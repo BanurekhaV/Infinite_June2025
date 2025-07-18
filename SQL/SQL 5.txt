@@ -225,6 +225,42 @@ as
   -- to execute the functions
   select fndisplaydetails(ename,hire_date) from emp  -- does not work
 
+--option 1. 2 part qualifier
+  select dbo.fndisplaydetails(ename,hire_date)from emp
+
+  --option 2. 3 part qualifier
+  select infinitedb.dbo.fndisplaydetails(ename,hire_date) from emp
+
+  --ex 1.
+  --write a function that takes employee no and returns the salary
+
+  --write a function to calculate the Area of a rectangle
+  create or alter function fn_findArea(@ln int, @bd int)
+  returns int
+  as
+  begin
+   declare @area int
+   set @area = @ln * @bd
+   return @area
+   end
+
+   select dbo.fn_findarea(5,6) as 'Area of Rectangle'
+
+   --inline table valued
+   create function fn_getEmployeedata(@dept int)
+   returns table
+   as
+   return (select empno,ename,job,deptno,salary from emp where deptno =@dept)
+
+   --to execute
+   select ename,job,salary from dbo.fn_getEmployeedata(10) where job='clerk'
+
+   select job, avg(salary) from dbo.fn_getEmployeedata(20) group by job
+
+     select job, avg(salary) from dbo.fn_getEmployeedata(20) group by job
+	 having avg(salary)>1000
+
+
   --option 1. 2 part qualifier
   select dbo.fndisplaydetails(ename,hire_date)from emp
 

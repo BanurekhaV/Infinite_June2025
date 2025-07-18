@@ -20,3 +20,55 @@ raise error : raiserror(<error message>,<severity><error state>
  syntax : sp_addmessage <errornum>,<severity num>,<errormessage>
 
 select * from sysmessages
+
+Transactions : A set of SQL statements that are executed together or not executed at all
+- A database transaction consists of
+   1. DML statements
+   2. DDL
+   3. DCL
+   4. DQL
+ 
+Begins when the first DML statement is executed and ends with any one of the following
+   - A commit or a rollback
+   - A Auto commit
+   - User exits
+   - System crashes
+
+With commit or rollback we ensure
+  - Data Consistency
+  - Group logically related operations
+  - Preview the data changes before and after
+
+ACID Test : are to be passes successfully by the transaction
+ Atomicity : requires the transaction that involve more parts of changes/info. to commit fully or rollback fully
+ 
+ Consistency : requires the transaction to have a valid state of the data (either post the changes or pre changes)
+
+ Isolation : requires the transaction which is still running, and yet to be committed does not interfere with other transactions
+
+ Durability : requires the transaction to preserve all committed data so that it can be made available to others
+
+Locking : is a mechanism of saving the state of the object during transaction
+  2 types
+   shared
+   exclusive
+- row level
+- page level
+- table level
+
+Save Transactions : are logical markers of a set of statements. It is not an ANSI standard
+
+
+Functions : are reusable piece of code that can be called 
+            may or may not take parameters
+            will have to return either a scalar value or a table value
+            cannot return text, ntext, images, timestamps, cursors etc
+
+they are of 2 types
+  1. Scalar : functions that return any single data type 
+  2. Table Valued
+     - Inline Table Valued : are functions that return a table (rows, cols)
+     - are not enclosed within begin and end
+     - can be used in where, join, and select clauses
+     - provide better performance than multi statement table valued functions
+     - Multi statement table valued
