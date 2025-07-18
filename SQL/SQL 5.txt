@@ -92,3 +92,86 @@ begin
   raiserror(63000,16,8)
 end catch
 end
+
+
+--full example with dml operations, error handlers, system variables in a procedure.
+drop table productsales
+
+drop table products 
+
+create table Products
+(ProductId int primary key,
+ProductName varchar(40),
+Price int,
+QuantityAvailable int)
+
+insert into Products values(101, 'Laptops',55000,100),
+(102,'Desktops',38000,50),(103,'Tablets',65000,35),(104,'Mobiles',75000,70)
+
+--create a productsales table to record sales
+create table ProductSales
+(ProductSalesID int primary key,
+PrdID int references Products(ProductId),
+QuantitySold int)
+
+select * from Products
+select * from ProductSales
+select max(productsalesid) from ProductSales
+
+--alter table productsales
+--add constraint fkprodid foreign key(prdid) references Products(productid)
+
+--will create a procedure to have the sales entry made and to update the products table
+create or alter proc sp_Product_salesMade
+@prdid int, @qtyto_sell int
+as
+begin
+ --first let us check the stock available for the product we want to sell
+  declare @stockavailable int
+  select @stockavailable = QuantityAvailable  from products where productid = @prdid
+  --if the qty_tosell is more than the stock avialable then we should raise an error
+  if(@stockavailable is null)
+  begin
+   raiserror('Wrong Product', 15,1)
+  end
+  if(@stockavailable < @qtyto_sell)
+     begin
+	  raiserror('Not enough stock available', 16,1)
+	  
+	 end
+	 else
+	 begin
+	 --let us now start the dml 
+	 --first we will reduce the qty available in products table
+	 update products set QuantityAvailable = QuantityAvailable - @qtyto_sell
+	 where productid=@prdid
+	 
+	 --after the updation, we will make an insertion int the productsales table
+	 -- check if the table is having any data. If no, then some value, else value + 1
+	 declare @maxsaleid int
+
+	 select @maxsaleid = case
+	  when max(productsalesid) is null then 0
+	  else max(productsalesid)
+	  end
+	  from productsales
+
+	  --increment @maxsaleid by 1, to avoid pk violation
+	  set @maxsaleid = @maxsaleid + 1
+
+	  --we can start inserting
+	  insert into productsales values(@maxsaleid, @prdid, @qtyto_sell)
+	  end
+	  --@@error - a global variable that has non 0 value if there was an error, else 0
+	  if(@@ERROR <> 0)
+	   begin
+	    print 'Error ... rolling back'
+		end
+		else
+		begin
+		  print 'success'
+		  end
+end
+
+exec sp_Product_salesMade 102, 10
+

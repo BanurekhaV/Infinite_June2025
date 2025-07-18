@@ -1,0 +1,22 @@
+Error Handling : Sql allows simple error handlers with the begin try and begin catch blocks
+- All predefined error are below 50000 ,and all user defined errors are above 50000
+- We can raise and throw specific errors
+
+Error Message : are brief info. describing the kind of error and has a limit of 2047 characters
+
+Severity Level : Tell us the importance of the error
+ the range includes
+  0-9 : not severe. considered as status messages/information
+  11-16 : Indicates user generated errors
+  17-19 : Indicates software errors, that cannot be rectified by the users. It has to reported to sysadmins
+  20-24 : Indicates fatal errors that can damage the database/system. The database will be terminated immediately to ensure database security
+
+state : is an arbitrary value not very important to the user. This ranges between 0 and 27
+
+throw : throw <errornumber>,<error message>,<severity level>
+raise error : raiserror(<error message>,<severity><error state>
+
+-- to add user defined error messages
+ syntax : sp_addmessage <errornum>,<severity num>,<errormessage>
+
+select * from sysmessages
