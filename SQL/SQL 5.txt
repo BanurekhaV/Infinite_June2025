@@ -175,3 +175,61 @@ end
 
 exec sp_Product_salesMade 102, 10
 
+
+--Transactions
+select * from dummy2
+
+begin transaction
+ update dummy2 set dummycity = 'Pune' where dummyid = 4 -- this statement has to happen
+ save tran t1
+  select * from dummy2
+
+  delete from dummy2 where dummyid=8
+  select * from dummy2
+  save transaction t2
+
+  insert into dummy2 values(6,'C','Nasik')
+  select * from dummy2
+
+  rollback tran t2
+ -- rollback tran t1
+ -- rollback
+  commit
+
+  select * from dummy2
+
+  --sql commands/statements outside transaction
+  begin tran
+  insert into dummy2 values(6,'D','Nagpur')
+  commit 
+
+  delete from dummy2 where dummyname='D'
+
+  rollback
+
+  --implicit transactions mode enables or disables autocommit
+  --when off , auto commit is on
+  --when on , autocommit is off (we can either rollback or commit)
+
+  set implicit_transactions on
+
+--Functions 
+--eg 1
+create function fnDisplayDetails(@ename varchar(30), @doj date)
+returns nvarchar(100) -- tells the db engine that the functions return type is nvarchar
+as
+ begin
+  return (select @ename + ' ' + ' Joined on ' + cast(@doj as varchar(12)))
+  end
+
+  -- to execute the functions
+  select fndisplaydetails(ename,hire_date) from emp  -- does not work
+
+  --option 1. 2 part qualifier
+  select dbo.fndisplaydetails(ename,hire_date)from emp
+
+  --option 2. 3 part qualifier
+  select infinitedb.dbo.fndisplaydetails(ename,hire_date) from emp
+
+  --ex 1.
+  --write a function that takes employee no and returns the salary
