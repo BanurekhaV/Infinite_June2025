@@ -296,3 +296,4 @@ create procedure sp_greetings
    exec getsal_byname 'Shreya', @empsal output
    select @empsal
    print 'Salary is : ' + ' ' +  cast(@empsal as varchar(6))
+

@@ -1,0 +1,94 @@
+use infinitedb
+
+select (salary*12 ) from employee
+--procedures 
+--write a procedure that calculates whether an employee is eligible for tax or not
+create or alter proc sp_Taxcalculator @eid int, @annualsal float output
+as
+begin
+ declare @tempsal float
+ select @tempsal = (salary*12) from employee where empid = @eid
+ if(@tempsal > 78500)
+   begin
+    set @annualsal = @tempsal
+	end
+else
+ begin
+  print 'No Tax levied as annual salary is within the limits'
+  end
+end
+
+----to execute the above proc with output,  option 1
+--declare @outannsal float, @tax float
+--exec sp_Taxcalculator 100, @outannsal output
+--set @tax = @outannsal *10/100
+--print 'Salary earned is  '+ cast(@outannsal as varchar(8))
+--print ' Tax amount to be deducted : '+ cast(@tax as varchar(8))
+
+--option 2 is by changing the order
+declare @outannsal float, @tax float
+exec sp_Taxcalculator @annualsal=@outannsal output, @eid=106
+
+set @tax = @outannsal *10/100
+print 'Salary earned is  '+ cast(@outannsal as varchar(8))
+print ' Tax amount to be deducted : '+ cast(@tax as varchar(8))
+
+--ex. create a proc that takes employee number and outputs the manager name, employee name and the employee salary 
+
+--procedures with return type 
+--can be used when we want an integer value to be returned
+--create a proc that takes an empid and returns the deptid where the employee works
+create or alter proc sp_getDept @eid int
+as
+begin 
+-- return (select departmentid from employee where empid=@eid)
+return (select DepartmentId from employee where empid=@eid)
+ end
+
+ --declare @did int
+ --exec @did = sp_getDept 103
+ --select 'The Deapartment of the Employee is :' + cast(@did as varchar(5))
+
+ --ex. given a dept no, return the count of employees in that department
+create or alter proc sp_getempcount @did int
+as
+begin
+ return (select count(empid) from employee where DepartmentId = @did)
+end
+
+declare @totemp int
+exec @totemp=sp_getempcount 2
+print @totemp
+
+--eg : create a proc that takes deptno as input, and outputs the average salary of that dept and also 
+--returns the count of employee in that department
+
+create or alter proc sp_getavgsal_empcount (@did int, @avgsal float output)
+as
+begin
+ select @avgsal = avg(salary) from employee where DepartmentId = @did
+ return (select count(empid) from employee where DepartmentId = @did)
+ end
+
+ --execute the above
+ declare @sal float
+ declare @count int
+ exec @count = sp_getavgsal_empcount 1, @sal output
+ print 'Total Employees in Dept : ' + cast(@count as varchar(3)) + 
+  ' and the dept average is : ' + cast(@sal as varchar(8))
+
+ drop procedure sp_getavgsal_empcount
+
+ --error handling
+ create or alter proc sp_chkerror
+ as
+ begin
+  begin try
+ select salary + empname from employee where empid=105
+  end try
+  begin catch
+   --select 'Some Conversion error occured.. check it out'
+  -- throw 51000, 'Unable to convert data types', 8
+  raiserror(63000,16,8)
+end catch
+end
