@@ -71,4 +71,20 @@ they are of 2 types
      - are not enclosed within begin and end
      - can be used in where, join, and select clauses
      - provide better performance than multi statement table valued functions
-     - Multi statement table valued
+   - Multi statement table valued
+       - are functions thar return a table like structure (users preference)
+       - are enclosed within begin and end clauses
+
+Differences between Functions and Stored Procedures
+ - A function must return a scalar value, whereas a procedure returns an integer value
+ - A function can take only input parameters, whereas a procedure can have input, output parameters
+ - A function do not support data modifications using dml statements, whereas procedures can
+ - A function does not support transactions, error handling. whereas the procedures can
+ - A function can call only other functions, whereas a procedure can call other procedures as well as functions
+ - A function can be used in select, join and where clauses, whereas a procedure needs explicit execution
+
+
+ 
+
+
+       

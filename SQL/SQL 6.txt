@@ -1,0 +1,74 @@
+--multi statement table valued functions
+create or alter function fn_GetEmp_ByGender(@egen varchar(8))
+returns 
+@EmpBygender table(EmpNumber int, EmployeeName varchar(max), Gender varchar(8))
+ as
+  begin
+   --bulk insertion
+   insert into @EmpBygender select empid,empname,gender from employee
+     where gender = @egen
+	 --incase there wer eissues in bulk insertion
+	 --we can try to handle exception
+	 if @@ROWCOUNT = 0
+	  begin
+	   insert into @EmpBygender values(0, 'No Employee Found with the given gender', null)
+	  end
+	  return
+   end
+
+   --to execute the above
+   select * from dbo.fn_GetEmp_Bygender('Male')
+     select * from dbo.fn_GetEmp_Bygender('FeMale')
+	   select * from dbo.fn_GetEmp_Bygender('M')
+   
+   --Northwind 
+   use Northwind
+   select * from Customers
+
+   --write a multi statement function to return customers by their country name (given country name)
+
+   --Indexes
+create table TestTable 
+( TestId int,
+TestName varchar(max),
+TestDate date)
+
+insert into TestTable values(4,'Javascript','2025/07/20'),(null,'SQL','2025/07/25'),
+(1,'API','2025/08/21')
+
+delete from TestTable where TestName like'C%'
+select * from TestTable
+--creating a clustered index 
+create clustered index idxt_tid on TestTable(testid)
+
+-- the above only sorts the physical order
+
+--dropping an index from a table
+drop index Testtable.idxt_tid
+drop index Testtable.idxu
+
+--creating a unique clustered index
+create unique clustered index idx_u on TestTable(testid)
+create unique clustered index idxname on TestTable(testname)
+
+sp_help employee
+
+--non clusterd indexes
+create index idxtestname on testtable(testdate)
+
+--the above way of creating indexes will always create a non-clusterd, non-unique index only
+create unique nonclustered index idxdname on department(deptname)
+
+select * from department
+insert into department values(8,'hr',7000) -- unique nonclusterd protects from duplicate entries
+
+create nonclustered index idxname on employee(empname)
+
+select * from employee
+
+insert into employee values(107,'Shreya','Female',6200,3,'111111')
+
+--filtered indexes
+create index idxsalary on emp(salary) where salary > 1600
+
+select * from emp where salary between 2000 and 3000

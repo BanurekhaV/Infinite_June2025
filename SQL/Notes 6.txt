@@ -1,0 +1,22 @@
+Indexes : are mechanisms to sort the physical order of the data in the database.
+
+Why Indexes ? : without it the query/data modification response may consume lot of the time and effort of the database engine, using a top down approach.
+
+But a single well placed index can shorten the query time from a dozens of minutes to less than a second.
+- Speeds up the data access
+- May Enforce uniqueness (in case of unique/primary key constraints)
+- They occupy disk space
+
+Indexes are of 3 types
+ 1. Clustered Index : allows only one per table
+                      sorts the physical table on every dml operation
+                      does not need additional disk space
+                      can be just clustered or unique clustered (ensures uniqueness of the data inserted)
+
+ 2. Non Clustered Index : allows many indexes per table
+                          occupies additional disk space
+                          any DML operations does not affect the original table, instead only the index table will be sorted
+                          can be either unique or non-unique
+
+ 3. Filtered Index : is a non-clustered index with a predicate
+                     used in situations where we need only a portion of the index
