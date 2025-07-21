@@ -72,3 +72,90 @@ insert into employee values(107,'Shreya','Female',6200,3,'111111')
 create index idxsalary on emp(salary) where salary > 1600
 
 select * from emp where salary between 2000 and 3000
+
+--Views 
+--1. single table view
+create view vwEmpdata
+as select empid,empname,salary, phone from employee 
+
+sp_helptext vwempdata
+select * from vwEmpdata
+select * from employee
+
+insert into vwempdata values(108,'Dinesh',6300,'222222')
+
+update vwempdata set empname='Hari' where empid=108
+
+delete from vwempdata where empid=107
+-- all dml operations are successful thru the view , when the view is made out of a 
+--single table, and the other columns can take either a null value or a default value
+
+--mutliple table views
+create view vwEmpbyDept
+as select empid, empname,salary, department.deptname from employee join department
+on employee.departmentid = department.deptid
+
+select * from vwEmpbyDept
+
+select * from employee
+select * from department
+insert into vwEmpbyDept values(200,'Shami',6400,'IT')
+
+update vwEmpbyDept set deptname = 'HR' where empid=101
+
+--triggers
+create trigger trgEmpIns
+on employee   -- object on which the trigger is placed
+for insert   -- the event for which the trigger would automatically fire
+as
+ begin
+  select * from inserted
+  select * from employee
+  end
+
+  --for the above trigger to be fired
+  insert into employee values(200,'Banurekha','Female',6200,1,'34343434')
+
+  create or alter trigger trg_EmpDel
+  on employee
+  for delete
+  as
+   begin
+    select * from deleted
+	select * from employee
+	end
+
+set implicit_transactions on
+
+delete from employee where empid=200
+rollback
+
+--3. upd
+create trigger trg_empUpd
+on employee
+for update
+as
+begin
+ select * from deleted
+ select * from inserted
+
+ declare @oldsal float, @newsal float
+ select @oldsal = salary from deleted
+ select @newsal = salary from inserted
+ print @oldsal
+ print @newsal
+ if(@newsal > @oldsal)
+  begin
+   print ' emp salary has been upgraded'
+   end
+
+   else
+   begin
+   print ' salary has been decresed'
+   end
+
+ end
+
+ update employee set salary = 6000 where empid=200
+
+ rollback

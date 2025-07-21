@@ -20,3 +20,45 @@ Indexes are of 3 types
 
  3. Filtered Index : is a non-clustered index with a predicate
                      used in situations where we need only a portion of the index
+
+Guidelines for indexing:
+ - columns to index :
+    Primary and foreign key columns
+    Those columns that are frequently searched in ranges
+    Those columns which are frequently accessed in sorted order
+    Those columns which are grouped together during aggregation
+
+ - columns not to index :
+    Columns that are seldom refereed in queries
+    Columns that contain very dew data
+    Columns that are defined with text, ntext, images etc data types
+
+when to create index :
+    - columns that contain number of null values
+    - when the table is large and most of the queries are expected to retrieve less than 2-4% of rows
+
+when not to create index :
+    - when the table is small
+    - columns are referred often 
+    - more than 4% of rows are retrieved as a result from a query
+
+Views : are relations that is not of the conceptual model, but is made visible to the user as a virtual relation
+        - The database will have only the definitions of the views along with their name but no data
+        - Every time we query a virtual relation, the view definition constructs the query using the base tables/relations (original table)
+
+Triggers : are reusable piece of code like any procedure or functions
+           they are used to enforce/define business rules/constraints
+           they are not called for execution, instead they get fired automatically on certain events
+           they can be written for before/after events or instead of the event
+           they are dml or ddl types
+
+Magic tables : are temporary tables/storages that get created within a trigger body during its execution.
+ - their scope is within the trigger body
+ - they are 2 in number
+     1. Inserted Table  : 
+     2. Deleted Table :
+
+Updation is always delete followed by insert, hence there is no update magic table
+ 
+
+ 

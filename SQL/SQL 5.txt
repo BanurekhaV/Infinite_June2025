@@ -247,6 +247,7 @@ as
    select dbo.fn_findarea(5,6) as 'Area of Rectangle'
 
    --inline table valued
+
    create function fn_getEmployeedata(@dept int)
    returns table
    as
@@ -261,11 +262,4 @@ as
 	 having avg(salary)>1000
 
 
-  --option 1. 2 part qualifier
-  select dbo.fndisplaydetails(ename,hire_date)from emp
-
-  --option 2. 3 part qualifier
-  select infinitedb.dbo.fndisplaydetails(ename,hire_date) from emp
-
-  --ex 1.
-  --write a function that takes employee no and returns the salary
+  
