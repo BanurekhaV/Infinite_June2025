@@ -1,0 +1,154 @@
+--database scoped trigger :
+ create or alter trigger trg_restrict_create_table
+ on database
+ for create_table
+ as 
+ begin
+   print 'Access Denied'
+   rollback transaction
+ end
+
+ create procedure sp_testproc
+ as
+ begin
+ select * from employee
+ end
+
+ sp_testproc
+
+ --to drop database level triggers
+ drop trigger if exists trg_restrict_create_table on database
+
+ create table Sample (sampleid int, sname char (8))
+
+ --server scoped trigger
+ create or alter trigger trg_restrict_all
+ on all server
+ for create_table,alter_table,drop_table
+ as
+ begin
+  print 'You are not allowed to create, alter or drop any database tables in this server'
+  rollback
+ end
+ --test any options now
+ drop table sample
+
+ use Northwind
+ create table test(testid char(6),testname varchar(20))
+ alter table test add testdate date
+ drop table test
+ select * from test
+
+ alter table categories add newcolumn varchar(10)
+ 
+
+ --to drop serverscoped triggers
+ drop trigger if exists trg_restrict_all on all server
+
+
+ --cursors
+ --eg 1
+ --if we need any variables we can declare it first
+ declare @pname varchar(25), @price int, @qty int
+ --declare a cursor
+ declare prd_cursor cursor
+ for select productname, price,quantityavailable from products
+
+ --open the cursor
+ open prd_cursor
+ --read the data from the cursor
+ fetch next from prd_cursor into @pname,@price,@qty
+
+ --iterate the cursor set till we have no more rows
+ while @@FETCH_STATUS = 0
+  begin
+   print 'The Product named ' + @pname + ' '+ ' Costs ' + cast(@price as varchar(10)) +
+   ' and the Available Quantity is ' + cast(@qty as varchar(5))
+   --start to fetch the next record
+   fetch next from prd_cursor into @pname,@price,@qty
+  end
+
+  --close the cursor
+  close prd_cursor
+  --deallocate the cursor
+  deallocate prd_cursor
+
+  --eg 2
+  --cursor with tsql
+  declare @sal float, @ename varchar(40)
+  declare empcursor cursor
+  for select empname,salary from employee 
+  open empcursor
+  fetch next from empcursor into @ename,@sal
+  while @@FETCH_STATUS = 0
+   begin
+    if(@sal > 6500)
+	 begin
+	  print @ename + ' Earns ' + cast(@sal as varchar(10))
+	  end
+	else
+	 begin
+	 print @ename + ' needs an increment'
+	 end
+	 fetch next from empcursor into @ename,@sal
+	 end
+	 close empcursor
+	 deallocate empcursor
+
+--eg 3
+--static cursor
+declare @staticename varchar(30),@staticsal float
+declare emp_static cursor static
+for select empname,salary from employee
+
+open emp_static
+fetch relative 3 from emp_static into @staticename, @staticsal
+while @@FETCH_STATUS = 0
+ begin
+ if(@staticsal > 6500)
+  begin
+   print @staticename + 'Earns ' + cast(@staticsal as varchar(8))
+  end
+  else
+  begin
+  print @staticename + ' needs an increment'
+  end
+  fetch prior from emp_static into @staticename, @staticsal
+ end
+ fetch relative 7 from emp_static into @staticename, @staticsal
+ print @staticename
+ fetch next from emp_static into @staticename, @staticsal
+ print @staticename
+
+ close emp_static
+ deallocate emp_static
+
+ --eg 4 dynamic cursor
+ declare @empname varchar(40), @empsal float
+ declare emp_dynamic cursor dynamic
+ for select empname,salary from employee
+ open emp_dynamic
+ fetch next from emp_dynamic into @empname, @empsal
+
+ while @@FETCH_STATUS = 0
+  begin
+   if(@empsal < 6500)
+    begin
+	 print 'Current salary of : ' + @empname + ' is ' + cast(@empsal as varchar(8))
+	  update employee 
+	   set salary = salary + 500 where current of emp_dynamic
+
+	   --let us get the updated salary from tne table
+	   select @empsal = salary from employee where empname=@empname
+	   print ' Revised Salary of : ' + @empname + ' is ' + cast(@empsal as varchar(8))
+	   end
+	   else
+	   begin
+	    print @empname + ' is earning well '
+		end
+
+		 fetch next from emp_dynamic into @empname, @empsal
+		end
+
+		close emp_dynamic
+		deallocate emp_dynamic

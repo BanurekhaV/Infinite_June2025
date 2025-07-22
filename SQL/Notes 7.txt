@@ -1,0 +1,30 @@
+Soft delete : where a row that has to be deleted is actually updated with some value in one of the columns
+
+DDL Triggers : are of 2 types
+  1. Database scoped triggers - are applicable on the DDL Events of a particular database
+  2. Server scoped triggers - are applicable on the DDL Events of a all the databases of the server
+
+Cursors : are objects that store the result set of any query and allows traversal over the rows
+
+They are of 2 types :
+  - Implicit cursors : are created by the database engine automatically and processed
+  - Explicit cursors : are user defined that can be created, traversed, manipulated by the user programs
+
+Life Cycle :
+  1. Declare a cursor
+  2. Open the cursor
+  3. Fetch the data as along as there are rows
+  4. Close the cursor
+  5. Deallocate the cursor
+
+Cursor Traversal :
+  1. Forward only : cursors that can move forward only (1st, 2nd 3rd...)
+  2. Static cursor : cursors that do not reflect any changes made after opening it
+  3. Dynamic cursor : cursors that reflect any changes made after opening it
+  4. Keyset cursor : cursors that are driven by a unique value
+
+Cursor Vs While : 
+
+
+
+

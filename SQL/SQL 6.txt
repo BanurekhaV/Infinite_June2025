@@ -312,6 +312,4 @@ select * from AuditLog
 
 update vwEmpbyDept set deptname='Operations' where empid=250
 
---ex write an instead of trigger on the view to ensure updation of the departmentid 
---in the employee table for a given employee, and not in the department table as seen
 
