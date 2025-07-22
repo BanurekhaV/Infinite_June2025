@@ -181,6 +181,8 @@ begin
 
  create table AuditLog(msg nvarchar(max))
 
+  drop trigger trgaudit
+
  create or alter trigger trgAudit
  on employee
  for insert
@@ -189,7 +191,7 @@ begin
    declare @id int
    select @id = empid from inserted
 
-   insert into AuditLog
+   insert into AuditLog(msg)
    values('New Employee with Employee Id : ' + ' ' + cast(@id as varchar(5)) + 
    ' ' + ' is added at ' + cast(getdate() as varchar(20)))
   end
@@ -202,7 +204,7 @@ begin
   delete from department where deptid=7
   sp_help employee
 
-  -- trigger for updation along withaudit lod details
+  -- trigger for updation along with audit log details
   alter table auditlog
   add auditdate date 
 
@@ -251,4 +253,65 @@ begin
 		set @auditdata = @auditdata + ' Department from ' + cast(@olddept as varchar(5)) + ' to '
 		+ cast(@newdept as varchar(5))
 	   end
+
+	   --now the entire audit string is ready for insertion
+	   insert into AuditLog values(@auditdata, getdate())
+	   -- now we should move to the next row
+	   delete from #temptable where empid= @id
+	   end
+	end
+
+	select * from employee where gender ='female'
+	
+	update employee set salary =salary + 50 where gender ='female'  -- multiple row updations
+
+	select * from AuditLog
+
+-- instead of triggers
+select * from vwEmpbyDept
+
+insert into vwEmpbyDept values(300,'Ajay',6000,'24423553','Accounts') --/ purchase
+
+select * from department
+
+--instead of triggers are used to resolve issues with view updations
+
+sp_helptext vwempbydept
+
+create or alter view vwEmpbyDept  
+as select empid, empname,salary, phone,department.deptname from employee join department  
+on employee.departmentid = department.deptid
+
+
+create or alter trigger trg_ViewIns_Insteadof
+on vwempbydept    -- trigger on a view relation
+instead of insert
+as
+ begin
+  declare @departmentid int
+  --first let us check if the given department in the insert clause is valid ('Accounts')
+  set @departmentid = (select deptid from department d, inserted where inserted.deptname = d.DeptName)
+
+  --now we will check the data  in the variable @departmentid
+  if(@departmentid is null)
+    begin
+	 raiserror('Invalid Department name.. terminating', 16,1)
+	 return
+	 end
+
+	 --if the @departmentid is valid
+	 insert into employee(empid,empname,salary,phone,DepartmentId)
+	 select empid,empname,salary,phone,@departmentid from inserted
+end
+
+insert into vwEmpbyDept values(250,'Vijay',6000,'74423553','Operations') 
+
+select * from employee
+select * from AuditLog
+
+
+update vwEmpbyDept set deptname='Operations' where empid=250
+
+--ex write an instead of trigger on the view to ensure updation of the departmentid 
+--in the employee table for a given employee, and not in the department table as seen
 
