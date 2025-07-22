@@ -152,3 +152,45 @@ while @@FETCH_STATUS = 0
 
 		close emp_dynamic
 		deallocate emp_dynamic
+
+
+--file groups 
+create  database FilesDB on primary
+(
+--primary group
+Name='FilesDB',
+filename='C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\FilesD.mdf',
+size=5mb,
+maxsize=unlimited,
+filegrowth=1024kb
+),
+--secondary file group
+filegroup FDgrp1
+(
+Name='FilesDbFile1',
+filename='C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\FilesDbFile1.ndf',
+size=1mb,
+maxsize=unlimited,
+filegrowth=1024kb),
+
+--like the above we can create more secondary groups
+--now let us create a group for the log
+filegroup FiledDBLoggrp
+(Name='FilesDBLog',
+filename='C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\FilesDbLog.ldf',
+size=5mb,
+maxsize=unlimited,
+filegrowth=1024kb)
+
+dbcc showfilestats
+
+--now let us specify where we want an object to be created 
+create table t1(tid int, tname char(8))
+
+sp_help t2
+
+create table t2(tid int, tname char(8)) on FDgrp1
+
+select db_name() as [DatabaseName],name, file_id,physical_name,
+(size *8.0/1024)as Size,((size*8.0/1024)-(fileproperty(name,'SpaceUsed')*8.0/1024)) as 'Free Space'
+from sys.database_files

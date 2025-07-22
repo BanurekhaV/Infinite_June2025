@@ -1,0 +1,15 @@
+1. Write a T-Sql based procedure to generate complete payslip of a given employee with respect to the following condition
+
+   a) HRA as 10% of Salary
+   b) DA as 20% of Salary
+   c) PF as 8% of Salary
+   d) IT as 5% of Salary
+   e) Deductions as sum of PF and IT
+   f) Gross Salary as sum of Salary, HRA, DA
+   g) Net Salary as Gross Salary - Deductions
+
+Print the payslip neatly with all details
+
+2.  Create a trigger to restrict data manipulation on EMP table during General holidays. Display the error message like “Due to Independence day you cannot manipulate data” or "Due To Diwali", you cannot manipulate" etc
+
+Note: Create holiday table with (holiday_date,Holiday_name). Store at least 4 holiday details. try to match and stop manipulation 
