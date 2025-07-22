@@ -151,7 +151,7 @@ begin
 
    else
    begin
-   print ' salary has been decresed'
+   print ' salary has been decreased'
    end
 
  end
@@ -159,3 +159,96 @@ begin
  update employee set salary = 6000 where empid=200
 
  rollback
+
+
+--eg 4. trigger for dml restriction
+drop trigger trgnochanges
+create or alter trigger trgNoChanges
+on department
+for insert,update,delete
+as
+begin
+ select 'Permission denied.. Contact Admin'
+ rollback
+ end
+
+ insert into department values(20,'OurDept',20000)
+ delete from department where deptid =20
+ select * from department
+
+ --eg 5.
+ --trigger for creating log data
+
+ create table AuditLog(msg nvarchar(max))
+
+ create or alter trigger trgAudit
+ on employee
+ for insert
+ as
+  begin
+   declare @id int
+   select @id = empid from inserted
+
+   insert into AuditLog
+   values('New Employee with Employee Id : ' + ' ' + cast(@id as varchar(5)) + 
+   ' ' + ' is added at ' + cast(getdate() as varchar(20)))
+  end
+
+  --let us insert a row into employee
+  insert into employee values(110,'Taraka lakshmi', 'Female', 6500,1,'776655')
+
+  select * from auditlog
+
+  delete from department where deptid=7
+  sp_help employee
+
+  -- trigger for updation along withaudit lod details
+  alter table auditlog
+  add auditdate date 
+
+  create or alter trigger trgUpdateAudit
+  on employee
+  for update
+  as
+  begin
+   declare @id int, @olddept int, @newdept int
+   declare @oldename varchar(40), @newename varchar(40)
+   declare @oldsal float, @newsal float
+
+   -- declare a variable to build the audit string 
+   declare @auditdata varchar(max)
+   select * from deleted
+   select * from inserted
+   --store the inserted data into temporary table or we can directly use the inserted 
+   select * into #temptable from inserted 
+   select * from #temptable
+   --loop thru all the updated records incase we have updated many records
+   while(exists(select empid from #temptable))
+    begin
+	 set @auditdata = ' '
+
+	 --let us select the first row of the temporary table
+	 select top 1 @id=empid, @newename=empname, @newsal = salary,@newdept=departmentid from #temptable
+
+	 --let us also select the data from the deleted table
+	 select @oldename = empname, @oldsal=salary, @olddept = departmentid from deleted
+
+	 set @auditdata = 'Employee with ID : ' + cast(@id as varchar(5)) + ' Changed '
+	 --if old data is updated with new data, we should track individually
+	 if(@oldename <> @newename)
+	  begin
+	   set @auditdata = @auditdata + ' the Name from ' + @oldename + ' to ' + @newename
+	   end
+	   --for salary
+	   if(@oldsal <> @newsal)
+	    begin
+		set @auditdata = @auditdata + ' Salary from ' + cast(@oldsal as varchar(8)) + ' to ' + 
+		cast(@newsal as varchar(10))
+	   end
+	   --for dept
+	   if(@olddept <> @newdept)
+	    begin
+		set @auditdata = @auditdata + ' Department from ' + cast(@olddept as varchar(5)) + ' to '
+		+ cast(@newdept as varchar(5))
+	   end
+
