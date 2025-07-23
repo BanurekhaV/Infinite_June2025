@@ -1,0 +1,24 @@
+Activex Data Objects (ADO)
+
+
+Architecture of ADO :
+ 1. Connected : applications remain connected through out with the datasource
+ 2. Disconnected : applications can automatically connect/disconnect during the execution.
+                  - temporary data structures called as datasets at the application space
+
+Important classes/objects of ADO
+ - Connection :
+ - Command : 
+     - executeReader() returns an object of type DataReader
+     - executeNonQuery() returns an int (rows affected)
+
+-DataReader : a storage unit known as resultset/recordset
+
+-DataAdapter : 
+
+- Dataset : container objects that contains
+            - Data Tables
+            - Data Rows
+            - Data Columns
+            - Data Relationships
+            - Data Constraints

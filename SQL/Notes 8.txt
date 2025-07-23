@@ -16,3 +16,38 @@ Cube: is similar to rollup, used with group by clause. It can provide sub and gr
 1. row_number() - allocates numbers based on the rows over a particular column
 2. rank() - allocates rank over a particular column, but skips the sequence of the  next number, in case there are more rows taking up the same rank
 3.dense_rank() - allocates rank over a particular column, without skipping any sequence
+
+
+Calculated /Computed Columns : are columns that are computed from an expression that can make use of other columns of the same table
+- are virtual columns by default, and the data is not stored in the disk
+- are computed at the time of execution using reference expression
+- we can use the persistence property and may want to save the data to the disk
+- if the computed column is persisted, then we can also create index on such columns for efficient retrieval
+- we can apply foreign key, check constraints on these columns if persisted
+- can be used in select/dml statements, also in order by where clauses
+
+-- Limitations :
+  cannot refer to columns of the other table
+ 
+
+Normalization :  is a process of decomposing a larger, complex dataset into several smaller and simpler ones
+- move from a lower form to higher form
+- a process based on the candidate keys of a relation and the functional dependencies amongst the other columns
+
+Why Normalization : Redundancy is the root cause for several problems associated with the relational schemas
+ - this causes anomalies in insert, update and delete operations
+ - wastage of storage
+
+Normal Forms : 1 NF : A relation/table is said to be in the 1 NF, when every row contains exactly one value for each attribute/column
+
+ Eg :
+  Employee {Eno, Dept, Prjcode, Hours}
+
+2 NF : A table/relation is already in 1NF, and every non-key attribute of that relation should be fully functionally dependent on the whole key (primary key) and not partial dependencies
+-- remove all partial dependencies
+
+3 NF : a->b->c : then a->c (transitive dependency)
+A table/relation is already in 2 NF, and no non-prime attributes is transitively dependent on the primary key.
+--prohibit transitive dependencies and ensure only direct dependency
+ 
+
