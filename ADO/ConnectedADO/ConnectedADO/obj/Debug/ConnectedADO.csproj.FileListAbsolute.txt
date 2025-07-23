@@ -1,0 +1,7 @@
+C:\Banu\Infinite_June25\ADO\ConnectedADO\ConnectedADO\bin\Debug\ConnectedADO.exe.config
+C:\Banu\Infinite_June25\ADO\ConnectedADO\ConnectedADO\bin\Debug\ConnectedADO.exe
+C:\Banu\Infinite_June25\ADO\ConnectedADO\ConnectedADO\bin\Debug\ConnectedADO.pdb
+C:\Banu\Infinite_June25\ADO\ConnectedADO\ConnectedADO\obj\Debug\ConnectedADO.csproj.AssemblyReference.cache
+C:\Banu\Infinite_June25\ADO\ConnectedADO\ConnectedADO\obj\Debug\ConnectedADO.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite_June25\ADO\ConnectedADO\ConnectedADO\obj\Debug\ConnectedADO.exe
+C:\Banu\Infinite_June25\ADO\ConnectedADO\ConnectedADO\obj\Debug\ConnectedADO.pdb
