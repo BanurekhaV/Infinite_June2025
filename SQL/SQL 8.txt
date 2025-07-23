@@ -1,0 +1,104 @@
+--misc functions
+
+--isnull()
+select isnull('Hello', 'replace value of null')as 'is null'
+select isnull(null,'replace value of null')as 'isnull'
+
+create table NullFuncCheck
+(serialNo int, name varchar(20), loc varchar(20),
+age int, occupation varchar(20))
+
+insert into NullFuncCheck values(1,'Hemasai','India',22,'Software Engg'),
+(2,'Rakesh','UK',null,'Artist'),(2,'Shrinivas','USA',null,'Writer'),
+(4,'Nithin','India',23,'Professor')
+
+select * from NullFuncCheck
+
+select *, isnull(age,30)as 'New Age' from NullFuncCheck
+
+update NullFuncCheck set age = isnull(age,27)where loc ='USA'
+
+update NullFuncCheck set age = null where serialNo =2
+
+insert into NullFuncCheck values(5,'Thamarai','Canada',isnull(null,25),'Banker')
+
+--coalesce
+declare @str1 char,@str2 char,@str3 char
+--all values are null
+select coalesce(@str1,@str2)as 'Coalesce Results',
+ case 
+   when @str1 is not null then @str1
+   when @str2 is null then 'is a null value'
+   end as 'Case Result'
+
+   select coalesce(null,null,null,5,null) 
+   -- to apply the above using isnull
+   select isnull(null,isnull(null,isnull(null,isnull(5,null))))
+
+   use northwind
+   select * from Employees
+   use Infinitedb
+   --1.
+   select titleofcourtesy,firstname,lastname,titleofcourtesy + ' ' +
+    coalesce(firstname,' ') + ' ' + coalesce(lastname,' ')as [Employee Full Name] from
+	employees
+
+--rollup
+select departmentid,sum(salary)as 'Total Salary' from employee 
+group by departmentid
+
+select departmentid,sum(salary)as 'Total Salary' from employee 
+group by rollup(departmentid)
+
+--to display the totals with a meaningful column value, we can coalesce
+select coalesce(departmentid,500)as Department,sum(salary)as 'Total Salary' from employee 
+group by rollup(departmentid)
+
+--subtotals and grand totals deptwise, gender wise
+update employee set gender='Male' where empid in(250,300)
+
+select coalesce(departmentid,500)as Department,coalesce(gender,'All genders subtotal'),
+sum(salary)as 'Total Salary' from employee
+group by rollup(departmentid,gender)
+
+--the above without coalesce
+select departmentid as Department, Gender, sum(Salary)TotalSalary from employee
+group by rollup(departmentid,gender)
+
+--cube
+select coalesce(departmentid,500)as Department,coalesce(gender,'All Genders Subtotal') as Gender,
+sum(salary)as 'Total Salary' from employee
+group by cube(departmentid,gender)
+order by departmentid,gender
+
+--addl func.
+create table Students(StdName varchar(25),Subject varchar(20), Marks_Scored int)
+
+insert into Students values('Traun','Maths',80),('Tarun','Science',70),('Tarun','English',65),
+('Nishitha','Maths',68),('Nishitha','Science',85),('Nishitha','English',90),
+('Susmitha','Maths',65),('Susmitha','Science',90),('Susmitha','English',60)
+
+update Students set Marks_Scored=60 where subject='English' and stdname='susmitha'
+update students set stdname='Tarun' where stdname='traun'
+select * from Students
+
+--row_number() - allocates numbers based on the rows over a particular column
+select stdname,subject,marks_scored,row_number() over(order by marks_scored desc)as Row_Numbers 
+from Students
+
+--rank() - allocates numbers based on the rows over a particular column, but skips the sequence of the next number
+--in case there are more rows with the same value
+
+select stdname,subject,marks_scored,rank() over(order by marks_scored desc)as Rank_Numbers 
+from Students
+
+--dense_rank() - allocates numbers based on the rows over a particular column, without skipping any sequence
+select stdname,subject,marks_scored,dense_rank() over(order by marks_scored desc)as Rank_Numbers 
+from Students
+
+--seggregation based on particular coulmns can be used with partition
+select stdname,subject,marks_scored,rank() over(partition by subject order by marks_scored desc)as Rank_Numbers 
+from Students
+
+select stdname,subject,marks_scored,dense_rank() over(partition by stdname order by marks_scored desc)as Rank_Numbers 
+from Students
