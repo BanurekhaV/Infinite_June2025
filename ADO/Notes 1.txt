@@ -9,8 +9,9 @@ Architecture of ADO :
 Important classes/objects of ADO
  - Connection :
  - Command : 
-     - executeReader() returns an object of type DataReader
-     - executeNonQuery() returns an int (rows affected)
+     - executeReader() returns an object of type DataReader (used with DQL)
+     - executeNonQuery() returns an int (rows affected) (used for DML)
+     - executescalar() returns one value or we are looking at only one value
 
 -DataReader : a storage unit known as resultset/recordset
 
