@@ -92,7 +92,7 @@ namespace ConnectionPooling_Transaction
                                 using (SqlConnection con1 = new SqlConnection(str))
                                 {
                                     con1.Open();
-                                    using (SqlCommand cmd1 = new SqlCommand("insert into shippers values(10,'DTDC','(100)-12345')", con1))
+                                    using (SqlCommand cmd1 = new SqlCommand("insert into shippers values('Fedex','(200)-67895')", con1))
                                     {
                                         int noofrows = cmd1.ExecuteNonQuery();
                                         if (noofrows > 0)
