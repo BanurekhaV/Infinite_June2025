@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Building_DataSets.DataConstraints</StartupObject>
+    <StartupObject>Building_DataSets.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

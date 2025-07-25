@@ -71,11 +71,10 @@ namespace Building_DataSets
             DataRow dr2 = ds.Tables["Students"].NewRow();
             dr2["Sid"] = 1;
             dr2["SName"] = "Banurekha";
-            dr2["ClassId"] = 4;
+            dr2["ClassId"] = 1;
 
             StudentTable.Rows.Add(dr2);
-
-
+           
         }
     }
 }

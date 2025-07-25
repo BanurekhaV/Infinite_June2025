@@ -155,27 +155,42 @@ namespace Building_DataSets
                     row["EmpStatusId"], row["EmpStatus"]);
             Console.WriteLine
             ("-----------------------------------------------------------------------");
-            foreach(DataRow row in dsEmployement.Tables["Employees"].Rows)
-            {
+            //foreach(DataRow row in dsEmployement.Tables["Employees"].Rows)
+            //{
                 //Console.WriteLine("{0} \t | {1}    \t  | " +
                 //    "         {2}          \t          |        {3}     \t",row["EmpCode"],
                 //    row["EmpName"], row["EmpDept"], row["EmpStatusId"]);
 
                 //if we want the status names and not the id
-                int irow = int.Parse(row["EmpStatusId"].ToString());
+               // int irow = int.Parse(row["EmpStatusId"].ToString());
                // Console.WriteLine(irow);
-                Console.WriteLine();
-                DataRow currentrow = dsEmployement.Tables["EmployeeStatus"].Rows[irow - 1];
+               // Console.WriteLine();
+               // DataRow currentrow = dsEmployement.Tables["EmployeeStatus"].Rows[irow - 1];
+          
+               //Console.WriteLine("{0} \t | {1}    \t  | " +
+               //    "         {2}          \t          |        {3}     \t", row["EmpCode"],
+               //    row["EmpName"], row["EmpDept"], currentrow["EmpStatus"]);
 
-                Console.WriteLine(currentrow);
 
-                Console.WriteLine("{0} \t | {1}    \t  | " +
-                   "         {2}          \t          |        {3}     \t", row["EmpCode"],
-                   row["EmpName"], row["EmpDept"], currentrow["EmpStatus"]);
+                Console.WriteLine("By Comparing Values ");
+            Console.WriteLine();
+                Console.WriteLine("----------------Getting the Matching Record-------------------");
+                foreach(DataRow drow in dtEmpStatus.Rows)
+                {
+                    foreach(DataRow drow1 in dtEmployees.Rows)
+                    {
+                        int stsid = drow.Field<int>("EmpStatusId");
+                        string status = drow.Field<string>("EmpStatus");
+                        int empstsid = drow1.Field<int>("EmpStatusId");
+                        if(stsid == empstsid)
+                        {
+                           Console.WriteLine("{0} \t  {1}  \t   {2}   \t   {3}", drow1["Empcode"],drow1["EmpName"],drow1["EmpDept"],status);
+                        }
+
+                    }
+                }
             }
-            
 
-        }
         static void Main(string[] args)
         {
             Datasets_Build();
