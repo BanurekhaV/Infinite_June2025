@@ -1,0 +1,25 @@
+Transaction Management System : locking mechanisms, works on locking policy that changes based on the level of Isolation
+
+Transaction Isolation Levels :
+1. Serializable : Highest level of Isolation. Exclusive range of locks are applied.
+2. Repeatable Read : Second Highest level. Same as Serializable, but does not acquire range of locks. Phantom reda are possible
+3. Read Committed : Acquires Shared lock and allows reading only committed data. Avoids read changes as a part of the transaction
+4. Read Uncommitted : Lowest level. Allows dirty reads
+
+Reading Mechanism : 
+ - Dirty Read : one transaction reads the changed values/data of another transaction, which is yet to be committed. When We make a decision based on the uncommitted data, and then the transaction is rolled back, creates a bug in the application
+
+ - Non Repeatable Read : A transaction reads the same data from the same table multiple times, the there can a problem of looking at different values for every read
+
+ - Phantom Read : A transaction reads a table first and finds x number of rows. A problem can creep in when the same transaction goes for another read, it may find x+1 rows
+
+
+Transaction Scope : is an object that ensures all operations within the scope are treated as a single unit of work, maintaining consistency and integrity.
+ - It does not require us to create a separate transaction
+ - It will automatically manage ambient transaction and does not need connection transaction
+     Ambient Transaction : 
+     --------------------
+A transaction which on its own identifies a block of code that needs the support of transaction, without we explicitly mentioning.
+     Connection Transaction :
+     ----------------------- 
+  Transactions that are tied directly to the SqlConnection Object.

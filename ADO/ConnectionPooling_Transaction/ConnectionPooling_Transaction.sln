@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34931.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionPooling_Transaction", "ConnectionPooling_Transaction\ConnectionPooling_Transaction.csproj", "{443831AD-4D04-499D-9187-D8F5A2D0275D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{443831AD-4D04-499D-9187-D8F5A2D0275D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{443831AD-4D04-499D-9187-D8F5A2D0275D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{443831AD-4D04-499D-9187-D8F5A2D0275D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{443831AD-4D04-499D-9187-D8F5A2D0275D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34AF1BE3-FE1D-414A-94A8-A73242A8E35B}
+	EndGlobalSection
+EndGlobal
