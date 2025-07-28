@@ -17,6 +17,7 @@ namespace LinqToSQL_VS
             {
                 Console.WriteLine($"{e.empno} {e.ename} {e.job} {e.salary} {e.mgr_id}");
             }
+
             Console.Read();
         }
     }
