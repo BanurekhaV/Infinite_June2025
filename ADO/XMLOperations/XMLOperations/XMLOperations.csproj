@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D4D9AF0B-4694-46CA-BA05-CF43EFA859AC}</ProjectGuid>
+    <ProjectGuid>{434B2D06-5137-4242-B564-36D26CDD5E22}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Building_DataSets</RootNamespace>
-    <AssemblyName>Building_DataSets</AssemblyName>
+    <RootNamespace>XMLOperations</RootNamespace>
+    <AssemblyName>XMLOperations</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>Building_DataSets.Datasets_Manipulations</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,8 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataConstraints.cs" />
-    <Compile Include="Datasets_Manipulations.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

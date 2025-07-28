@@ -1,0 +1,7 @@
+C:\Banu\Infinite_June25\ADO\XMLOperations\XMLOperations\bin\Debug\XMLOperations.exe.config
+C:\Banu\Infinite_June25\ADO\XMLOperations\XMLOperations\bin\Debug\XMLOperations.exe
+C:\Banu\Infinite_June25\ADO\XMLOperations\XMLOperations\bin\Debug\XMLOperations.pdb
+C:\Banu\Infinite_June25\ADO\XMLOperations\XMLOperations\obj\Debug\XMLOperations.csproj.AssemblyReference.cache
+C:\Banu\Infinite_June25\ADO\XMLOperations\XMLOperations\obj\Debug\XMLOperations.csproj.CoreCompileInputs.cache
+C:\Banu\Infinite_June25\ADO\XMLOperations\XMLOperations\obj\Debug\XMLOperations.exe
+C:\Banu\Infinite_June25\ADO\XMLOperations\XMLOperations\obj\Debug\XMLOperations.pdb

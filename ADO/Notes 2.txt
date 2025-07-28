@@ -1,0 +1,60 @@
+When to Use Data Sets : 
+  - Complex Structures in application with multiple tables and relationships. Acts like a mirror to a RDBMS
+  - Disconnected Manipulation : When we want to work offline. All changes are made locally and then updated at the database
+  - Data Serialization
+  - Reporting and Data Analysis
+  - Hierarchial Data
+  - Data Transformations 
+
+Cons : Memory Usahe - is more
+       Performance - flexibility can sometimes impact performnace
+       Data Access - can be a bottleneck when applications are extensive read only (only reading heavy data)
+                      onstrad use SQLDataReader
+
+Wen to use Data Readers : Forward only cursor ( only fetching data)
+                          Use memory efficienty
+                          Connected
+                          Better performance
+
+
+
+XML : Extensible Mark up Language
+ - It is text based markup lang.
+ - it is derived from SGML(Standard Generalized Mark up lang)
+ - It is a public standard (w3 open standards)
+ - xml tags identify the data that are used to store and organize
+ - User defined tags
+
+- XML Usage : simplifies creation of html documents for both small and large scale applications/website
+  - Used for storing and exchanging data
+  - can express any data type
+
+&lt = <
+&amp - &
+&apos - '
+&quot - "
+
+Xml documents can be created and validated against well formed documents
+ 1. DTD : Document Type Definition
+ 2. XDS : Xml Schema Definition
+
+DTD :
+<?xml version "1.0">
+<!Doctype Employee Management System" employee.dtd>
+<Employees>
+ <employee>
+  <firstname>Amitabh </firstname>
+  <lastname>Bachhan</lastname>
+ </employee>
+ <employee>
+  <firstname>Ajith </firstname>
+  <lastname>Kumar</lastname>
+ </employee>
+</Employees>
+
+XSD :
+<?xml version="1.0">
+<Employee 
+   xmlns="https://www.infinite.com"
+   xmlns: xsi="http://www.w3.org/2001/xmlschema-instance
+   xsi:schemaLocation-"http://www.infinite.com employee.xsd>
