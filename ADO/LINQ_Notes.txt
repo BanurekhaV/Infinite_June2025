@@ -50,8 +50,21 @@ To work with Linq to Sql, we need to convert all entities to Objects. This proce
 - mapped objects are generated/ can be generated using the following options
 
   1. Visual Studio (Uses Linq to Sql classes, that generates a .dbml file with all the mappings)
-  2. SqlMetal.exe (a tool - an executable that generates the mapping as a .dbml file)
 
+      1. Create a console Application
+      2. Right click on the project and add a new Item
+      3. Search for Linq to Sql classes (if not found, go to tools menu->tools and features->individual component-> type linq to sql in the search text box. Check the tool and install the component)
+      4. You may now change the name of the dbml file that is likely to be created
+      5. Observe 2 files getting created (a. designer.cs for the Context Class, with 4 parameterized constructors, and b. a layout with 2 panes for tables and stored proc/functions)
+      6. You may want to explore the designer.cs file for the ContextClass
+      7. Go to the View Menu and select the SQLServer Object Explorer.
+      8. Try to find the database instance (if not found, then add sql server under SQL Server option and give proper values to the dialog box that pop up. Then click ok/connect)
+      9. Select the database that you would like to work with. Select the tables and drag and drop them on the left hand side of the layout pane. Any stored procs or functions, drag and drop them on the right hand side pane of the layout
+      10. Allow the dbml to map the objects.
+      11. Build the application
+      12 . Observer the context class in the designer.cs file for a new empty constructor with all other related objects and properties etc
+       13. Now create an instance of the context class and start working/querying the data source
 
-    
+    --------------------------------------------------------------------------------------------------------
+ 2. SqlMetal.exe (a tool - an executable that generates the mapping as a .dbml file)
 
