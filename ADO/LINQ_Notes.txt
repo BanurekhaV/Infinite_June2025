@@ -1,0 +1,18 @@
+LINQ : Language Integrated Query
+   - is a query standard to query any data source
+   - less code
+   - more readable
+   - provides intellisense support
+   - compile time safe
+   - English like 
+   - no need to learn many query languages
+
+LINQ to collections 
+LINQ to Objects
+LINQ to Data Tables
+LINQ to SQL
+
+Immediate LINQ  vs Deferred LINQ
+
+
+

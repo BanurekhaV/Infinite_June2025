@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.IO;
-
+using System.Xml;
 
 namespace XMLOperations
 {
@@ -14,10 +14,10 @@ namespace XMLOperations
         static DataSet ds = new DataSet("DS");
         static void Main(string[] args)
         {
-            XMLWriter();
-            XMLReader();
+          //  XMLWriter();
+          //  XMLReader();
            // XMLSchemaWriter();
-           // XMLSchemaReader();
+            XMLSchemaReader();
             Console.Read();
         }
 
@@ -107,12 +107,22 @@ namespace XMLOperations
 
         static void XMLSchemaWriter()
         {
-
+            ContenGeneration();
+            ds.WriteXmlSchema("studentschema");
         }
 
         static void XMLSchemaReader()
         {
+            ds = new DataSet("stdschema");
+            StreamReader sr = new StreamReader("studentschema");
 
+            ds.ReadXmlSchema(sr);
+
+            //use foreach loop and iterate the dataset
+
+            //we can also write using the schema writer
+            XmlTextWriter writer = new XmlTextWriter(Console.Out);
+            ds.WriteXmlSchema(writer);
         }
     }
 }
