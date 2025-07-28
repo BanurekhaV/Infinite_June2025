@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LINQ_Queries
 {
-    class Program
+    class Linq_Ops
     {
         static void Main(string[] args)
         {
@@ -23,6 +23,9 @@ namespace LINQ_Queries
             Console.WriteLine("-------------------------");
             InnerJoins();
             Console.WriteLine("---------------------------");
+            Group_By_Func();
+            Console.WriteLine("**************************");
+            Group_Join();
             Console.Read();
         }
 
@@ -136,6 +139,73 @@ namespace LINQ_Queries
                 Console.WriteLine(country);
             }
         }
+
+        static void Group_By_Func()
+        {
+            int[] numbers = { 10, 15, 20, 25, 30, 35, 42 };
+            var result = numbers.GroupBy(num => (num % 10 == 0));  //query construction
+
+            foreach(IGrouping<bool,int> gp in result)  // query execution
+            {
+                if(gp.Key ==  true)
+                {
+                    Console.WriteLine("Group 1 : - Numbers Divisible by 10..");
+                }
+                else
+                {
+                    Console.WriteLine("Group 2 : - Numbers Not divisible by 10..");
+                }
+                foreach(int n in gp)
+                {
+                    Console.WriteLine(n);
+                }
+            }
+        }
+
+        static void Group_Join()  //wprks like a left outer join
+        {
+            
+            Language[] languages = new Language[]
+            {
+                new Language{Id = 1, Name="English"},
+                new Language{Id = 2, Name = "German"},
+                 new Language{Id = 3, Name = "Spanish"},
+            };
+
+            
+            Person[] persons = new Person[]
+            {
+                new Person{LanguageId = 1, PersonName ="Naveen"},
+                new Person{LanguageId = 1, PersonName ="Sathish"},
+                new Person{LanguageId = 2, PersonName ="Naresh"},
+                new Person{LanguageId = 2, PersonName ="Sudesh"},
+                new Person{LanguageId = 1, PersonName ="Nithya"},
+            };
+
+            var result = languages.GroupJoin(persons, l => l.Id, p => p.LanguageId,
+                (lang, ps) => new { Key = lang.Name, Person = ps });
+
+            foreach(var language in result)
+            {
+                Console.WriteLine(String.Format("Persons speaking {0} :", language.Key));
+                foreach(var person in language.Person)
+                {
+                    Console.WriteLine(person.PersonName);
+                }
+            }
+        }
+    }
+
+    class Language
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
+
+    class Person
+    {
+        public int LanguageId { get; set; }
+        public string PersonName { get; set; }
     }
 }
 

@@ -15,4 +15,43 @@ LINQ to SQL
 Immediate LINQ  vs Deferred LINQ
 
 
+Any Linq queries can be executed either as 
+Immediate : Greedy Queries (greedy operator)
+            Query is executed at the point of declaration/construction
+            Aggregate functions, element operators(first, last, single, tolist, toarray, todictionary)
+
+Deferred : Lazy Operator
+           Query is not executed at the point of declaration/construction, instead at the time we access the results
+           Projection Operators (select, selectmany)
+           Restriction operators ( where)
+           Paging Operators ( take, skip)
+           Avoids unnecessary execution and hence improves performance
+           Works always on the latest collection/object
+
+
+ex : GroupJoin
+Person {PId, PName} 
+
+Course {CId, CName}ADO.net, C#.Net, SQL
+
+Employee {}
+Department {}
+
+        
+LINQ to SQL : is an infrastructure(run-time) for relational data to be managed as an object representation
+
+  Table ------		  Class
+  Columns  ----		  Properties
+  Rows   ----  		  Instances
+  Stored Procedures ----  Methods/Functions
+
+To work with Linq to Sql, we need to convert all entities to Objects. This process is known as Object Relational Mapper (ORM)
+
+- mapped objects are generated/ can be generated using the following options
+
+  1. Visual Studio (Uses Linq to Sql classes, that generates a .dbml file with all the mappings)
+  2. SqlMetal.exe (a tool - an executable that generates the mapping as a .dbml file)
+
+
+    
 
