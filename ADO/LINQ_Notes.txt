@@ -68,3 +68,20 @@ To work with Linq to Sql, we need to convert all entities to Objects. This proce
     --------------------------------------------------------------------------------------------------------
  2. SqlMetal.exe (a tool - an executable that generates the mapping as a .dbml file)
 
+C:\Banu\Infinite_June25\ADO\LinqToSql_SqlMetal>sqlmetal.exe /server:laptop-tjj7d977 /database:Northwind /dbml:C:\Banu\Infinite_June25\ADO\northwind.dbml /context:NorthwindContext
+
+Authentication via SqL server can include user and password after database option and before dbml option
+
+- right click on the project and select existing item -> search for the .dbml file created and add it.
+- observe the designer.cs and layout files
+- Go the App.config File and include the below under configuration section
+    
+     <connectionStrings>
+    <add name="NwindConnstr"
+          connectionString="Data Source=<server name>;initial catalog=northwind;
+          integrated security=true" providerName="System.Data.SqlClient"/>
+  </connectionStrings>
+
+- Build the application
+- Create context class instance by passing the connection string name to the constructor 
+- Now we are ready to use the mapped objects

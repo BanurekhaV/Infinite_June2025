@@ -1,0 +1,40 @@
+Railway Reservation System :  C# with ADO 
+--------------------------
+Register
+Reservation
+Cancellation
+Reports   : Ticket
+
+Unit Testing 
+(soft delete of all candidate rows)
+
+ Customer Details
+  Custid
+ CustName
+ Phone
+ Mail id
+
+Train Details
+ Train No
+ Train name
+ Source
+ Destination
+ Class (Sleeper, 2nd AC. 3rd AC)
+ Availability per class (to start off with have fixed allotments per class, maximum)
+ Cost per seat/class
+
+Reservation
+ Booking id
+ customer no
+ Name
+ dt of travel
+ class
+ birth allotments
+ Total Cost
+ date of booking
+
+Cancellation : 
+  Booking id
+  ticket cancelled
+  Amt Refund (50% refund )
+  dt of cancellation

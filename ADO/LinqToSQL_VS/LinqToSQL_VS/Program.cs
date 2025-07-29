@@ -18,6 +18,11 @@ namespace LinqToSQL_VS
                 Console.WriteLine($"{e.empno} {e.ename} {e.job} {e.salary} {e.mgr_id}");
             }
 
+            Console.WriteLine("-----Calling The Procedure------");
+            double ? salary = 0;
+            string ename = "Vidushi";
+            db.GetSal_byName(ename, ref salary);
+            Console.WriteLine($"{ename} earns a Salary of {salary} Rupees..");
             Console.Read();
         }
     }
