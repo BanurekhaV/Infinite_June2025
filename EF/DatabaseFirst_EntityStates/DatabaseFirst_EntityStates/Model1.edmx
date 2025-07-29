@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="InfiniteDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="InfiniteDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Department">
           <Key>
             <PropertyRef Name="Deptid" />
@@ -99,6 +99,33 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="fn_findArea" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+          <Parameter Name="ln" Type="int" Mode="In" />
+          <Parameter Name="bd" Type="int" Mode="In" />
+        </Function>
+        <Function Name="fn_GetEmp_ByGender" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="egen" Type="varchar" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="EmpNumber" Type="int" />
+                <Property Name="EmployeeName" Type="varchar(max)" />
+                <Property Name="Gender" Type="varchar" MaxLength="8" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="GetSal_byName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ename" Type="varchar" Mode="In" />
+          <Parameter Name="salary" Type="float" Mode="InOut" />
+        </Function>
+        <Function Name="sp_getavgsal_empcount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="did" Type="int" Mode="In" />
+          <Parameter Name="avgsal" Type="float" Mode="InOut" />
+        </Function>
+        <Function Name="sp_getDept" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="eid" Type="int" Mode="In" />
+        </Function>
         <EntityContainer Name="InfiniteDBModelStoreContainer">
           <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="dept" EntityType="Self.dept" Schema="dbo" store:Type="Tables" />
@@ -119,8 +146,7 @@
             <End Role="Employee" EntitySet="Employee" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="InfiniteDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -243,7 +269,26 @@
             <End Role="Products" EntitySet="Products" />
             <End Role="ProductSales" EntitySet="ProductSales" />
           </AssociationSet>
+          <FunctionImport Name="GetSal_byName">
+            <Parameter Name="ename" Mode="In" Type="String" />
+            <Parameter Name="salary" Mode="InOut" Type="Double" />
+          </FunctionImport>
+          <FunctionImport Name="sp_getDept">
+          <Parameter Name="eid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_getavgsal_empcount">
+            <Parameter Name="did" Mode="In" Type="Int32" />
+            <Parameter Name="avgsal" Mode="InOut" Type="Double" />
+          </FunctionImport>
+          <FunctionImport Name="fn_GetEmp_ByGender" IsComposable="true" ReturnType="Collection(InfiniteDBModel.fn_GetEmp_ByGender_Result)">
+            <Parameter Name="egen" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
+        <ComplexType Name="fn_GetEmp_ByGender_Result">
+          <Property Type="Int32" Name="EmpNumber" Nullable="true" />
+          <Property Type="String" Name="EmployeeName" Nullable="true" />
+          <Property Type="String" Name="Gender" Nullable="true" MaxLength="8" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -314,6 +359,18 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetSal_byName" FunctionName="InfiniteDBModel.Store.GetSal_byName" />
+          <FunctionImportMapping FunctionImportName="sp_getDept" FunctionName="InfiniteDBModel.Store.sp_getDept" />
+          <FunctionImportMapping FunctionImportName="sp_getavgsal_empcount" FunctionName="InfiniteDBModel.Store.sp_getavgsal_empcount" />
+          <FunctionImportMapping FunctionImportName="fn_GetEmp_ByGender" FunctionName="InfiniteDBModel.Store.fn_GetEmp_ByGender">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="InfiniteDBModel.fn_GetEmp_ByGender_Result">
+                <ScalarProperty Name="EmpNumber" ColumnName="EmpNumber" />
+                <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Mymodel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MymodelStoreContainer">
+    <EntitySet Name="Cars" EntityType="Mymodel.Store.Cars" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Manufacturers" EntityType="Mymodel.Store.Manufacturers" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="ManufacturerCars" Association="Mymodel.Store.ManufacturerCars">
+      <End Role="Manufacturer" EntitySet="Manufacturers" />
+      <End Role="Cars" EntitySet="Cars" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Cars">
+    <Key>
+      <PropertyRef Name="CarID" />
+    </Key>
+    <Property Name="CarID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CarName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CarCost" Type="float" Nullable="false" />
+    <Property Name="Manufactured_ID" Type="int" Nullable="false" />
+    <Property Name="ManufacturerMfr_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Manufacturers">
+    <Key>
+      <PropertyRef Name="Mfr_ID" />
+    </Key>
+    <Property Name="Mfr_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Mfr_Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Car_Type" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="ManufacturerCars">
+    <End Role="Manufacturer" Type="Mymodel.Store.Manufacturers" Multiplicity="1" />
+    <End Role="Cars" Type="Mymodel.Store.Cars" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufacturer">
+        <PropertyRef Name="Mfr_ID" />
+      </Principal>
+      <Dependent Role="Cars">
+        <PropertyRef Name="ManufacturerMfr_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -65,5 +65,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetSal_byName" FunctionName="InfiniteDBModel.Store.GetSal_byName" />
+    <FunctionImportMapping FunctionImportName="sp_getDept" FunctionName="InfiniteDBModel.Store.sp_getDept" />
+    <FunctionImportMapping FunctionImportName="sp_getavgsal_empcount" FunctionName="InfiniteDBModel.Store.sp_getavgsal_empcount" />
+    <FunctionImportMapping FunctionImportName="fn_GetEmp_ByGender" FunctionName="InfiniteDBModel.Store.fn_GetEmp_ByGender">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="InfiniteDBModel.fn_GetEmp_ByGender_Result">
+          <ScalarProperty Name="EmpNumber" ColumnName="EmpNumber" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

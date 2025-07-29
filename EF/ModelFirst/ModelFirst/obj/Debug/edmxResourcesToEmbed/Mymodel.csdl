@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Mymodel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="MymodelContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cars" EntityType="Mymodel.Cars" />
+    <EntitySet Name="Manufacturers" EntityType="Mymodel.Manufacturer" />
+    <AssociationSet Name="ManufacturerCars" Association="Mymodel.ManufacturerCars">
+      <End Role="Manufacturer" EntitySet="Manufacturers" />
+      <End Role="Cars" EntitySet="Cars" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Cars">
+    <Key>
+      <PropertyRef Name="CarID" />
+    </Key>
+    <Property Name="CarID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CarName" Type="String" Nullable="false" />
+    <Property Name="CarCost" Type="Double" Nullable="false" />
+    <Property Name="Manufactured_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Manufacturer" Relationship="Mymodel.ManufacturerCars" FromRole="Cars" ToRole="Manufacturer" />
+    <Property Name="ManufacturerMfr_ID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Manufacturer">
+    <Key>
+      <PropertyRef Name="Mfr_ID" />
+    </Key>
+    <Property Name="Mfr_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Mfr_Name" Type="String" Nullable="false" />
+    <Property Name="Car_Type" Type="String" Nullable="false" />
+    <NavigationProperty Name="Cars" Relationship="Mymodel.ManufacturerCars" FromRole="Manufacturer" ToRole="Cars" />
+  </EntityType>
+  <Association Name="ManufacturerCars">
+    <End Type="Mymodel.Manufacturer" Role="Manufacturer" Multiplicity="1" />
+    <End Type="Mymodel.Cars" Role="Cars" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufacturer">
+        <PropertyRef Name="Mfr_ID" />
+      </Principal>
+      <Dependent Role="Cars">
+        <PropertyRef Name="ManufacturerMfr_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

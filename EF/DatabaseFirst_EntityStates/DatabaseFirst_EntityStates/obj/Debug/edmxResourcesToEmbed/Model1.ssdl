@@ -94,6 +94,33 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="fn_findArea" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="ln" Type="int" Mode="In" />
+    <Parameter Name="bd" Type="int" Mode="In" />
+  </Function>
+  <Function Name="fn_GetEmp_ByGender" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="egen" Type="varchar" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="EmpNumber" Type="int" />
+          <Property Name="EmployeeName" Type="varchar(max)" />
+          <Property Name="Gender" Type="varchar" MaxLength="8" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="GetSal_byName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ename" Type="varchar" Mode="In" />
+    <Parameter Name="salary" Type="float" Mode="InOut" />
+  </Function>
+  <Function Name="sp_getavgsal_empcount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="did" Type="int" Mode="In" />
+    <Parameter Name="avgsal" Type="float" Mode="InOut" />
+  </Function>
+  <Function Name="sp_getDept" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="eid" Type="int" Mode="In" />
+  </Function>
   <EntityContainer Name="InfiniteDBModelStoreContainer">
     <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="dept" EntityType="Self.dept" Schema="dbo" store:Type="Tables" />

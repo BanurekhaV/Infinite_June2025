@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MymodelStoreContainer" CdmEntityContainer="MymodelContainer">
+    <EntitySetMapping Name="Cars">
+      <EntityTypeMapping TypeName="IsTypeOf(Mymodel.Cars)">
+        <MappingFragment StoreEntitySet="Cars">
+          <ScalarProperty Name="CarID" ColumnName="CarID" />
+          <ScalarProperty Name="CarName" ColumnName="CarName" />
+          <ScalarProperty Name="CarCost" ColumnName="CarCost" />
+          <ScalarProperty Name="Manufactured_ID" ColumnName="Manufactured_ID" />
+          <ScalarProperty Name="ManufacturerMfr_ID" ColumnName="ManufacturerMfr_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Manufacturers">
+      <EntityTypeMapping TypeName="IsTypeOf(Mymodel.Manufacturer)">
+        <MappingFragment StoreEntitySet="Manufacturers">
+          <ScalarProperty Name="Mfr_ID" ColumnName="Mfr_ID" />
+          <ScalarProperty Name="Mfr_Name" ColumnName="Mfr_Name" />
+          <ScalarProperty Name="Car_Type" ColumnName="Car_Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

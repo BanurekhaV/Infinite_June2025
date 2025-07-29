@@ -12,6 +12,8 @@ namespace DatabaseFirst_EntityStates
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class InfiniteDBEntities : DbContext
     {
@@ -31,5 +33,42 @@ namespace DatabaseFirst_EntityStates
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<ProductSale> ProductSales { get; set; }
+    
+        public virtual int GetSal_byName(string ename, ObjectParameter salary)
+        {
+            var enameParameter = ename != null ?
+                new ObjectParameter("ename", ename) :
+                new ObjectParameter("ename", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("GetSal_byName", enameParameter, salary);
+        }
+    
+        public virtual int sp_getDept(Nullable<int> eid)
+        {
+            var eidParameter = eid.HasValue ?
+                new ObjectParameter("eid", eid) :
+                new ObjectParameter("eid", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_getDept", eidParameter);
+        }
+    
+        public virtual int sp_getavgsal_empcount(Nullable<int> did, ObjectParameter avgsal)
+        {
+            var didParameter = did.HasValue ?
+                new ObjectParameter("did", did) :
+                new ObjectParameter("did", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_getavgsal_empcount", didParameter, avgsal);
+        }
+    
+        [DbFunction("InfiniteDBEntities", "fn_GetEmp_ByGender")]
+        public virtual IQueryable<fn_GetEmp_ByGender_Result> fn_GetEmp_ByGender(string egen)
+        {
+            var egenParameter = egen != null ?
+                new ObjectParameter("egen", egen) :
+                new ObjectParameter("egen", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.CreateQuery<fn_GetEmp_ByGender_Result>("[InfiniteDBEntities].[fn_GetEmp_ByGender](@egen)", egenParameter);
+        }
     }
 }

@@ -1,0 +1,29 @@
+Entity Framework : is an Object Relational Mapper that enables dotnet developers to work with relational data with domain specific objects (ORM)
+ -It is an Open source framework for ADO.net
+ -Helps faster application development
+
+Types of Entities :
+ 1. POCO Entities :(Plain Old CLR Objects). A Poco entity is a class that does not depend on any framework base class, but is just a normal .net clr class
+
+ 2. Dynamix Proxy Entities : (POCO Proxy) Dynamic proxy is a runtime proxy class which wraps the POCO entities
+
+Data Base Context : Is an Instance of the database, that allows individual/group changes to be written back to the database as a single unit
+
+Life cycle of an Entity Object/ Entity States:
+
+1. Added : The entity is marked added, when we perform insertion. The entity will be tracked by the context, but the data will not be available yet in the database. When we call SaveChanges(), the state will be Unchanged
+
+2. Deleted : The entity is marked deleted, when we delete rows. The entity will be tracked by the context, and the data will be available in the database. When we call SaveChanges(), the entity state will be detached
+
+3. Detached : The entity is not being tracked by the context. An entity will be in this state as soon as it is instantiated using a 'new' operator
+
+4. Modified : This state is when the entity is being modified. The entity will be tracked by the context, and the data will be available in the database. Some or all property values can change. When we call SaveChanges(), the entity state will be Unchanged
+
+5. Unchanged : The entity has either been inserted with or modified with data.
+
+
+Entity Framework EF supports 3 approaches to work with the data source
+1. Database First Approach (Existing Database) : Relations are simply mapped to classes as Models
+2. Code First Approach (New Database) : Classes get mapped to relations using a technique called migrations
+3. Model First Approach (creating Models in the design mode, then convert the models into classes, and then classes to relations)
+

@@ -119,5 +119,24 @@
       <End Role="Products" EntitySet="Products" />
       <End Role="ProductSales" EntitySet="ProductSales" />
     </AssociationSet>
+    <FunctionImport Name="GetSal_byName">
+      <Parameter Name="ename" Mode="In" Type="String" />
+      <Parameter Name="salary" Mode="InOut" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getDept">
+      <Parameter Name="eid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_getavgsal_empcount">
+      <Parameter Name="did" Mode="In" Type="Int32" />
+      <Parameter Name="avgsal" Mode="InOut" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="fn_GetEmp_ByGender" IsComposable="true" ReturnType="Collection(InfiniteDBModel.fn_GetEmp_ByGender_Result)">
+      <Parameter Name="egen" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
+  <ComplexType Name="fn_GetEmp_ByGender_Result">
+    <Property Type="Int32" Name="EmpNumber" Nullable="true" />
+    <Property Type="String" Name="EmployeeName" Nullable="true" />
+    <Property Type="String" Name="Gender" Nullable="true" MaxLength="8" />
+  </ComplexType>
 </Schema>

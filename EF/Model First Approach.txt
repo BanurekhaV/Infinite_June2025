@@ -1,0 +1,20 @@
+Model First Approach : 
+---------------------
+
+1. Create a Console Application
+2. Right Click on the Project and add new Item -> ADO.net Entitymodel
+3. It will create a model1 object (you may change the name if required)
+4. It opens up the wizard. From here choose the 2nd option (EF Designer Model)
+5. Observe that an empty designer surface (edmx) being created
+6. Here right click on the surface and add entity/entities
+7. Next right click on the entity added, and add scalar properties, with specific data types and constraints (from properties window)
+8. Once the required entities with properties are added, right click on the surface of the designer and add association to associate the relations
+9. Again right click on the surface and select ' Generate Database from Model' option (this will generate the required scripts)
+10. Go thru it and click finish ( this will create the edmx.sql file)
+11. In the edmx.sql file right click and select execute option
+12. Now it opens a dialog box asking the credentials and other details of the server
+13. Choose appropriate options and click OK
+14. verify the Database being created both at the SQL Server as well as the SQL server Object Explorer(Vs IDE)
+15. Build the project once 
+16. Create an instance of the Context class and start to work with it
+17. You can check the App.Config file for automatic entry of the connection string
