@@ -35,30 +35,71 @@ namespace DatabaseFirst_EntityStates
             Console.WriteLine("********** Deletion **********");
          //   DeleteEmp();
             Console.WriteLine("********** All Employees *******");
-            ShowAllEmp();
+          //  ShowAllEmp();
             Console.WriteLine("********** Procedures ************");
              CallProc();
             Console.WriteLine("******** Functions *************");
-            Callfunction();
+           // Callfunction();
             Console.Read();
 
         }
 
         static void CallProc()
         {
-            ObjectParameter param = new ObjectParameter("Salary", typeof(float));
-            ObjectParameter param2 = new ObjectParameter("avgsal", typeof(float));
-            ObjectParameter param3 = new ObjectParameter("count", typeof(Int32));
+           // ObjectParameter param = new ObjectParameter("Salary", typeof(float));
+           // ObjectParameter param2 = new ObjectParameter("avgsal", typeof(float));
+           // ObjectParameter param3 = new ObjectParameter("count", typeof(Int32));
             
-            db.GetSal_byName("Alexa", param);
-            Console.WriteLine((param.Value).ToString());
-           int count =  db.sp_getavgsal_empcount(1, param2);
-            Console.WriteLine("Average Salary of Dept : 1 is : {0} and the Employee count is {1}", param2.Value, count);
+           // db.GetSal_byName("Alexa", param);
+           // Console.WriteLine((param.Value).ToString());
+           //int count =  db.sp_getavgsal_empcount(1, param2);
+           // Console.WriteLine("Average Salary of Dept : 1 is : {0} and the Employee count is {1}", param2.Value, count);
 
+           // //option 2
+
+           // var EmpCount = new SqlParameter
+           // {
+           //     ParameterName = "@ReturnVal",
+           //     SqlDbType = SqlDbType.Int,
+           //     Direction = ParameterDirection.ReturnValue
+           // };
+
+           // var retavgsal = new SqlParameter
+           // {
+           //     ParameterName = "@avgsal",
+           //     SqlDbType = SqlDbType.Float,
+           //     Direction = ParameterDirection.Output,
+           // };
+           // Console.WriteLine("___________Option 2___________");
+           // //calling the procedure
+           // var employees = db.Database.SqlQuery<Employee>(
+           //     "Exec @ReturnVal = sp_getavgsal_empcount 1, @avgsal output",
+           //     EmpCount, retavgsal).ToList();
+
+           // int TotalEmpCount = (int)EmpCount.Value;
+           // float AverageSal = (float)retavgsal.Value;
+           // Console.WriteLine($"No of Employees in Dept 1 : {TotalEmpCount} and the Department Average is {AverageSal}");
+
+            //option 3 Linq
+
+            var results = from e in db.Employees
+                                         group e by e.DepartmentId into
+                                         deptgroup
+                                         select new {                                        
+                                             Deptid = deptgroup.Key,
+                                             Empcount = deptgroup.Count(),
+                                             Avgsal = deptgroup.Average(emp => emp.Salary)
+                                         };
+
+            foreach(var e in results)
+            {
+                Console.WriteLine($"Department Id : {e.Deptid} has no.of Employees : {e.Empcount} and the Dept Average is : {e.Avgsal}");
+            }
         }
-
+        
         static void Callfunction()
         {
+
             var results = db.fn_GetEmp_ByGender("Male");
             foreach(var v in results)
             {
