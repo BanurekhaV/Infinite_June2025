@@ -1,0 +1,24 @@
+Web Technologies :
+
+WWW ? : World Wide Web  (W3C.Org)
+ Network of Information
+ - A Uniform naming Scheme for locating a resource on the web (URI)
+ - Protocol, for accessing the named resources over web (HTTP)
+ - Content / Hyper Text, for easy navigation among resources (HTML)
+
+
+Resource : (document, images, audio, video, applications, programs etc..) , will have an address that can be accessed using the URI
+
+Eg : https://www.mysite.com/mypage
+       1       2             3
+
+1. Protocol, 2 : Machine name, 3. Actual Resource
+
+URI > (URN   || URL)
+Uniform Resource name (defines an item identity)
+Uniform Resource Locator (provides methods to find the resource)
+
+
+Web page : a document
+
+HTMl + CSS + JavaScript = Content + Style + Behaviour

@@ -95,8 +95,62 @@ namespace DatabaseFirst_EntityStates
             {
                 Console.WriteLine($"Department Id : {e.Deptid} has no.of Employees : {e.Empcount} and the Dept Average is : {e.Avgsal}");
             }
+
+            //just check the below 
+            Console.WriteLine("-----------------------------------------");
+            using (var context = new InfiniteDBEntities())
+            {
+                // Ensure the connection is open
+                var connection = context.Database.Connection;
+                if (connection.State != ConnectionState.Open)
+                    connection.Open();
+
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = "dbo.sp_getavgsal_empcount";
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    // Input parameter
+                    Console.WriteLine("Enter Dept Number (1-6)");
+                    int did = Convert.ToInt32(Console.ReadLine());
+
+                    var DeptIdParam = new SqlParameter("@DId", SqlDbType.Int)
+                    {
+                        Direction = ParameterDirection.Input,
+                        Value = did
+                    };
+
+                    // Output parameter
+                    var avgsalParam = new SqlParameter("@avgsal", SqlDbType.Float)
+                    {
+                        Direction = ParameterDirection.Output
+                    };
+
+                    // Return value
+                    var returnValueParam = new SqlParameter
+                    {
+                        ParameterName = "@ReturnValue",
+                        SqlDbType = SqlDbType.Int,
+                        Direction = ParameterDirection.ReturnValue
+                    };
+
+                    command.Parameters.Add(returnValueParam);
+                    command.Parameters.Add(DeptIdParam);
+                    command.Parameters.Add(avgsalParam);
+
+                    command.ExecuteNonQuery();
+
+                    // Get values
+                    float Averagesalary = Convert.ToSingle(avgsalParam.Value);
+                    int returnValue = (int)returnValueParam.Value;
+
+                    Console.WriteLine($"Dept Average (Output): {Averagesalary}");
+                    Console.WriteLine($"Employee Count (Return Value) : {returnValue}");
+                }
+            }
+
         }
-        
+
         static void Callfunction()
         {
 
