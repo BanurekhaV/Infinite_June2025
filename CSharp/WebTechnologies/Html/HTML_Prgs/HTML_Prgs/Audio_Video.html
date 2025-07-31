@@ -4,16 +4,41 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <style>
+        #Linear{
+            height:200px;
+            background-color:red; /*for browsers that dont support gradient*/
+            background-image:linear-gradient(black,pink,yellow);
+        }
+        #Radial{
+            height:200px;
+            background-image:radial-gradient(red,blue,green);
+        }
+        div{
+            border:1px solid red;
+            margin:15px;
+            padding :8px;
+            border-width:thick;
+        }
+    </style>
 </head>
 <body>
+    <div id="Linear">
+        <h1>Linear Gradient</h1>
+    </div>
+    <br /></br>
+    <div id="Radial">
+        <h1>Radial Gradient</h1>
+    </div>
+    <hr/>
     <h1>Audio Clip</h1>
     <div id="audio">
         <audio controls>
             <source src="C:\Banu\Infinite_June25\WebTechnologies\HTML\sample-3s.mp3" />
         </audio>
     </div>
-    <br/>
-    <hr/>
+    <br />
+    <hr />
     <div id="video">
         <video width="500" height="400" controls>
             <source src="C:\Banu\Infinite_June25\WebTechnologies\HTML\samplevideo.mp4" />

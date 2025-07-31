@@ -49,5 +49,21 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="2D-3D.html" />
+    <Content Include="Animation.html" />
+    <Content Include="Audio_Video.html" />
+    <Content Include="Canvas.html" />
+    <Content Include="ExternalStyles.html" />
+    <Content Include="Form.html" />
+    <Content Include="Img\Flowers.jpg" />
+    <Content Include="MultiColumn.html" />
+    <Content Include="MyStyles.css" />
+    <Content Include="RegistrationForm.html" />
+    <Content Include="SVG1.html" />
+    <Content Include="SVG2.html" />
+    <Content Include="SVG3.html" />
+    <Content Include="Table.html" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -59,6 +59,18 @@ Html History : versions 1,2,3,4,5, Living Document(all enhancements are made to 
 Css versions : Css1, css2, css3 ( Responsive design, Advance Layouts->flex box, Grid,
    Visual enhancements -> animation, transitions, transformations etc.)
 
+Scalable Vector Graphics (SVG)
+- is defines using xml format
+- all elements must be closed properly
+- is case sensitive and hence any elements/attributes is preferred to be given lowercase
+- all the attribute values must be within quotes, including numbers
+
+Ways to integrate SVG with HTML
+  - Inline SVG , using <svg> element
+  - External SVG, using <object> <img>
+  - SVG as background
+
+
 Web-Kit : is a html/css web browser rendering engine
   IE : Engine - Trident, css prefix : -ms
   Edge : Engine - EdgeHTML, css prefix : -ms
