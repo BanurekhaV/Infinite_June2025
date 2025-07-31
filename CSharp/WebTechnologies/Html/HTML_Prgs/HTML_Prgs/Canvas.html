@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <canvas id="mycanvas" width="200" height="100" style="border:1px solid #808080;">
+    </canvas>
+    <script>
+        var c = document.getElementById("mycanvas");
+        var d = c.getContext("2d");
+        d.beginPath();
+        d.arc(95, 50, 40, 0, 2 * Math.PI);
+        d.stroke();
+    </script>
+    <hr />
+
+    <canvas id="myc" width="200" height="100" style="border:5px solid blue;">
+    </canvas>
+
+    <script>
+        var c1 = document.getElementById("myc");
+        var txt = c1.getContext("2d");
+        txt.font = "30px Arial";
+        txt.fillText("Hello World", 10, 50);
+
+    </script>
+
+    <hr />
+
+    <canvas id="myc2" width="200" height="100" style="border:5px solid red;">
+    </canvas>
+    <script>
+        var c1 = document.getElementById("myc2");
+        var ctx = c1.getContext("2d");
+        ctx.beginPath();
+        ctx.lineWidth = "5";
+        ctx.strokeStyle = "blue";
+        ctx.moveTo(0, 75);
+        ctx.lineTo(250, 75);
+        ctx.stroke();
+
+
+        ctx.beginPath();
+        ctx.strokeStyle = "Purple";
+        ctx.moveTo(50, 0);
+        ctx.lineTo(150, 130);
+        ctx.stroke();
+
+
+    </script>
+</body>
+</html>

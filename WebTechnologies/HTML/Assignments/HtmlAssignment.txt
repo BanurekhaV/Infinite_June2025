@@ -1,0 +1,21 @@
+
+1. Create the largest heading with the text 'Welcome'.
+ 
+2. Create second highest heading with the text 'About Us'.
+
+3. Make third highest heading with the text 'Welcome To HTML' aligned to the center.
+
+4. Create a heading with the text 'Services' and set its text color to '#0066cc'.
+
+5. Create a heading with underline 'Important' and a font color of '#ff0000'.
+
+6. Create a text input field for the user's name.
+
+7. Make a password input field with a placeholder 'Enter your password'.
+
+8. Create a checkbox input for 'I Agree' with an associated label.
+
+9. Embed an audio file with the source 'music.mp3' and set controls for playback.
+
+10. Make an unordered list with two items: 'Red', 'Blue'.
+
