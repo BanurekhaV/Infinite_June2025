@@ -1,0 +1,18 @@
+﻿body
+{
+    background-image:url("Img/Flowers.jpg");
+    background-position:center;
+    background-repeat:no-repeat;
+}
+div{
+    background-color:burlywood;
+    height:300px;
+    width:200px;
+    color:blue;
+}
+#myid{
+    color:darkmagenta;
+}
+.cls{
+    color:coral;
+}

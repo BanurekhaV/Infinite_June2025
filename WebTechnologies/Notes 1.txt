@@ -22,3 +22,47 @@ Uniform Resource Locator (provides methods to find the resource)
 Web page : a document
 
 HTMl + CSS + JavaScript = Content + Style + Behaviour
+
+HTML : Hyper Text Mark Up Lang. 
+       It is known as a publishing lang. of www
+       Made up of predefined tags, elements, attributes and values
+
+HTTP : Hyper text Transfer Protocol
+      is a network protocol used to deliver virtually any resource on the web
+      is an HTTP client, as it sends/receives requests to and from the server
+      operates on a default port 8080, to listen to requests
+
+
+CSS : Cascading Style Sheets
+   3 types :
+     inline
+     internal
+     external
+can be applied as selectors, properties and values
+  -- Tag selectors
+  -- ID selectors
+  -- Class selectors
+
+Grouping and Nesting :
+ grouping : h2{color:red;} .mycolor{color:red} #color{color:red} 
+            h2,.mycolor,#color{color:red}
+
+Nesting : #t{background-color:blue; padding :1em'}
+          #t h1{color:green;}
+          #t p{color:crimson;font-size:20px;}
+
+shorthand properties : border-top :10px; border-right:5px;
+        10px 5px 10px 5 px
+
+Html History : versions 1,2,3,4,5, Living Document(all enhancements are made to the same standard document)
+
+Css versions : Css1, css2, css3 ( Responsive design, Advance Layouts->flex box, Grid,
+   Visual enhancements -> animation, transitions, transformations etc.)
+
+Web-Kit : is a html/css web browser rendering engine
+  IE : Engine - Trident, css prefix : -ms
+  Edge : Engine - EdgeHTML, css prefix : -ms
+  FireFox : Engine - Gecko, css prefix : -moz
+  Opera :Engine - Presto, css prefix : -o
+  Chrome : Engine - -webkit->Blink2, css prefix : -webkit
+  Safari : Engine - Webkit, css prefix : -webkit
