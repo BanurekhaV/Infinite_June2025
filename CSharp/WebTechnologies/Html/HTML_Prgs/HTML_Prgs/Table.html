@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Products Table</title>
+    <style>
+        #table{
+            background-color:aqua;
+            font-size:20px;
+        }
+        img{
+            height:60px;
+            width:60px;
+        }
+        #name{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color:rgb(80,50,80);
+            font-size:30px;
+            font-stretch:semi-condensed;
+        }
+        .dashed{
+            border:dashed;
+            color:blueviolet;
+        }
+        .groove{
+            color:darkorchid;
+            border:groove;
+            border-width:5px;
+            border-color:palegoldenrod;
+        }
+       /* div{
+            width:500px;
+            height:400px;
+        }*/
+    </style>
+</head>
+<body>
+    <h1 style="color:blue;">Products List</h1>
+    <div style="background-color:silver;width:300px;height:100px">
+        <h2>Baby Products</h2>
+    </div>
+    <div id="table" style="width: 500px; height: 400px">
+        <table border="1">
+            <tr>
+                <th>S.No.</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Picture</th>
+            </tr>
+            <tr>
+                <td>100</td>
+                <td>Dolls</td>
+                <td>1500</td>
+                <td><img src="C:\Banu\Infinite_June25\WebTechnologies\Images\Dolls.jpg" /></td>
+            </tr>
+            <tr>
+                <td>101</td>
+                <td>Chocolates</td>
+                <td>500</td>
+                <td rowspan="2"><img src="C:\Banu\Infinite_June25\WebTechnologies\Images\chocolates.jpg" /></td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>Toys</td>
+                <td>2500</td>
+                <td><img src="C:\Banu\Infinite_June25\WebTechnologies\Images\toys.jpg" /></td>
+            </tr>
+            <tr>
+                <td>103</td>
+                <td>Biscuits</td>
+                <td>200</td>
+                <td><img src="C:\Banu\Infinite_June25\WebTechnologies\Images\Biscuits.jpg" /></td>
+            </tr>
+        </table>
+    </div>
+    <br/>
+        <hr/>
+    <div class="dashed">I am a DIV with dashed Border</div>
+    <p class="groove">I am a Grooved Paragraph</p>
+    <p id="name">I am a styled Paragraph</p>
+</body>
+</html>

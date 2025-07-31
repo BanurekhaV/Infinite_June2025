@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Form</title>
+</head>
+<body>
+    <h1 style="color:darkblue;text-align:center">Registration Form</h1>
+    <p style="background-color:azure;color:black;font-size:48px;">Please Register here....</p>
+
+    <form action="RegistrationForm.html" method="post">
+        FirstName : &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" name="fname" />
+        <br />
+        Last Name : &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" name="lname" />
+        <br />
+        Email Id : &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="email" name="email" />
+        <br />
+        Address : &nbsp;&nbsp;&nbsp;&nbsp;
+        <textarea rows="4" cols="30"></textarea>
+        <br />
+        Age : &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="number" name="age" min="21" max="50" />
+        <br />
+        Gender : &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="gender" value="male" />Male &nbsp;&nbsp;
+        <input type="radio" name="gender" value="female" />Female &nbsp;&nbsp;
+        <input type="radio" name="gender" value="others" />Others
+        <br />
+        <br />
+        City : &nbsp;&nbsp;&nbsp;&nbsp;
+        <select name="city">
+            <option value="blr">Bangalore</option>
+            <option value="chn">Chennai</option>
+            <option value="up">Noida</option>
+            <option value="vz">Vizag</option>
+        </select>
+        <br/><br/>
+        Qualifications : &nbsp;<input list="Qualifications" />
+         <datalist id="Qualifications">
+             <option value="12th"></option>
+             <option value="UG"></option>
+             <option value="PG"></option>
+         </datalist><br/>
+        <br/>
+        ID Proofs : <br/>
+         <input type="checkbox" name="id1" value="ac" />Aadhar Card <br/>
+        <input type="checkbox" name="id2" value="dl" />Driving License <br/>
+        <input type="checkbox" name="id3" value="pc" />Pan Card <br/>
+
+        Upload Proof of Identity : &nbsp;&nbsp;&nbsp;
+        <input type="file" /><br/><br/>
+
+        <input type="submit" value="Register" /> &nbsp;&nbsp;
+        <input type="reset" value="Clear" />
+
+
+    </form>
+</body>
+</html>
