@@ -4,6 +4,18 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <script>
+        function doLoop() {
+            var repeat = document.getElementById('saythis').value;
+            var maxloop = document.getElementById('howmany').value;
+            var str = ' ';
+
+            for (var i = 1; (i <= maxloop); i++) {
+                str = str + i + ':' + repeat + '<br/>';
+            }
+            document.getElementById('results').innerHTML = str;
+        }
+    </script>
 </head>
 <body>
     <script>
@@ -38,5 +50,31 @@
         }
         document.write("Loop Done");
     </script>
+    <hr/>
+    <!--<script>
+        function doLoop() {
+            var repeat = document.getElementById('saythis').value;
+            var maxloop = document.getElementById('howmany').value;
+            var str = ' ';
+
+            for (var i = 1; (i <= maxloop); i++) {
+                str = str + i + ':' + repeat + '<br/>';
+            }
+            document.getElementById('results').innerHTML = str;
+        }
+    </script>-->
+    Welcome to For Loop
+    <p>Repeat What ?</p> &nbsp;&nbsp; <input id="saythis" size="20" />
+    <br/>
+    <p>How many Times ?</p>&nbsp;<select id="howmany">
+    <option value="1">1 Time</option>
+    <option value="5">5 Times</option>
+    <option value="10">10 Times</option>
+    <option value="15">15 Times</option>
+</select>
+    <br/>
+    <button onclick="doLoop()">Do It !!</button>
+    <br/>
+    <div id="results"></div>
 </body>
 </html>

@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+      //  1. Function Declaration:
+        console.log(add(10, 20));
+        function add(x, y) {
+            console.log(x + y);
+        }
+
+        add(3, 4);
+
+       // 2. Function Expressions:
+        const addnum = function (x, y) {
+            console.log(x + y);
+        }
+
+        addnum(5, 5);
+        console.log(addnum)
+
+       // 3. Arrow Functions: a) single line
+        let addnew = (x, y) => x + y;
+        console.log(addnew(2, 4));
+
+     //   b) multiline
+
+        const check = (x, y) => {
+            if (x > y)
+                return "x is greater";
+            else
+                return "y is greater";
+        }
+        console.log(check(5, 10));
+
+        // function with return
+
+        function func_ret(x, y) {
+            let sum = x + y;
+            return sum;
+        }
+        console.log(func_ret(1, 2));
+
+        //Methods of Javascript
+        //if an objects property contains a function, then it i sknown as a jacascript method
+        //1. JS Methos invocation
+
+        let employee = {
+            empname: "Shami",
+            department: "IT",
+            details: function () {
+                return this.empname + " works with the Department " + this.department;
+            }
+        };
+        console.log(employee.details());
+    </script>
+</body>
+</html>

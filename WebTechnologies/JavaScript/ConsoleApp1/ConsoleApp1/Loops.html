@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        const shape = {
+            type: "Circle",
+            area: "Pi R Square",
+        };
+        //for ... in works best for objects
+        for (let s in shape) {
+            console.log(`${s}: ${shape[s]}`);
+        }
+        //for in with arrays
+        let arr = [1, 2, 3, 4, 5];
+        for (let a in arr) {
+            console.log(arr[a]);
+        }
+
+        //for of with arrays,  works best for arrays, maps, strings, sets etc
+        const array = [1, 2, 3, 4, 5, 6, 7, 8];
+        for (const item of array) {
+            console.log(item);
+        }
+
+        const m = new Map([
+            ["name", "Infinite"],
+            ["age", 20],
+            ["HO", "Bangalore"]
+        ]);
+        for (let [key, value] of m) {
+            console.log(`${key} : ${value}`);
+        }
+
+        const str = "Javascript";
+        for (const c of str) {
+            console.log(c);
+        }
+    </script>
+</body>
+</html>

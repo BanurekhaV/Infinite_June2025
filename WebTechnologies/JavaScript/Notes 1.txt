@@ -1,0 +1,119 @@
+JavaScript : is a programming language for web with built in apis, to make the html document live,interactive and dynamic
+
+- Usage : Browser detection and control
+          Cookies
+          Validations
+
+Document Object Model (DOM)
+  Window
+    Document
+     Head      Body
+
+external script
+  <script src="<path>"</script>
+
+<a href="aaa.html" onClick="">click here</a>
+
+Display Options :
+  windows.alert();
+  document.write();
+  innerHtml/innerText
+  Console.log();
+
+A script can contain
+   variables, values, operators, expressions, keywords, commnets etc
+ //, /* */
+
+var person[]
+
+
+var x
+x="" ; 
+x=null; 
+
+5+5 = 10
+"5"+5 = 55
+
+==(equal to a value)
+===(equal values and equal types)
+!=(not equal to a value)
+!==(not equal values and equal types)
+
+typeof "Hello"  - returns a string
+typeof[1,2,3]  - returns an object
+typeof {name:'Banu', address:'abc', age:30} - returns an object
+
+Client Side JS
+Server Side JS ( handle files and databases)
+
+Datatypes and variables :
+
+Primitive Types (Numeric)
+    Number
+    Bigint
+
+Primitive Types (Non Numeric)
+    string
+    Boolean
+    null
+    undefined 
+    symbol
+
+Non-primitive Types :
+     object
+     arrays
+     function
+     Date 
+     Regular Expressions 
+
+Variables :
+
+ var x =5;
+console.log(x);    //5
+
+var x=25; redeclaring and reassigning are allowed
+
+console.log(x);    //25
+
+
+Functions : ways to write functions
+
+add(1,2);  "possible to call an yet to be defined function using 'hoisting'
+
+ 1. Function Declaration:
+   function add(x, y){
+console.log(x+y);
+}
+
+add(3,4);
+
+2. Function Expressions :
+   const addnum = function(x, y){
+     console.log(x+y);
+}
+
+ addnum(5,5);
+ console.log(addnum)
+
+3. Arrow Functions : a) single line
+  let addnew =(x, y) => x+y;
+console.log(addnew(2,4));
+  
+   b) multiline
+  
+   const check =(x, y) =>{
+     if(x > y)
+       return "x is greater";
+     else
+       return "y is greater";
+}
+console.log(check(5,10));
+
+JavaScript Functions      		 Vs        Methods
+1. are code blocks to perform a task              are an objects property that contains a function
+2. can pass and may have a return type            operates on the data contained within the object
+3. Data passed is explicit                        it implicitly passes the objects data on which it is called
+4. lives on its own(independent)                  is always associated with an object's property
+
+
+

@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        outerloop:
+        for (var i = 0; i < 5; i++) {
+            document.write("Outer Loop : " + i + "<br/>");
+
+            innerloop:
+            for (var j = 0; j < 5; j++) {
+                if (j > 3) break;  // quits the innermost loop
+                if (i == 2) break innerloop; //quits the innerloop also
+                if (i == 4) break outerloop; //quits the outerloop
+                document.write("Inner Loop " + j + "<br/>");
+            }
+        }
+    </script>
+    <hr />
+    <script>
+        const dt = new Date("August 14, 2000 23:50:30");
+        dt.setFullYear(2003);
+        console.log(dt.getFullYear());
+        const olddt = Date.now();
+        
+        console.log(olddt); // displays the milliseconds elapsed since epoch(i.e jan 1 1970)
+    </script>
+    <hr/>
+    <p id="demo">Get Date</p>
+    <script>
+        var currentdate = new Date();
+        console.log(currentdate);
+        currentdate.setDate(currentdate.getDate() + 45);
+        alert("check the new Date");
+    </script>
+    <input type="button" onclick="document.getElementById('demo').innerText = currentdate" value="GetNewDate" />
+</body>
+</html>
