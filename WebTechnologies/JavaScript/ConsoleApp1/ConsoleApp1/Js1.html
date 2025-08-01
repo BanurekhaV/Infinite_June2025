@@ -23,7 +23,6 @@
     <button type="button" onclick="document.getElementById('n1').innerText=length">Num Change</button>
     <button type="button" onclick="document.getElementById('str').innerHTML=pname">Get Name</button>
     <button type="button" onclick="document.getElementById('obj').innerHTML = ob.firstname +ob.age">Get Object</button>-->
-
     <!-- Eg 2
     <input id="userinput" size="40" />
     <button ondblclick="userSubmit()">Submit</button>
@@ -36,7 +35,6 @@
             }
         </script>
     </div> -->
-
     <!--example 3
     <script>
         function change() {
@@ -52,12 +50,39 @@
     <h2>Head 2</h2>
     <p>Para 3</p>
     <button onclick="change()">clicke here for change of values</button>-->
-
-    <!--example 4 css change-->
+    <!--example 4 css change
 
     <div id="results">Hello DiV</div>
     <script>
         document.getElementById('results').innerHTML = '<p><font color="blue" size="30px";>Hello New DIV</font></p>';
+    </script>-->
+    <!--Example operators-->
+    <script>
+        var v1 = null;
+        var v2 = '';
+        var v3 = 'hi';
+
+        //var result = v1 && v2;
+        //document.write(result);
+        document.write("<hr/>");
+        result = v2 || v1 || v3;  //checks all variables in the order
+        document.write(result);
+
+        var res = v2 || v3 || v1; //shortcircuitiing at v3
+        document.write(res);
+
+        function returnfalsy() {
+            return "";
+        }
+        const c1 = [1, 2];
+        const c2 = [3, 4]; //returnfalsy();
+        const c3 = [5, 6]; //{ name: "infinite" };
+
+       // const answer = c2 || c3 || c1;
+        const answer = c3 || c1 || c2;
+        console.log(answer);
     </script>
+    <h1>Hi Operators??</h1>
 </body>
+
 </html>

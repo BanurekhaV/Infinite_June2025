@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        var subject = "English";
+        if (subject == "Science") {
+            document.write("<b><i>Science Book</i></b>");
+        } else if (subject == "Maths") {
+            document.write("<mark><i>Maths Book</i></mark>");
+        } else if (subject == "English") {
+            document.write("<b><i>English Book</i></b>");
+        }
+            else document.write("Unknown Subject book");
+    </script>
+    <script>
+        var grade = 'A';
+        switch (grade) {
+            case 'A': document.write("<hr/><b><i>A Grade</i></b>");
+                break;
+            case 'B': document.write("<b><i>B Grade</i></b>");
+                break;
+            default: document.write("<b><i>Invalid grade</i></b>");
+        }
+    </script>
+    <hr/>
+    <!-- while loop-->
+    <script>
+        var count = 0;
+        document.write("Starting the Loop ....");
+        while (count < 10) {
+            document.write("<b><i>Current Count : " + count + "</i></b><br/>");
+                count++;
+        }
+        document.write("Loop Done");
+    </script>
+</body>
+</html>
