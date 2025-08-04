@@ -50,8 +50,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Events.html" />
     <Content Include="JQ1.html" />
     <Content Include="JQ2.html" />
+    <Content Include="JQ3.html" />
+    <Content Include="JQ4.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
