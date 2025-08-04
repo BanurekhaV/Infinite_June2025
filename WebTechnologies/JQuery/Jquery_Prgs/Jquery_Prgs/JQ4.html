@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+<script>
+    //element removal
+    //$(document).ready(function () {
+    //    $('button').click(function () {
+    //       // $('div').remove();  //removes the selected element and hence all its child elements
+    //        $('div').empty(); // romoves all child elements of the selected element
+    //    })
+    //})
+
+    //element append and prepend
+    $(document).ready(function () {
+        $('#btn1').click(function () {
+            $('p').append("<b>Stay Indoors </b>");
+        })
+        $('#btn2').click(function () {
+            $('ol').prepend("<li>New Item</li>")
+        })
+    });
+</script>
+</head>
+<body>
+    <h2>Removing Elements</h2>
+    <div style="height:150px; width:300px;border:1px solid red;background-color:aquamarine;">
+        We can have some elements here
+        <p>para 1</p>
+        <h4>Head 4</h4>
+        <p>Para 2</p>
+    </div>
+    <button>Remove</button>
+    <hr/>
+    <h2>Append and Prepend elements</h2>
+    <p>Summers are really Hot </p>
+    <p>Have Plenty of water to remain hydrated</p> <br/><br/>
+    <ol>
+        <li> Milk</li>
+        <li> Coffee Powder</li>
+    </ol>
+    <button id="btn1">Append</button>
+    <button id="btn2">Prepend</button>
+
+</body>
+</html>

@@ -23,3 +23,5 @@ Events : Mouse, keyboard, Form, Document/Window
 
 methods : hide(), show(),toggle(), fadein(), fadeout(), fadetoggle(),slide(), animate(), callback(), chaining etc..
 
+
+

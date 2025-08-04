@@ -24,25 +24,59 @@
         //})
 
         //Jquery for CSS manipulations
+        //$(document).ready(function () {
+        //    var clicked = true;
+        //    $('button').click(function () {
+        //        if (clicked) {
+        //            $(this).css('background-color', 'red');
+        //            clicked = false;
+        //        } else {
+        //            $(this).css('background-color', 'blue');
+        //            clicked = true;
+        //        }                
+        //    })
+        //})
+
+        //call back eg
         $(document).ready(function () {
-            var clicked = true;
             $('button').click(function () {
-                if (clicked) {
-                    $(this).css('background-color', 'red');
-                    clicked = false;
-                } else {
-                    $(this).css('background-color', 'blue');
-                    clicked = true;
-                }                
-            })
-        })
+                $('p').slideToggle("slow", function () {
+                    alert("slide Toggle Effect seen..");
+                });
+                
+            });
+        });    
+
     </script>
     <style>
-        button{
+       /* button{
             background-color:blue;
             height:100px;
             width:100px;
-        }
+        }*/
+       .tclass {
+           margin:10px;
+           padding:5px;
+           color:crimson;
+           border:2px solid grey;
+           display:block;
+       }
+
+       #b1, #board{
+           padding:7px;
+           font-size:20px;
+           background-color:cornflowerblue;
+           border:1px solid red;
+           text-align:center;
+       }
+       /*#board{*/
+          /* padding:40px;*/
+           /*display:none;
+           background-color:aqua;
+           height:100px;
+           width:100px;
+
+       }*/
     </style>
 </head>
 <body>
@@ -60,7 +94,15 @@
         <img src="C:\Banu\Infinite_June25\WebTechnologies\Images\dolls.jpg" alt ="Doll "height="100" width="100" />
         <p> Here We Go..</p>
     </div>-->
-    <h2>HTML for CSS Manipulations</h2>
-    <button>Press Here</button>
+    <!--<h2>HTML for CSS Manipulations</h2>
+    <button>Press Here</button>-->
+    <hr/>
+    <h2>Slide Toggle Call back</h2>
+     <p>Hey There!! I am a Para</p>
+
+    <button>Click to Toggle</button>
+
+    <hr/>
+    
 </body>
 </html>

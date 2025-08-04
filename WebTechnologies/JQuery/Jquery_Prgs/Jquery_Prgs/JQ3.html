@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+    <script src="https://googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+         #b1, #board {
+             padding: 7px;
+             font-size: 20px;
+             background-color: cornflowerblue;
+             border: 1px solid red;
+             text-align: center;
+         }
+         #board{
+          padding:40px;
+         display:none;
+           
+
+        }
+    </style>
+
+    <script>
+
+        $(document).ready(function () {
+            $('#b1').click(function () {
+                $('#board').slideDown(5000);
+            })
+            $('#b2').click(function () {
+                $('#board').stop();
+            })
+        })
+
+        //jquery traversal
+        //$(document).ready(function () {
+        //    $('span').parents('ul').css({ color: "red", border: "2px solid blue" });
+        //})
+    </script>
+    <style>
+        .tclass {
+            margin: 10px;
+            padding: 5px;
+            color: fuchsia;
+            border: 2px solid grey;
+            display: block;
+        }
+        div{
+            width:300px;
+            height:300px;
+        }
+    </style>
+</head>
+<body> <!--class="tclass">Hierarchy(GG_GParents)-->
+
+    <!--<h2>Jquery for descendants</h2>
+    <div  >
+        (G_GParents)
+        <ul>UL(G Parents)
+        <li>LI(parent)
+            <span>Span Element</span></li>
+        </ul>
+    </div>-->
+    <hr/>
+    <h2>Slide and Stop</h2>
+    <button id="b2">Stop Sliding</button>
+    <br />
+    <button id="b1">Start Sliding</button>
+
+    <div id="board">
+        <p>This is to slide and stop</p>
+    </div>
+
+</body>
+</html>
