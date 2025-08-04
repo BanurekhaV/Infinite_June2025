@@ -16,14 +16,24 @@
     //})
 
     //element append and prepend
-    $(document).ready(function () {
-        $('#btn1').click(function () {
-            $('p').append("<b>Stay Indoors </b>");
-        })
-        $('#btn2').click(function () {
-            $('ol').prepend("<li>New Item</li>")
-        })
-    });
+    //$(document).ready(function () {
+    //    $('#btn1').click(function () {
+    //        $('p').append("<b>Stay Indoors </b>");
+    //    })
+    //    $('#btn2').click(function () {
+    //        $('ol').prepend("<li>New Item</li>")
+    //    })
+    //});
+
+    //jquery for dynamic elements insertion
+    function appendmany() {
+        var txt1 = "<p style='color:red'>New Text</p>"; // creating  a text with html
+        var txt2 = $("<h2 style='color:blue'></h2>").text("Heading 2"); //creating text with jquery
+        var txt3 = document.createElement('p');
+        txt3.innerHTML = "My new Paragraph"; // creating text with DOM
+        $('body').append(txt1, txt2, txt3);
+    }
+
 </script>
 </head>
 <body>
@@ -45,6 +55,11 @@
     </ol>
     <button id="btn1">Append</button>
     <button id="btn2">Prepend</button>
+
+    <h2>Multiple appends</h2>
+    <p>Trying to append elements at runtime</p>
+
+    <button onclick="appendmany()">Click here to append</button>
 
 </body>
 </html>

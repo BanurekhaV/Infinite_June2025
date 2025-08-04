@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+    <script src="https://googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script>
+    //handling events by binding
+    $(document).ready(function () {
+        ////to bind eg 1
+        //$('div').bind('click', function (event) {
+        //    alert("Hello " + event.target.innerHTML);
+        //});
+
+        //to bind and unbind
+        //$('div').bind('click', function (event) {
+        //    alert("Hello " + event.target.innerHTML);
+        //    alert("The Event Type is : " + event.type);
+        //});
+        //$('button').dblclick(function () {
+        //    $('div').unbind('click');
+
+        //});
+
+        //mouse events
+        $('p').on({
+            mouseenter: function () {
+                $(this).css("background-color", "red");
+            },
+            mouseleave: function () {
+                $(this).css("background-color", "darkGreen");
+            },
+            dblclick: function () {
+                $(this).css("color", "white");
+            },
+            hover: function () {
+                $(this).hide();
+            }
+            
+        })
+
+       
+    })
+</script>
+    <style>
+        .div{
+            margin:10px;
+            padding:12px;border:2px solid blue;width:60px;
+        }
+    </style>
+</head>
+<body>
+    <p>Click on any square below and see the results</p>
+    <div class="div" style="background-color:crimson">
+        Div No.1
+    </div>
+    <br />
+    <div class="div" style="background-color:chartreuse;">
+        Div No.2
+    </div>
+    <br />
+    <div class="div" style="background-color:deeppink">
+        Div No.3
+    </div>
+    <br />
+    <button>Unbind</button>
+
+    <p>Trying Mouse Events</p>
+   
+</body>
+</html>
