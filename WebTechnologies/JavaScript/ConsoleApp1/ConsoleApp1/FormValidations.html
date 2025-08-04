@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        function FormValidator() {
+            //let us make references to all the form fields
+            var firstname = document.getElementById('firstname');
+            var addr = document.getElementById('addr');
+            var zip = document.getElementById('zip');
+            var state = document.getElementById('state');
+            var username = document.getElementById('username');
+            var email = document.getElementById('email');
+
+            //check if the user input is in order
+            if (isAlphabet(firstname, "Please enter only Characters for Name")) {
+                if (isAlphaNumeric(addr, "Address can have only characters and numbers.")) {
+                    if (isNumeric(zip, "Please enter valid 6 digits number")) {
+                        if (madeSelection(state, "Please choose a state from the list")) {
+                            if (lengthRestriction(username, 6, 12)) {
+                                if (emailValidate(email, "Please enter email in correct format")) {
+                                    return true;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+
+        //let us now write the functions for each field
+        function isNumeric(elem, helpmsg) {
+            var numericexpr = /^[0-9]+$/;  //pattern for zip
+            if (elem.value.match(numericexpr)) {
+                return true;
+            } else {
+                alert(helpmsg);
+                elem.focus();
+                return false;
+            }
+        }
+
+        function isAlphabet(elem, helpmsg) {
+            var alphaexpr = /^[a-zA-Z]+$/;
+            if (elem.value.match(alphaexpr)) {
+                return true;
+            } else {
+                alert(helpmsg);
+                elem.focus();
+                return false;
+            }
+        }
+
+        function isAlphaNumeric(elem, helpmsg) {
+            var alphanum = /^[0-9a-zA-Z]+$/;
+            if (elem.value.match(alphanum)) {
+                return true;
+            } else {
+                alert(helpmsg);
+                elem.focus();
+                return false;
+            }
+        }
+
+        function lengthRestriction(elem, min, max) {
+            var uname = elem.value;
+            if (uname.length >= min && uname.length <= max) {
+                return true;
+            } else {
+                alert("User name to be between " + min + " " + max + " characters only");
+                elem.focus();
+                return false;
+            }
+        }
+
+        function madeSelection(elem, helpmsg) {
+            if (elem.value == "Choose State") {
+                alert(helpmsg);
+                elem.focus();
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        function emailValidate(elem, helpmsg) {
+            var emailexpr = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-Z0-9]{2,4}$/;
+            if (elem.value.match(emailexpr)) {
+                return true;
+            } else {
+                alert(helpmsg);
+                elem.focus();
+                return false;
+            }
+        }
+
+    </script>
+
+    <form onsubmit="FormValidator()">
+        First Name      : <input type="text" id="firstname" /><br /><br />
+        Address         : <input tyep="text" id="addr" /><br /><br />
+        Zip Code        : <input type="text" id="zip" /><br /><br />
+        State           : <select id="state">
+    <option>Choose State</option>
+    <option>Andhra Pradesh</option>
+    <option>Karnataka</option>
+    <option>Tamil Nadu</option>
+    <option>Uttar Pradesh</option>
+</select><br/><br/>
+         User Name       : <input type="text" id="username" /><br/><br/>
+         Email           : <input type="text" id="email" /><br/><br/>
+
+        <input type="submit" value="Validate Form" />
+    </form>
+</body>
+
+</html>
