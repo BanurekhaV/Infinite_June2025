@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+    <!-- Jquery eg 1-->
+    <!--<script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                $('p').hide();
+            });
+        });
+    </script>
+        eg 2 -->
+    <!--<script>
+        $(document).ready(function(){
+            $('button').click(function () {
+                $('#test').hide();
+            })
+        })
+    </script>
+        
+        eg 3-->
+    <!--<script>
+        $(document).ready(function () {
+            $('p').click(function () {
+                $(this).hide();
+            })
+        })
+    </script>
+        
+        eg 4-->
+    <script>
+        $(document).ready(function () {
+            $(".hide").click(function () {
+                $(this).parents(".ex").hide();
+            })
+        })
+    </script>
+
+    <style>
+        div.ex{
+            background-color:#e533cc;
+            padding:7px;
+            border:solid 1px #c3c3c3;
+        }
+    </style>
+</head>
+<body>
+    <h1> Jquery 3.4.1</h1>
+    <p>Para 1</p>
+    <p>Para 2</p>
+    <h2>Head 2</h2>
+    <p id="test">Para 3</p>
+
+    <button>Hit me</button>
+    <hr/>
+    <h2>For Jquery 4</h2>
+    <div class="ex">
+        <button class="hide">Hide me</button>
+        <p>
+             Contact : Seema K <br/>
+             Bangalore Karnataka
+        </p>
+    </div>
+    <h3> Branch Office</h3>
+    <div class="ex">
+        <button class="hide">Hide me</button>
+        <p>
+            Contact : Umesh Biswas <br />
+            Chennai MEPZ, Tamil Nadu
+        </p>
+    </div>
+</body>
+</html>

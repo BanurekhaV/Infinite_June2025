@@ -1,0 +1,25 @@
+jQuery - is a javascript library
+         is a light weight library (write less do more)
+         to enable easier usage of javascripts on the web
+         it includes a lot of common tasks, that would have usually taken lines of code, wrapped into methods that takes up a single line of code.
+         simplifies complicated scripts like Ajax Calls and DOM manipulations
+
+Downloadable library from sources
+  <script src= "jquery-3.4.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+
+-is used along with html script tag
+
+$(selector).action()
+
+$ - is a sign to either define/access jquery
+selector - to query or find html elements/tags
+action() - method to be used to perform some tasks on the html elements
+
+Eg : $(this).hide()
+
+Events : Mouse, keyboard, Form, Document/Window
+
+methods : hide(), show(),toggle(), fadein(), fadeout(), fadetoggle(),slide(), animate(), callback(), chaining etc..
+

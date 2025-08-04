@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4A308134-C4EB-41C8-A107-FD2B5C536EA3}</ProjectGuid>
+    <ProjectGuid>{96C7CAFA-3801-4A3D-823B-C2E618AFDA2C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleApp1</RootNamespace>
-    <AssemblyName>ConsoleApp1</AssemblyName>
+    <RootNamespace>Jquery_Prgs</RootNamespace>
+    <AssemblyName>Jquery_Prgs</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,16 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="FormValidations.html" />
-    <Content Include="FunctionTypes.html" />
-    <Content Include="JavaScript1.js" />
-    <Content Include="Js1.html" />
-    <Content Include="Js2.html" />
-    <Content Include="Js3.html" />
-    <Content Include="Labels.html" />
-    <Content Include="Loops.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

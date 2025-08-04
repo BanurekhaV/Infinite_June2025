@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+    <!-- JQuery for hiding and showing-->
+    <script>
+        //$(document).ready(function () {
+        //    $('#hide').click(function () {
+        //        $('p').hide();
+        //    });
+        //    $('#show').click(function () {
+        //        $('p').show();
+        //    })
+        //})
+
+        //Jquery for toggle
+        //$(document).ready(function () {
+        //    $('button').click(function () {
+        //        $('div').toggle();
+        //    })
+        //})
+
+        //Jquery for CSS manipulations
+        $(document).ready(function () {
+            var clicked = true;
+            $('button').click(function () {
+                if (clicked) {
+                    $(this).css('background-color', 'red');
+                    clicked = false;
+                } else {
+                    $(this).css('background-color', 'blue');
+                    clicked = true;
+                }                
+            })
+        })
+    </script>
+    <style>
+        button{
+            background-color:blue;
+            height:100px;
+            width:100px;
+        }
+    </style>
+</head>
+<body>
+    <!--<h2> Jquery 5 for hide and show</h2>
+    <p>I am Para 1</p>
+    <p>I am second Para</p>
+    <p>And I am the Third</p>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <hr />
+    <h2>HTML for Toggle</h2>
+    <button>Toggle</button>
+    <div>
+        <img src="C:\Banu\Infinite_June25\WebTechnologies\Images\dolls.jpg" alt ="Doll "height="100" width="100" />
+        <p> Here We Go..</p>
+    </div>-->
+    <h2>HTML for CSS Manipulations</h2>
+    <button>Press Here</button>
+</body>
+</html>
