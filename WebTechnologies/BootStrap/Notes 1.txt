@@ -27,7 +27,18 @@ Bootstrap container classes : (wraps the content of the website) that can span a
 
 Viewport : applies to responsive designs/features of the bootstrap class
 
-Components :
+Components: A set of reusable , customizable aspect/objects for web development
+1. Jumbotron : making contents look larger and bigger to gain attention
+2. Alerts : predefined pop up messages
+3. Buttons : Objects responsible for events
+4. Badges : labelling components
+5. Progress Bar : Activity tracker
+6. Navigation Bar : Menu Items for navigation
+7. Forms : Input receiver
+8. Card : extensible, flexible content component(layout)
+9. List Groups : display a series of content(theme based)
+10. Carousels : sliding images
+11. BreadCrumbs : provides location of the current page in the navigation hierarchy
 
 
 
