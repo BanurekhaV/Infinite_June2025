@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>JSON.parse() creates Java Script Objects</h1>
+    <p id="demo"></p><br/>
+    <hr/>
+
+    <h2>JSON.stringify() to create Strings</h2>
+    <p id="demo1"></p>
+
+    <script>
+        //1. parsing text to objects
+        const mydata = '{"name":"Infinite Ltd.", "city":"Bangalore", "age":25}';
+
+        const myobj = JSON.parse(mydata);
+        document.getElementById('demo').innerHTML = "Parsed Object Details = " +
+            myobj.name + " " + myobj.city + " " + myobj.age;
+
+        //2. stringify objects to text
+        data = JSON.stringify(myobj);
+        document.write("Stringified Data is : " + data);
+
+        //3 . replacers in stringify
+        var robj = { "customername": "alex", "City": "Chennai", "age": 35 };
+        var rtext = JSON.stringify(robj, function (key, value) {
+            if (key === "") {
+                return value;
+            }else if(key == "customername") {
+                return value.toUpperCase();
+            } else if(key == "age") {
+                return value - 10;
+            } else {
+                return null;
+            }
+        });
+        document.getElementById('demo1').innerHTML = rtext;
+    </script>
+</body>
+</html>
