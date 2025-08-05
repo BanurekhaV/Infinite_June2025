@@ -1,0 +1,36 @@
+Bootstrap : open free frontend framework for easier and faster web development
+ - It includes design templates for html and css(tables, forms, nav bars, images, carousels, javascripts plug-ins etc)
+ - Gives the ability to create responsive designs
+ - Was developed and released as an Opensource framework in 2011 ( By Mark Otto, and Jacob at Twitter)
+
+- Benefits
+ Easy to learn and use
+ Responsive Features to suit all devices
+ Compatible with almost all browsers (though was primarily targeted as Mobile First Approach)
+
+Grid System : consisting of 4 classes
+  - xs extra small (for phones with screen size <760 pixels width)
+  - sm small device (for phones/tablets with screen size >=760 pixels width) 
+  - md medium (for small laptops with screen size >=980 pixels width)
+  - lg large (for laptops/desktops  with screen size >=1200 pixels width)
+
+How to get bootstrap
+ - by downloading and installing
+ - by including the cdn
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+Bootstrap container classes : (wraps the content of the website) that can span any device
+ 
+1. .container (fixed width)
+2. .container-fluid(full width)
+
+Viewport : applies to responsive designs/features of the bootstrap class
+
+Components :
+
+
+
+
+
+ 

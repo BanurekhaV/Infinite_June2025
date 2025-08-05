@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D6D0D6E5-0F58-46A4-BC2D-224277305F2B}</ProjectGuid>
+    <ProjectGuid>{0B383372-7A18-414B-949C-F7E394589D63}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Json_Prj</RootNamespace>
-    <AssemblyName>Json_Prj</AssemblyName>
+    <RootNamespace>BootStrap_Prgs</RootNamespace>
+    <AssemblyName>BootStrap_Prgs</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,9 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Jsonprg.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

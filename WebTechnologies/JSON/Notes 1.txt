@@ -22,7 +22,7 @@ Arrays:
 colors["Red","Blue","green"]
 
 JSON and XML
- - Both are hierarchial, human readable, self describing data, can be used by many programming applications
+ - Both are hierarchical, human readable, self describing data, can be used by many programming applications
  - Are used to fetch data from the server on request
  - XML is parsed using XML parser, while JSON is parsed using javascript function
  - On parsing Json gives ready to use javascript objects

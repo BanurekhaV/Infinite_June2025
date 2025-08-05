@@ -26,18 +26,20 @@
         document.write("Stringified Data is : " + data);
 
         //3 . replacers in stringify
-        var robj = { "customername": "alex", "City": "Chennai", "age": 35 };
-        var rtext = JSON.stringify(robj, function (key, value) {
-            if (key === "") {
-                return value;
-            }else if(key == "customername") {
-                return value.toUpperCase();
-            } else if(key == "age") {
-                return value - 10;
+        var robj = { "customername": "banurekha", "City": "Chennai", "age": 35 };
+        var rtext = JSON.stringify(robj, function (k, v) {
+           // if (key === "") {
+           //     return value;
+            //  }else 
+            if (k == "customername") {
+                return v.toUpperCase();
+            } else if(k == "age") {
+                return v + 10;
             } else {
-                return null;
+                return v;
             }
         });
+        console.log(rtext);
         document.getElementById('demo1').innerHTML = rtext;
     </script>
 </body>
