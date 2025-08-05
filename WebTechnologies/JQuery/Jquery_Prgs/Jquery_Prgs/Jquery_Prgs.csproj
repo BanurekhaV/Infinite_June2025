@@ -50,11 +50,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Animate.html" />
+    <Content Include="Datafile.txt" />
     <Content Include="Events.html" />
+    <Content Include="Events2.html" />
+    <Content Include="GetnSet.html" />
     <Content Include="JQ1.html" />
     <Content Include="JQ2.html" />
     <Content Include="JQ3.html" />
     <Content Include="JQ4.html" />
+    <Content Include="Jquery_with_Ajax.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

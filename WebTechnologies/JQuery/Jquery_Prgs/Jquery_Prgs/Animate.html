@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+
+    <style>
+        p{
+            width:200px;
+            padding:40px;
+            font:bold 24px sans-serif;
+            text-align:center;
+            background-color:#00ff90;
+            border:1px solid blue;
+            box-sizing:border-box;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+
+            //animation
+            //$('.start').click(function () {
+            //    $('p').animate({ width: "100%" }).animate({ fontSize: "48px" }).animate({ borderWidth: 30 });
+            //})
+            //$('.reset').click(function () {
+            //    $('p').removeAttr('style');
+            //})
+
+            //delay method
+            $('button').click(function () {
+                $('#d1').delay("slow").fadeIn();
+                $('#d2').delay("fast").fadeIn();
+                $('#d3').delay(1000).fadeIn();
+                $('#d4').delay(4000).fadeIn();
+            })
+        })
+    </script>
+</head>
+<body>
+    <!--<p>Hello Animation</p>
+    <button type="button" class="start">Start Animation</button>
+    <button type="button" class="reset">Stop Animation</button>-->
+    <hr />
+    <button>Click Me</button>
+    <br />
+    <div id="d1" style="width:50px;height:50px;background-color:darkorange;display:none;"></div>
+    <br />
+    <div id="d2" style="width:50px;height:50px;background-color:hotpink;display:none;"></div>
+    <br />
+    <div id="d3" style="width:50px;height:50px;background-color:crimson;display:none;"></div>
+    <br />
+    <div id="d4" style="width:50px;height:50px;background-color:seagreen;display:none"></div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+﻿<h1>This is an Example for JQuery with AJAX !! </h1>
+<div id='d1'>What a Wonderful Combination
+ <p id='p1'>This is a Paragraph Element of HTML </p>
+</div>

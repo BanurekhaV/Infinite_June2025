@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+    <script src="https://googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            //1 . simple change on button click
+            //$('button').click(function () {
+            //    $('input').change();
+            //})
+
+            //2. input losing focus
+            //$('.fc').change(function () {
+            //    $(this).css("background-color", "lime").css("color", "black");
+            //})
+
+            //3. fade in/out
+            $('#b1').click(function () {
+                $('#d1').fadeIn();
+            })
+            $('#b2').click(function () {
+                $('#d1').fadeOut();
+            })
+        })
+    </script>
+    <style>
+        .fc{
+            padding:5px;
+        }
+        .div{
+            margin:10px;
+            padding:12px;border:2px solid blue;width:60px;
+        }
+    </style>
+</head>
+<body>
+    <!--<p>Click and see the changed values</p>
+    Enter some Data : <input type="text" value="Good Morning" onchange="alert(this.value)" />
+
+    <button>Click to see changes</button>-->
+
+    <hr/>
+    <h2>One more Change Event</h2>
+    Enter some Value :  <input class="fc" type="text" />
+    <p>We will try the change event by either clicking enter or click somewhere outside
+    the input field</p>
+
+    <hr/>
+    <h2>Fade in and Out</h2>
+    <button id="b1">Fade In</button> <br/>
+    <button id="b2">Fade Out</button> <br/>
+
+    <div id="d1" style="background-color:aqua;display:none;"> Hi Div</div>
+</body>
+</html>

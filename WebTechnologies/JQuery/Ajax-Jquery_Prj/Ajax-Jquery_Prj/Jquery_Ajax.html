@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+    <script src="https://googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                $.ajax({
+                    url: "Datafile.txt", success: function (result) {
+                        $('#div1').html(result);
+                    }
+                })
+
+                //with jquery load
+                //$('#div1').load("Datafile.txt", function (responsetxt, statustxt, r) {
+
+                //    if (statustxt == 'success')
+                //        alert("External Content Loaded Successfully");
+                //    if (statustxt == 'error')
+                //        alert("Error : " + r.status + " " + r.statustxt )
+                //})
+                //})
+
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="div1">
+        <h2>Let the Ajax Jquery change the page content</h2>
+    </div><br /><br />
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+    <br />
+    <button>Make an Ajax Call</button>
+</body>
+</html>
