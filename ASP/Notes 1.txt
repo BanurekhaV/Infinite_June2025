@@ -1,0 +1,97 @@
+ASP.Net Web Forms : ASP.Net is a web development platform, which provides a programming model, a comprehensive software infrastructure, and various services required to build a robust web applications for PC's as well as mobiles.
+
+Other web development tools in the market :
+ PHP
+ CGI
+ PERL
+ Ruby on Rail
+ Java
+etc..
+
+- was introduced along with .net framework 1.1 in the year 2002
+- web applications are always hosted onto a webserver like
+  - IIS
+  - Apache
+  - Nginx
+  - LiteSpeed
+  - Node
+- provides cross platform support
+- is a client server architecture (browsers, web applications)
+
+Web Forms : a form/web page has a code behind and designer files
+-code behind files have an extension of aspx.cs, aspx.vb, which contains the code that the developer writes
+-designer files have aspx.designer.cs (are auto generated code, that should not be changed)
+-web forms are associated with the code behind file using '@page' directive
+
+Web Form Model :
+
+- an event driven model for interactions with the web application. When the client submits a request for a resource on the webserver, and the web server returns a full mark-up page or html in response
+- HTTP is a stateless protocol. The ASP.Net Framework helps in storing the information/state of the application which consists of
+   - Page State
+   - Session State
+
+--Inline Code : <% ...%> refers to any code written along with HTML inside the .aspx
+--Code behind : refers to the code of an asp.net web page written in a separate class file with .cs extension
+
+WebPage : When a request is received, an instance of the requested page is created
+- Events are processed
+- Generates the HTML and Posts to the client
+- The page is destroyed immediately
+
+Life cycle of a page :
+S : starts the page 
+I : Initialization (all control classes)
+L : Load
+V : Validate
+E : Event handling
+R : Render (css,ui, html)
+
+Page request : if the page is requested for the first time, then the server compiles the page and renders it . If the request is not the first time, then the server checks the cache to see if the page is existing. if so then that response is sent to the user
+
+Page Start : 2 objects known as request and response are created
+
+Page Initialization : All controls on the page are initialized
+
+Page Load : The page gets loaded with all default settings/values (on to the memory)
+
+Validation : if Any validations , are performed here
+
+PostbackEvent : this event gets triggered if the same page is loaded again
+
+Page Rendering : all information that are to be sent to the user are saved and then a complete web page is rendered.
+
+Unload : The page object is then disposed
+
+Page Events : Preinit : Is the event where the server checks if the request is postback or not. Also here it sets the themes and masterpages
+Init : the control tree is built
+Init_Complete :tracks all the viewstate
+LoadViewState : loads all viewstate info
+Preload : occurs before post data is loaded in the controls
+Load : The page and then recursively all child controls are loaded and the tree is created.
+loadcomplete: The page event handlers and validations are done Page_Prerender: occurs just before the output is rendered, where any updations to th econtrols are performed
+Pageprerender_complete : is an event that is ready to fire with the updated output
+Page_Render: handing over the output to the browser engine
+SaveState: 
+Page_unload : Page object ready for discard
+
+The last event that is triggered is Page_Unload when the page is fully rendered and the HTML is already sent to the client. This stage, the page object is ready for discard, and hence we cannot indulge in any page properties.
+
+
+Application Life Cycle:
+------------------------
+
+Application Start : The web application is started by the webserver on the user request
+Object Creation : HttpContext, HttpRequest, HttpResponse objects are created. The context object contains the request and response objects.
+HttpApplication Creation : Application object is created for serving first and subsequent requests
+Dispose : All resources are released upon calling this method
+Application End : Application is unloaded from the webservers memory.
+
+Trace :
+-----
+is like a debugger that traces all requests and response 
+activities of a page/s. In order to be able to trace, we have to enable the trace in the web.config file as below :
+
+<system.web>
+ <trace enabled="true"/>
+</system.web>
+
