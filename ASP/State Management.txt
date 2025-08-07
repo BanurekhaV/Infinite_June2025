@@ -9,6 +9,20 @@ Can be achieved using techniques as below:
 - can retain the state across multiple postbacks of the same page
 - cannot travel to other pages
 
+    b) Hidden field : is a control in the toolbox. This will not be visible at runtime
+     - is a class that needs to be initialized along with its members that can be a load on the system
+     - Like viewstate, this also can retain the state across multiple postbacks of the same page, and not other pages
+     - can be used if minimal data needs to be stored
 
+     c) Cookies : Allows managing the state across pages
+              - can travel to other pages with the previous state
+              - are of 2 types
+                   -> Persistent cookies ( uses an object of the HttpCookies class to store data)
+                   -> Non-persistent cookies ( Data is directly stored in the response object)
+
+     d) Query Strings : allows to manage the state across pages using URL
+              - we can use url encoding to format the data
+              - The data is carried from one page to another on the address bar, making it visible.
+              - Sensitive data should not be sent via query string
 
 2. Server Side Technique :
