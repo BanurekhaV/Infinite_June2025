@@ -16,3 +16,8 @@ Server Control : are on the server side and generate the html for the user(brows
 
 
 In conclusion, html controls are suitable for simple client side interactions, where as asp controls provide more advanced features
+
+
+IIS : Internet Information Services is a flexible general purpose web server developed by Microsoft. 
+- It is used to host websites, web applications and services.
+- It supports both static (html,css) and dynamic content(asp.net appln). 

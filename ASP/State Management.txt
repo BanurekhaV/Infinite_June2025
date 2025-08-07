@@ -26,3 +26,7 @@ Can be achieved using techniques as below:
               - Sensitive data should not be sent via query string
 
 2. Server Side Technique :
+
+     a) Session State: are like viewstate that keeps track of the state of a page across other pages at the server side
+
+     b) Application state : Manages the entire applications instance for every session

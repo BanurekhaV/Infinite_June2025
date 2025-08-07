@@ -99,3 +99,12 @@ activities of a page/s. In order to be able to trace, we have to enable the trac
 ViewState : 
 All server controls have a view state variable by default (that can maintain the state across the post backs of the same page)
 
+All web forms are basically instances of Asp.net web page class. The page class has the following very useful properties that corresponds to the intrinsic objects
+ - Session
+ - Application
+ - Cache
+ - Request
+ - Response
+ - Server
+ - User
+ - Trace

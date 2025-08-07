@@ -19,7 +19,9 @@ namespace StateManagement
             //2. hidden fileds being objects, do not even show up in other pages
             //than where it is declared. Hence throws compilation error.
 
-          //  lblmsg.Text = HiddenField1.Value + " " + HiddenField2.Value;
+            //  lblmsg.Text = HiddenField1.Value + " " + HiddenField2.Value;
+
+            Response.Write("hello all..");
         }
     }
 }
