@@ -95,3 +95,7 @@ activities of a page/s. In order to be able to trace, we have to enable the trac
  <trace enabled="true"/>
 </system.web>
 
+
+ViewState : 
+All server controls have a view state variable by default (that can maintain the state across the post backs of the same page)
+

@@ -70,6 +70,7 @@
     <Content Include="Form1.aspx" />
     <Content Include="Global.asax" />
     <Content Include="PageLifeCycle.aspx" />
+    <Content Include="PostBackEg.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -89,6 +90,13 @@
     </Compile>
     <Compile Include="PageLifeCycle.aspx.designer.cs">
       <DependentUpon>PageLifeCycle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PostBackEg.aspx.cs">
+      <DependentUpon>PostBackEg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostBackEg.aspx.designer.cs">
+      <DependentUpon>PostBackEg.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

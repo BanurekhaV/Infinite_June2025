@@ -1,0 +1,14 @@
+State Management : Storing values across various pages.
+
+Can be achieved using techniques as below:
+1. Client Side Technique :
+      a) ViewState: is a simple dictionary object that can store data as key and value pair
+- does not need any typecasting
+- can store any data including UDT
+- It stores the data at the client side
+- can retain the state across multiple postbacks of the same page
+- cannot travel to other pages
+
+
+
+2. Server Side Technique :
