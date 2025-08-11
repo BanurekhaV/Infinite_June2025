@@ -1,0 +1,36 @@
+Master Pages : Allows us to create page/s with a consistent look and feel for the website including the behaviour (group of pages)
+
+- is a template for the pages that can share the same layout and functionality
+
+- Defines placeholders for the content (content place holder), which can be overridden by the content)
+- the output result will be a combination of master page and content page (on request of the content page)
+- Can be nested
+
+-Master page is linked to ASP.Net using '@Master' directive
+
+<% @ Master %>
+ <html>
+  <body>
+    <h1> </h1>
+  <asp:ContentPlaceHolder id =" " runat="server" > 
+
+  
+</asp:ContentPlaceHolder>
+</body>
+</html>
+
+
+Steps  to create Master Pages :
+
+1. Right click on the project -> add -> newItem->masterpage (second option)
+2. Give a name if you wish to change the default name (Site1.master)
+3. Remove all the content placeholder tag in both the Head element as well as body element
+4. You can have your own design for the master page
+5. Now include the content placeholder control by double clicking or dragging it and placing it inside any container element within the body element 
+6. You may change the content placeholders id to something that gives an inference to the master viz. primary, main, master etc.
+7. Then to format it properly, you may press ctrl k and d
+8. Save it
+9. Right click on the master page->add contentpage (like this you can add several pages that follow the master page layout)
+10. Within the content placeholder tag, you can design your page
+
+Note : we cannot change the layout in the content pages, but only in the master page
