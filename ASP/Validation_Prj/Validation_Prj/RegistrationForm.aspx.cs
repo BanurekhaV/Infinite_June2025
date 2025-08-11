@@ -22,7 +22,7 @@ namespace Validation_Prj
             }
             else
             {
-                Response.Write("Please Correct the form..");
+                Response.Write("Please Correct the form details..");
             }
         }
     }

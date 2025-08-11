@@ -1,0 +1,15 @@
+Internet Information Services (IIS) is a flexible, general-purpose web server developed by Microsoft. It runs on Windows systems and is used to host websites, web applications, and services. IIS supports both static content (e.g., HTML, CSS) and dynamic content (e.g., ASP.NET applications). It processes client requests and serves the appropriate responses, making it a critical tool for web hosting.
+
+Features and Capabilities of IIS
+
+Modular Architecture: IIS allows developers to enable or disable specific features, optimizing performance and resource usage.
+
+ASP.NET Integration: It supports ASP.NET features like forms-based authentication, session state, and membership, providing a unified experience for web applications.
+
+HTTP/2 Support: Enhances performance with faster page loads and reduced latency.
+
+Security: Offers robust security features, including request filtering, authentication, and SSL/TLS support.
+
+Scalability: Ideal for hosting websites on a single server or across large server farms.
+
+To Test if IIS is installed type http://localhost and see

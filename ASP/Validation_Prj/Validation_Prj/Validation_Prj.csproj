@@ -67,10 +67,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CustomForm.aspx" />
     <Content Include="RegistrationForm.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomForm.aspx.cs">
+      <DependentUpon>CustomForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomForm.aspx.designer.cs">
+      <DependentUpon>CustomForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrationForm.aspx.cs">
       <DependentUpon>RegistrationForm.aspx</DependentUpon>
