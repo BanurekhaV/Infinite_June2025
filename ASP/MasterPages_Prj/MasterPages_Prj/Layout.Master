@@ -66,7 +66,7 @@
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
-            <li><a href="C:\Banu\Infinite_June25\ASP\Validation_Prj\Validation_Prj\RegistrationForm.aspx" style="float: right">Register</a></li>
+            <li><a href="SampleForm.aspx" style="float: right">Register</a></li>
             <li><a href="#" style="float: right">Login</a></li>
         </ul>
     </nav>
