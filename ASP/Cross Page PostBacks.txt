@@ -1,0 +1,26 @@
+Cross Page PostBacks :
+When there is a need to transfer some data from one web page to another web page then normally the first thing a developer thinks of is sessions. But the use of a session can be bad sometimes since the page becomes heavy due to it. There is one more way to do it and thereby avoid sessions or other state management techniques, we can use a cross page postback. It simply transfers the data from one page to another. In this article we will create a sample application to check the same.
+
+
+When the source page cross-posts back to the target page, and the target page accesses the source page, the source page is reloaded in memory and goes through all the life cycle stages except the rendering. This version of the source page object is used by the target page to access information on the source page.
+
+ 
+
+The IsCrossPagePostBack property in the source page indicates if it is being reloaded in memory in response to a PreviousPage reference from a target page.
+
+Page A cross postback to Page B
+Page B accesses the PreviousPage : Page A is reloaded in memory and the IsCrossPostBack property on this object has the value "true".
+The IsCrossPagePostBack property can be used in the source page to prevent un-necessary processing from repeating when the page is being reloaded for the PreviousPage reference.
+
+The PreviousPage.IsCrossPagePostBack property can be used to deduce if the current page has been loaded as a result of a cross page postback.
+
+
+Validations : 
+
+If the Source Page has any Validator controls, the source page will need to have valid input when it has cross posted to the target page. The target page can contain the validation check for PreviousPage.IsValid to catch invalid submissions to the source page.
+
+
+Example - A web form collects criteria for a web-based report (such as Report Type, Report Start Date and Report End Date) and the form is cross page posted to another web form which generates the report based on the parameters passed in the previous page.
+
+
+
