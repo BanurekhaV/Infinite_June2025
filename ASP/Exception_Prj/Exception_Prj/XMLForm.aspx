@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="XMLForm.aspx.cs" Inherits="Exception_Prj.XMLForm" ErrorPage="~/ErrorsPage.aspx" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="XMLForm.aspx.cs" Inherits="Exception_Prj.XMLForm" %>
 
 <!DOCTYPE html>
 

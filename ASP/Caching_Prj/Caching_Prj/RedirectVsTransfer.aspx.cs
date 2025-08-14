@@ -22,14 +22,14 @@ namespace Caching_Prj
             // Response.Write(Context.Items["Name"].ToString() + " " + Context.Items["Email"].ToString());
 
             //1. Redirect
-            // Response.Redirect("Page2.aspx"); //this resource is in the same web server
+             Response.Redirect("Page1.aspx"); //this resource is in the same web server
 
             // Response.Redirect("https://www.amazon.com"); // resource in some other server
 
             //2. Transfer
-             Server.Transfer("Page1.aspx");
+            // Server.Transfer("Page1.aspx");
 
-            Server.Transfer("https://www.amazon.com"); //cannot move to the webservers
+          //  Server.Transfer("https://www.amazon.com"); //cannot move to the webservers
         }
     }
 }

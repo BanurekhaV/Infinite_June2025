@@ -52,7 +52,6 @@ C:\Banu\Infinite_June25\ASP\Exception_Prj\Exception_Prj\bin\roslyn\VBCSCompiler.
 C:\Banu\Infinite_June25\ASP\Exception_Prj\Exception_Prj\bin\roslyn\VBCSCompiler.exe.config
 C:\Banu\Infinite_June25\ASP\Exception_Prj\Exception_Prj\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Banu\Infinite_June25\ASP\Exception_Prj\Exception_Prj\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Banu\Infinite_June25\ASP\Exception_Prj\Exception_Prj\obj\Debug\Exception_Prj.csproj.AssemblyReference.cache
 C:\Banu\Infinite_June25\ASP\Exception_Prj\Exception_Prj\obj\Debug\Exception_Prj.csproj.CoreCompileInputs.cache
 C:\Banu\Infinite_June25\ASP\Exception_Prj\Exception_Prj\obj\Debug\Exception_Prj.csproj.CopyComplete
 C:\Banu\Infinite_June25\ASP\Exception_Prj\Exception_Prj\obj\Debug\Exception_Prj.dll
