@@ -56,3 +56,4 @@ C:\Banu\Infinite_June25\ASP\Exception_Prj\Exception_Prj\obj\Debug\Exception_Prj.
 C:\Banu\Infinite_June25\ASP\Exception_Prj\Exception_Prj\obj\Debug\Exception_Prj.csproj.CopyComplete
 C:\Banu\Infinite_June25\ASP\Exception_Prj\Exception_Prj\obj\Debug\Exception_Prj.dll
 C:\Banu\Infinite_June25\ASP\Exception_Prj\Exception_Prj\obj\Debug\Exception_Prj.pdb
+C:\Banu\Infinite_June25\ASP\Exception_Prj\Exception_Prj\obj\Debug\Exception_Prj.csproj.AssemblyReference.cache

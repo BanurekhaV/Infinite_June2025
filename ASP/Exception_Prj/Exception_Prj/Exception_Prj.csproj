@@ -67,6 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CrossPageDefault.aspx" />
+    <Content Include="CrossPageIndex.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="DefaultError.aspx" />
     <Content Include="Employee.xml" />
@@ -74,10 +76,26 @@
     <Content Include="ErrorsPage.aspx" />
     <Content Include="Global.asax" />
     <Content Include="PageNotFound.aspx" />
+    <Content Include="TransferVsExecute.aspx" />
     <Content Include="Web.config" />
+    <Content Include="WebForm2.aspx" />
     <Content Include="XMLForm.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrossPageDefault.aspx.cs">
+      <DependentUpon>CrossPageDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrossPageDefault.aspx.designer.cs">
+      <DependentUpon>CrossPageDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrossPageIndex.aspx.cs">
+      <DependentUpon>CrossPageIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrossPageIndex.aspx.designer.cs">
+      <DependentUpon>CrossPageIndex.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -106,6 +124,7 @@
     <Compile Include="ErrorsPage.aspx.designer.cs">
       <DependentUpon>ErrorsPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Exception_Db_Logging.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -117,6 +136,20 @@
       <DependentUpon>PageNotFound.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransferVsExecute.aspx.cs">
+      <DependentUpon>TransferVsExecute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TransferVsExecute.aspx.designer.cs">
+      <DependentUpon>TransferVsExecute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="XMLForm.aspx.cs">
       <DependentUpon>XMLForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

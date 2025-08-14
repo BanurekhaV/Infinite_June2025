@@ -26,8 +26,16 @@ namespace Exception_Prj
 
         protected void Btn1_Click(object sender, EventArgs e)
         {
-             //Server.Transfer("~/hello.aspx");
-            Response.Redirect("~/Hello.aspx");
+            //Server.Transfer("~/hello.aspx");
+            try
+            {
+                // Response.Redirect("~/Hello.aspx");
+                Server.Transfer("~/Hello.aspx");
+            }
+            catch(Exception ex)
+            {
+                Exception_Db_Logging.LogExceptiontoDB(ex);
+            }
         }
 
         //protected void Page_Error(Object sender, EventArgs e)

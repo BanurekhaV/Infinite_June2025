@@ -12,19 +12,20 @@ namespace Exception_Prj
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //try
-            //{
-            DataSet ds = new DataSet();
+            try
+            {
+                DataSet ds = new DataSet();
                 //Response.Redirect("Hello.aspx");
                 ds.ReadXml(Server.MapPath("~/Employees.xml"));
                 Grid1.DataSource = ds;
                 Grid1.DataBind();
-            //}
-            //catch(Exception ex)
-            //{
-            //    Response.Write(ex.Message);
-            //    lblmsg.Text = "Some Technical Error Occurred.. try after sometime";
-            //}
+            }
+            catch (Exception ex)
+            {
+                // Response.Write(ex.Message);
+                Exception_Db_Logging.LogExceptiontoDB(ex);
+                lblmsg.Text = "Some Technical Error Occurred.. try after sometime";
+            }
         }
 
         //handling page error event as code behind

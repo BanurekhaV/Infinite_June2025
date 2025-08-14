@@ -18,6 +18,8 @@ Usage : to transfer the current page to another page of the same server
         to preserve the state of the current page
         to not disclose the url address of all the navigating pages
 
+Server.Execute :same as server.transfer, except that transfer() terminates the execution of the current page and starts executing the new page, whereas execute() processes the second request page without leaving the current page. Post completion, returns back to the original page
+
 Exceptions :
 In webform we van handle exceptions using the below techniques:
 
