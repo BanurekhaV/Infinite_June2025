@@ -108,3 +108,4 @@ All web forms are basically instances of Asp.net web page class. The page class 
  - Server
  - User
  - Trace
+ - Context
