@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index of the Data Controller</h2> <br/>
+<h2>@ViewBag.MyData</h2>
+
+@foreach(var item in Model)
+            {
+                <p>@item</p>
+            }
+
+<br />
+<h2>@ViewBag.Data1</h2>

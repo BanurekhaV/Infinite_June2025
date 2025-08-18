@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "TestDataTransfer";
+}
+
+<h2>TestDataTransfer</h2>
+@*<h3>@ViewBag.Data1</h3>*@
+<br />
+@*<h3>@ViewData["Data2"]</h3>*@
+
+<h2>OfficeRules thru ViewBag</h2>
+
+@*@foreach (string s in ViewBag.OfficeRules) -- unable to reach the object as they are set to null
+{
+    <ol>
+        <li>@s</li>
+    </ol>
+}*@
+
+<br />
+<hr />
+<h2>Office Rules Thru ViewData</h2>
+@*@foreach (var x in ViewData["followrules"] as List<string>)
+{
+    <p>@x</p>
+}*@
+
