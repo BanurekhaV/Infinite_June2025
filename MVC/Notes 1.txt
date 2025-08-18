@@ -1,0 +1,63 @@
+ASP.Net MVC : is a popular framework for developing web applications
+
+
+Features of MVC Pattern :
+ - Allows Clear separation of concerns ( Designs and Codes are neatly separated)
+ - Based on Model View and Controller pattern
+ - It is light weight, fast and secure
+ - It uses Pure HTML controls or HTML Helpers(No Server Control)
+ - It uses controller based URL
+ - Implements no view state
+ - It uses Layouts in place of Master Pages for consistent look and feel
+ - It uses Razor Syntax for customization
+ - ASP.Net MVC is open source framework
+
+Understanding MVC
+Model : responsible for keeping database operational logic 
+Controller : responsible for programming logics
+View : responsible for serving the webpage to the client (UI)
+
+Controller : is the main part of the MVC appln.
+- Is a mediator between client side request and server side response
+- Acts like a bridge between View Page and Models
+- Works with HTTP request that comes from the browser
+- Even when a static resource is requested , the controller comes in action and returns the requested page
+- Each request is mapped to a controller and each controller has several action methods to handle the request
+- In MVC, URL's are not mapped with a direct static page, instead with controllers
+- All controllers must have a suffix 'controller' after the name of the controller
+
+-- Action Methods : are methods inside the controller.
+  - Must be public
+  - Cannot be overloaded
+  - Cannot be static
+  - Every controller has one action method (Index()) by default, that returns a view
+
+ActionResult - is the base class of all the result types of action
+Result Types :
+  1. View Result : html and razor
+  2. Empty Result : no result
+  3. RedirectResult : redirection to a new url
+  4. JsonResult : json result type
+  5. ContentResult : a textual or html result
+  6. FileContentResult : downloadable binary content
+  7. FilePathResult : downloadable with path specifications
+  8. FileStreamResult : downloadable with a specified file stream
+  9 JavaScript Result : html result
+
+Views : is a folder structure of MVC application.
+- contains all .cshtml files under different folders that correspond to the controller, along with shared .cshtml files
+- view folder name and .cshtml files represent the controller name and the action method name respectively.
+- allows us to write razor syntax - a powerful and easier mark up syntax
+                    - way of writing the server code directly on to the html based view page
+                    - Uses '@{}' block to write program code
+                    - All inline expressions like variables, functions etc start with @
+                    - variables are declared using var keyword, and ';' can be used to terminate
+                    - Comments in razor are given with
+                          @*......*@ - multiline comments
+                          /* ... */
+                          //  - single line
+- to bind the model to the view, we use @model
+- @Model helps in accessing the properties of the bound model Object
+          
+
+
