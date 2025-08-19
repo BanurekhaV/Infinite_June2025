@@ -1,0 +1,13 @@
+﻿@model IEnumerable<MVC_DatabaseFirst.Models.CustOrdersOrders_Result>
+@{
+    ViewBag.Title = "Sp_With_Parameter";
+}
+
+<h2>Sp_With_Parameter</h2>
+@foreach(var v in Model)
+            {
+                <li>@v.OrderID</li>
+                <li>@v.OrderDate</li>
+                <li>@v.RequiredDate</li>
+                <li>@v.ShippedDate</li>
+            }

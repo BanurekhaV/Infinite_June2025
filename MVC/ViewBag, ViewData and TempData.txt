@@ -32,3 +32,17 @@ TempData : is a dictionary object that is derived from TempDataDictionary
  - has bigger life than viewbag and viewdata
  - it is generally used to transfer data/values from one controller to another
 
+
+
+HTTP Verbs :for CRUD Operations
+
+HttpGet : is a get request of a resource from the server
+HttpPost : is a post request for sending data from the view to the controller and hence the server
+HttpPut : is a request for change in data (from the view to the server)
+HttpDelete : is a request for deletion of data 
+
+--To pass the data from the View to the Controller
+1. Object (model)
+2. Forms Collections
+3. Parameter Collection
+4. Request Object 
