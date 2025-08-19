@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Test_third_Request";
+}
+
+<h2>Testing Third Request of TempData</h2>
+@*@foreach(var d in TempData["stores"] as List<string>)
+            {
+                <p>@d</p>
+            }*@
+
+
+@foreach(var item in Model)
+            {
+                <p>@item</p>
+            }

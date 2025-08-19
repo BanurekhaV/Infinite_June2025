@@ -12,12 +12,19 @@ namespace FirstMVC.Controllers
         public ActionResult Index()
         {
             //1. Passing an object to the view that will be used as a model
-            ViewBag.MyData = "Flower Index";
-            List<string> flowers = new List<string>
-            {
-                "Roses", "Lillies", "Jasmines", "Marigolds"
-            };
-            return View(flowers);
+            //ViewBag.MyData = "Flower Index";
+            //List<string> flowers = new List<string>
+            //{
+            //    "Roses", "Lillies", "Jasmines", "Marigolds"
+            //};
+            //return View(flowers);
+
+            //2. trying to access tempdata of the earlier request
+            List<string> st;
+            //st = TempData["stores"] as List<string>;
+            //return View(st);
+            TempData.Keep();
+            return RedirectToAction("Test_third_Request", "Demo"); //different controller
         }
 
         //2. Checking if the ViewBag can pass on the information to further requests
@@ -45,6 +52,27 @@ namespace FirstMVC.Controllers
 
             // return View();
             return RedirectToAction("TestDataTransfer");
+        }
+
+        //4. with tempdata
+        public ActionResult FirstTempRequest()
+        {
+            List<string> stationeries = new List<string>()
+            { "Pens", "Pencils","Notebooks", "Markers","Erasers"};
+            TempData["stores"] = stationeries;
+            //1. using the tempdata in the corresponding
+            // return View();
+
+            //2. 
+            return RedirectToAction("SecondTempRequest");
+        }
+
+        public ActionResult SecondTempRequest()
+        {
+            // List<string> stnlist;
+            // stnlist = TempData["stores"] as List<string>;
+            // return View(stnlist);  //works
+            return RedirectToAction("Index");
         }
     }
 }

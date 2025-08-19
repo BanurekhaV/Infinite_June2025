@@ -47,10 +47,14 @@ namespace FirstMVC.Controllers
         public ActionResult redirectMethod()
         {
             //redirecting to other actionmethods of the same controller
-           // return RedirectToAction("ContentMethod");
+            // return RedirectToAction("ContentMethod");
 
             //redirecting to other actionmethods of the other controller
-            return RedirectToAction("index", "home");
+            // return RedirectToAction("index", "home");
+
+            //3. trying to pass tempdata values to another controller without keeping it 
+            //in the earlier request
+            return RedirectToAction("about", "home");
         }
 
         //6. JsonResult
@@ -58,6 +62,13 @@ namespace FirstMVC.Controllers
         {
             Employee emp = new Employee() { ID = 101, Name = "Mahesh", Age = 22 };
             return Json(emp,JsonRequestBehavior.AllowGet);
+        }
+
+        //7. Testing tempdtat values from data controllers index action method
+        public ActionResult Test_third_Request()
+        {
+          //  return View(TempData["stores"]);  // this is to test iterating the passed model in the view
+           return RedirectToAction("redirectMethod");
         }
     }
 }

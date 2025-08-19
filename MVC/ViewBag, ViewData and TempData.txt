@@ -22,3 +22,13 @@ Eg : ViewData["Data2"] = "Data Two";
 to access
 ViewData["Data2"]
 
+
+TempData : is a dictionary object that is derived from TempDataDictionary
+ - uses key/value pair for storing and retrieving data
+ - used to transfer data from controller to view
+ - internally makes use of session to store the values
+ - always check for null before using tempdata to avoid runtime errors
+ - requires typecasting
+ - has bigger life than viewbag and viewdata
+ - it is generally used to transfer data/values from one controller to another
+
