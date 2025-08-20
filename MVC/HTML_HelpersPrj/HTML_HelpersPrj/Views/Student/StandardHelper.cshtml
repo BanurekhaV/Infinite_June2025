@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "StandardHelper";
+    Layout = null;
+}
+
+<!Doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width" />
+    <title>Standard helper</title>
+</head>
+<body>
+    <div>
+        <h2>Standard HTML</h2>
+        <h3>Labels</h3>
+        @Html.Label("name", "First Name")
+        <h3>TextBox</h3>
+        @Html.TextBox("txtname", "", new { @class = "form-control", placeholder = "First Name" })
+        <h3>TextArea</h3>
+        @Html.TextArea("address", new { @class = "form-control", rows = 5 })
+        <h3>Password</h3>
+        @Html.Password("password", "", new { @class = "form-control" })
+        <h3>Radio</h3>
+        @Html.RadioButton("mstatus", "Married", new { id = "IsMarried" }) Married ?
+        <br />
+        <h3>Checkbox</h3>
+        @Html.CheckBox("skl1") HTML 5
+        @Html.CheckBox("skl2") CSS
+        @Html.CheckBox("skl3") DOT Net
+        @Html.CheckBox("skl4") BootStrap
+        <h3>ListBox</h3>
+        @Html.ListBox("skills", new List<SelectListItem>
+   { new SelectListItem {Text="ASP.Net", Value="1"},
+   new SelectListItem {Text="MVC", Value="2"},
+   new SelectListItem {Text="React", Value="3"},
+   new SelectListItem {Text="Angular", Value="4"},
+   new SelectListItem {Text="SQL", Value="5"},}, new { @class = "form-control" })
+        <h3>DropDown</h3>
+        @Html.DropDownList("gender", new List<SelectListItem>
+   { new SelectListItem{ Text="Select Gender", Value="-1"},
+   new SelectListItem{ Text="Male", Value="1"},
+   new SelectListItem{ Text="Female", Value="2"},
+   new SelectListItem{ Text="Others", Value="3"},}, new {@class="csutom-select"})
+    </div>
+</body>
+</html>

@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InfiniteDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="Deptid" />
+    </Key>
+    <Property Name="Deptid" Type="Int32" Nullable="false" />
+    <Property Name="DeptName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DeptBudget" Type="Double" />
+    <NavigationProperty Name="Employees" Relationship="Self.fkdeptid" FromRole="Department" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="dept">
+    <Key>
+      <PropertyRef Name="deptno" />
+    </Key>
+    <Property Name="deptno" Type="Int32" Nullable="false" />
+    <Property Name="dname" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="loc" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="emps" Relationship="Self.FK__emp__deptno__3C69FB99" FromRole="dept" ToRole="emp" />
+  </EntityType>
+  <EntityType Name="emp">
+    <Key>
+      <PropertyRef Name="empno" />
+    </Key>
+    <Property Name="empno" Type="Int32" Nullable="false" />
+    <Property Name="ename" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="job" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mgr_id" Type="Int32" />
+    <Property Name="hire_date" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="salary" Type="Int32" />
+    <Property Name="comm" Type="Int32" />
+    <Property Name="deptno" Type="Int32" />
+    <NavigationProperty Name="dept" Relationship="Self.FK__emp__deptno__3C69FB99" FromRole="emp" ToRole="dept" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmpId" />
+    </Key>
+    <Property Name="EmpId" Type="Int32" Nullable="false" />
+    <Property Name="EmpName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Gender" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+    <Property Name="Salary" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="DepartmentId" Type="Int32" />
+    <Property Name="Phone" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="AnnualSalary" Type="Decimal" Precision="21" Scale="0" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Department" Relationship="Self.fkdeptid" FromRole="Employee" ToRole="Department" />
+  </EntityType>
+  <EntityType Name="empnormal">
+    <Key>
+      <PropertyRef Name="eno" />
+      <PropertyRef Name="prjcode" />
+    </Key>
+    <Property Name="eno" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="dept" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="prjcode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Hours" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="Int32" Nullable="false" />
+    <Property Name="ProductName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="Int32" />
+    <Property Name="QuantityAvailable" Type="Int32" />
+    <NavigationProperty Name="ProductSales" Relationship="Self.FK__ProductSa__PrdID__5AEE82B9" FromRole="Products" ToRole="ProductSales" />
+  </EntityType>
+  <EntityType Name="ProductSale">
+    <Key>
+      <PropertyRef Name="ProductSalesID" />
+    </Key>
+    <Property Name="ProductSalesID" Type="Int32" Nullable="false" />
+    <Property Name="PrdID" Type="Int32" />
+    <Property Name="QuantitySold" Type="Int32" />
+    <NavigationProperty Name="Product" Relationship="Self.FK__ProductSa__PrdID__5AEE82B9" FromRole="ProductSales" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="dummy">
+    <Key>
+      <PropertyRef Name="dummyid" />
+    </Key>
+    <Property Name="dummyid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dummyname" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="empdata">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ename" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Age" Type="Int32" />
+    <Property Name="City" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Utable1">
+    <Key>
+      <PropertyRef Name="uid" />
+    </Key>
+    <Property Name="uid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="uname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ugrade" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="upercentage" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Utable2">
+    <Key>
+      <PropertyRef Name="uid" />
+    </Key>
+    <Property Name="uid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="uname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ugrade" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="upercentage" Type="Int32" />
+  </EntityType>
+  <Association Name="fkdeptid">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="Deptid" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__emp__deptno__3C69FB99">
+    <End Role="dept" Type="Self.dept" Multiplicity="0..1" />
+    <End Role="emp" Type="Self.emp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dept">
+        <PropertyRef Name="deptno" />
+      </Principal>
+      <Dependent Role="emp">
+        <PropertyRef Name="deptno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductSa__PrdID__5AEE82B9">
+    <End Role="Products" Type="Self.Product" Multiplicity="0..1" />
+    <End Role="ProductSales" Type="Self.ProductSale" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ProductSales">
+        <PropertyRef Name="PrdID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="InfiniteDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Departments" EntityType="Self.Department" />
+    <EntitySet Name="depts" EntityType="Self.dept" />
+    <EntitySet Name="emps" EntityType="Self.emp" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="empnormals" EntityType="Self.empnormal" />
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <EntitySet Name="ProductSales" EntityType="Self.ProductSale" />
+    <EntitySet Name="dummies" EntityType="Self.dummy" />
+    <EntitySet Name="empdatas" EntityType="Self.empdata" />
+    <EntitySet Name="Utable1" EntityType="Self.Utable1" />
+    <EntitySet Name="Utable2" EntityType="Self.Utable2" />
+    <AssociationSet Name="fkdeptid" Association="Self.fkdeptid">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__emp__deptno__3C69FB99" Association="Self.FK__emp__deptno__3C69FB99">
+      <End Role="dept" EntitySet="depts" />
+      <End Role="emp" EntitySet="emps" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductSa__PrdID__5AEE82B9" Association="Self.FK__ProductSa__PrdID__5AEE82B9">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="ProductSales" EntitySet="ProductSales" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
