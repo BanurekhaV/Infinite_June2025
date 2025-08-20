@@ -38,6 +38,20 @@ namespace HTML_HelpersPrj.Controllers
         {
             return View();
         }
+        //5. Display Template
+        public ActionResult StudentDetails()
+        {
+            Student stud = new Student()
+            {
+                RNo = 1,
+                Name = "Karthick",
+                Address = "Chennai",
+            };
+            ViewData["stddata"] = stud;
+            return View(stud);
+        }
+
+        //6. Custom Helpers
 
     }
 }

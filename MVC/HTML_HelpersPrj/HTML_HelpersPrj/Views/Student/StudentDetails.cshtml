@@ -1,0 +1,12 @@
+﻿@model HTML_HelpersPrj.Models.Student
+@{
+    ViewBag.Title = "StudentDetails";
+}
+
+<h2>Student Details</h2>
+<fieldset>
+    <legend>Student Personal Details</legend>
+    @*@Html.Display("stddata");*@
+    @Html.DisplayForModel();
+</fieldset>
+
