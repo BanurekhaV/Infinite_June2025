@@ -44,7 +44,7 @@ namespace MVC_DatabaseFirst.Controllers
         //4 delete a category
         public ActionResult Delete(int Id)
         {
-            Category cat = db.Categories.Find(Id);
+            Category cat = db.Categories.Find(Id);            
             return View(cat);
         }
 
