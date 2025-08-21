@@ -1,0 +1,7 @@
+
+JobApplication Model
+
+
+DOB      -  candidate to be > 21 years and  < 25 years only from the currentdate
+DOJ      -  to be <= CurrentDate  (bool IsValid(object value))
+Password  - FirstCharacter to be in Uppercase followed by a number, followed by any 5 Characters
