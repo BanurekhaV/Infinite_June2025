@@ -8,3 +8,23 @@
 <p>
     @CustomStaticHelpers.LabelWithMark("This is an Example for Static Custome Helpers")
 </p>
+<br/>
+<hr/>
+<h2>Extension Helpers</h2>
+<p>
+    @Html.GreenLabel("This is a Green Label Extension Custom Helper")
+    @Html.RedLabel("This is a Red Label Extension Custom Helper")
+</p>
+<br/>
+<hr/>
+<h2>Inline Helpers</h2>
+<!--Declaration of an Inline Helper-->
+@helper LabelWithRazor(string content)
+    {
+    <label><strong><sup>@content</sup></strong></label>
+    }
+
+<!--Calling the inline helper-->
+<p>
+    @LabelWithRazor("This is an Example for Inline Html Helper using Razor")
+</p>

@@ -28,17 +28,17 @@ Eg : @helper MyInlineHelper(string[] words)
 
 2. Built in Helpers
 
-3. Standard Html Helper : are used to render typical html elements
+2.1. Standard Html Helper : are used to render typical html elements
 
  Eg : @Html.Action()  -- to create link tags
       @Html.TextBox()
       @Html.BeginForm()  -- to start a form action
 
-4. Strongly Typed Html Helper : These take lambda expressions with parameters and informs the helper which property of the model has to be used
+2.2 Strongly Typed Html Helper : These take lambda expressions with parameters and informs the helper which property of the model has to be used
  Eg : @Html.LabelFor(model=>model.ID)
        @Html.TextBoxFor();
 
-5. Templated Html Helper : is used for data display and input. Generates Html automatically as per the model property and also for the complete model with just a single Tag. It has 2 types
+2.3 Templated Html Helper : is used for data display and input. Generates Html automatically as per the model property and also for the complete model with just a single Tag. It has 2 types
     1. Display Template : @Html.Display(), @Html.DisplayFor()
 
        @Html.DisplayForModel()  //single tag for entire model
@@ -47,6 +47,8 @@ Eg : @helper MyInlineHelper(string[] words)
      
         @Html.EditorForModel();
 
- 6. Custom Html Helper : Users Preferences in the views. These can be of 2 types
+ 3. Custom Html Helper : Users Preferences in the views. These can be of 2 types
      1. Static Helpers
      2. Extension Helpers
+
+Model States : Built-in attributes for validation
