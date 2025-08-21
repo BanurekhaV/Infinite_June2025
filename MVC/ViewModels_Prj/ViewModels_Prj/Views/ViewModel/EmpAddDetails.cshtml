@@ -1,0 +1,27 @@
+﻿@model ViewModels_Prj.Models.EmployeeAddress
+@{
+    ViewBag.title = "My Title";   
+}
+
+<html>
+<head>
+    @*<title>@Model.PageTitle</title>*@
+    <title>Test Title</title>
+</head>
+<body>
+    <hr/>
+    <h1>@Model.PageTitle</h1>
+    <div> Employee Data
+       Employee Number  : @Model.employee.EID
+       Employee Name    : @Model.employee.EName
+       Employee Salary  : @Model.employee.Salary
+    </div>
+    <hr/>
+    <div>Address Details
+       Door No  : @Model.address.DoorNo
+       Street   : @Model.address.Street
+       City     : @Model.address.City
+    </div>
+</body>
+</html>
+
