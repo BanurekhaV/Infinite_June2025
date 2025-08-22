@@ -51,7 +51,6 @@ namespace ModelStates_Prj.Controllers
                 TempData["age"] = user.age;
                 TempData.Keep();
                 return RedirectToAction("UserStatus");
-
             }
         }
     }

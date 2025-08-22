@@ -165,8 +165,8 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\User\UserStatus.cshtml" />
-    <Content Include="Views\User\AddUser.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\AddUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

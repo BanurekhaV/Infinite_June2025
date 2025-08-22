@@ -122,6 +122,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobApplicationController.cs" />
+    <Compile Include="CustomValidations\BirthDateValidate.cs" />
     <Compile Include="CustomValidations\GenderValidate.cs" />
     <Compile Include="CustomValidations\SkillValidation.cs" />
     <Compile Include="CustomValidations\ValidBirthDate.cs" />

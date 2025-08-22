@@ -26,6 +26,10 @@ namespace ModelStates_Prj.Models
         [Display(Name ="Email")]
         [RegularExpression(@"^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})$",
             ErrorMessage ="Invalid Format")]
+
         public string email { get; set; }
+
+        [EmailAddress]
+        public string MyEmail { get; set; }
     }
 }

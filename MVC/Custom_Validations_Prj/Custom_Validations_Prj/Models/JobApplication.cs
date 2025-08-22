@@ -8,7 +8,7 @@ using Custom_Validations_Prj.CustomValidations;
 
 namespace Custom_Validations_Prj.Models
 {
-    public class JobApplication
+    public class JobApplication : IValidatableObject
     {
         [Required]
         [Display(Name ="Applicant Name")]
@@ -21,6 +21,7 @@ namespace Custom_Validations_Prj.Models
         [Display(Name ="DOB")]
         [DataType(DataType.Date)]
         [ValidBirthDate(ErrorMessage ="DOB should be between 01/01/1996 and 31/12/2003 only")]
+        [BirthDateValidate]
         public DateTime birthdate { get; set; }
 
         [Required]

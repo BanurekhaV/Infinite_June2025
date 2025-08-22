@@ -1,0 +1,21 @@
+﻿@model Custom_Remote_Validations.Models.UserModel
+@{
+    ViewBag.Title = "CustomValidation";
+}
+
+<h2>Custom Validation</h2>
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name)
+        @Html.ValidationMessageFor(model => model.Name)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.BirthDay)
+        @Html.TextBoxFor(model => model.BirthDay)
+        @Html.ValidationMessageFor(model => model.BirthDay)
+    </div>
+    <input type="submit" value="Submit" />
+}
+
