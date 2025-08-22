@@ -1,0 +1,22 @@
+Remote Validations :
+
+Passing Data from controller/model to views using sessions
+
+What is Session in ASP.NET MVC ?
+
+ASP.NET Session is an object to store information about the user 
+-It can be used for passing data between models/controllers to the view page 
+-It's value doesn’t become null after passing information until we manually set it to null or session   	times expires. 
+-By default, in ASP.NET MVC, session time is 20 minutes and we can increase or decrease time upon needs. 
+-A session is mostly used in login page where a user is considered as validated until the session expires or the user clicks on log out button.
+
+
+Tuples - What are Tuples in ASP.NET MVC?
+ - It is immutable, fixed-size and ordered sequence object. 
+ - It is a data structure that has a specific number and sequence of elements and it supports up to 7 to 8 elements. 
+ - We can use Tuples for passing multiple models in a single view page.
+ - Pass the models in Tuple<model1, model2, model3,….model7> brackets and then pass the respective action method in sequence that is mapped with model, like (function1, function2, function3,….function7)
+ -  Add tuples in the beginning of the view page and pass models name in parameter, as below
+
+@model Tuple<ItemModel, List<ReviewersModel>>  (as per our Demo)
+
