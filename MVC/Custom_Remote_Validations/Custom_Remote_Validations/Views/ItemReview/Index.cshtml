@@ -1,0 +1,33 @@
+﻿@using Custom_Remote_Validations.Models;
+@model Tuple<ItemModel, List<ReviewerModel>>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div>
+    <h4>Passing Data Thru Tuple Objects</h4>
+    <hr />
+    <dl class="dl-horizontal"></dl>
+</div>
+<p style="font-size:20px;">
+    Item Details
+</p>
+<div style="background-color:burlywood;padding:5px;">
+    <h1 style="color:green">@Model.Item1.Name</h1>
+    <b>Category :</b> @Model.Item1.Category<br />
+    <b>Price :</b> @Model.Item1.Price
+    <hr />
+</div>
+
+<h2>Loading Review Details</h2>
+@foreach (var review in Model.Item2)
+{
+    <h4><b>@review.CommentsTitle</b></h4>
+    <b>@review.ReviewerName</b>
+    <br />
+    <b>Date :</b> @review.ReviewDate <span>|</span>
+    <b>Star Rating :</b>@review.StarRating<span>/5</span>
+    <br />
+    <i>@review.Comments</i>
+    <hr />
+}

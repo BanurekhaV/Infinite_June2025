@@ -122,10 +122,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemReviewController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CustomerModel.cs" />
+    <Compile Include="Models\ItemModel.cs" />
+    <Compile Include="Models\ReviewerModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -167,6 +170,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\CustomValidation.cshtml" />
     <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\ItemReview\ItemReviewDisplay.cshtml" />
+    <Content Include="Views\ItemReview\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
