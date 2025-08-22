@@ -1,0 +1,1 @@
+﻿document.write("Welcome and this is our Third Javascript File")

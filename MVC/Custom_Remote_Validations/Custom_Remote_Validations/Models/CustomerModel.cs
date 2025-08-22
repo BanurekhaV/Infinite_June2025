@@ -9,6 +9,7 @@ namespace Custom_Remote_Validations.Models
 {
     public class CustomerModel
     {
+        public int ID { get; set; }
         public string Name { get; set; }
 
         [Remote("IsEmailExists","Customer",ErrorMessage ="Email Already Exists, Choose another email")]

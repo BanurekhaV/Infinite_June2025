@@ -20,3 +20,23 @@ Tuples - What are Tuples in ASP.NET MVC?
 
 @model Tuple<ItemModel, List<ReviewersModel>>  (as per our Demo)
 
+
+
+
+Model Binder : is the mechanism which converts the URL segment into method Parameters
+- The Parameters can be of primitive type or complex type
+- It acts like a bridge between http request and action method and maps the values from the URL which may be as below :
+
+ Model binder uses default Model Binder mapping (rules for mapping)
+1. Request.Form[] : if the request is post
+2. RouteData.Values[] : if the value is in the route
+3. Request.QueryString[] : if the values are concatenated in the url as query strimg
+4. Request.Files[] : If the file is being uploaded
+
+When we have to custom bind in situations where the UI controls names are different from Model properties names, we can implement the IModelBinder interface BindModel Method()
+  
+
+
+Bundling & Minification : is a concept of making use of static files viz .js, .css etc that are required by the application.
+- This would be rendered after compressing the resources 
+- We can add any resources to the bundle collection of the BundleConfig.cs
