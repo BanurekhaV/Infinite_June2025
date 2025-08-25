@@ -13,7 +13,8 @@ namespace Filters_Prj
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+           FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+           // GlobalFilters.Filters.Add(new HandleErrorAttribute());
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }

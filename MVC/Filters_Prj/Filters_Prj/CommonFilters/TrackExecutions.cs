@@ -21,7 +21,7 @@ namespace Filters_Prj.CommonFilters
         {
             string message = "\n" + filterContext.ActionDescriptor.ControllerDescriptor.ControllerName +
                  "-->" + filterContext.ActionDescriptor.ActionName + " -->OnActionExceuted \t- " +
-                 DateTime.Now.ToString() + "\n";
+                 DateTime.Now.ToString() ;
             LogExecutionTime(message);
         }
         public override void OnResultExecuted(ResultExecutedContext filterContext)
@@ -50,6 +50,7 @@ namespace Filters_Prj.CommonFilters
         private void LogExecutionTime(string data)
         {
             File.AppendAllText(HttpContext.Current.Server.MapPath("~/DataFolder/Data.txt"), data);
+            
         }
     }
 }

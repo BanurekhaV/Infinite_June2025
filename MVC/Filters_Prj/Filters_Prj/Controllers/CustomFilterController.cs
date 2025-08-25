@@ -7,15 +7,16 @@ using Filters_Prj.CommonFilters;
 
 namespace Filters_Prj.Controllers
 {
+    [TrackExecutions]
     public class CustomFilterController : Controller
     {
-       [TrackExecutions]
+       
         public string Index()
         {
             return "Index action invoked";
         }
 
-        [TrackExecutions]
+      //  [TrackExecutions]
         public string Welcome()
         {
             throw new Exception("Exception Occured");

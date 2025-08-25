@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿
+
+@*@model System.Web.Mvc.HandleErrorInfo*@
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -6,8 +10,12 @@
 </head>
 <body>
     <hgroup>
-        <h1>Error.</h1>
+        <h1 style="color:red;">Error.</h1>
         <h2>An error occurred while processing your request.</h2>
+        @*<h1>Error Occurred</h1>
+        <h2>Controller Name : @Model.ControllerName</h2>
+        <h3>Action name : @Model.ActionName</h3>
+        <h3>Exception Details : @Model.Exception</h3>*@
     </hgroup>
 </body>
 </html>
