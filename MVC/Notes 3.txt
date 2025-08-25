@@ -40,3 +40,17 @@ When we have to custom bind in situations where the UI controls names are differ
 Bundling & Minification : is a concept of making use of static files viz .js, .css etc that are required by the application.
 - This would be rendered after compressing the resources 
 - We can add any resources to the bundle collection of the BundleConfig.cs
+
+
+Partial Views : are views that are rendered within another view.
+- have .cshtml extension like normal views
+- are usedwhen we need some common view to be displayed as part of many other views
+- are also useful to divide the webpage into smaller portions (header, footer, menus etc..)
+
+To Render a Partial View :
+
+  1. Html.RenderPartial
+  2. Html.Partial
+  3. Html.RenderAction
+  4. Html.Action
+  5. JQuery Load Function
