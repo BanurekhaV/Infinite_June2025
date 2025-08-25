@@ -32,6 +32,7 @@ namespace PartialViews_Prj.Controllers
         //2. Normal method that takes up the list of products object
         public ActionResult JustMethod()
         {
+            //1. return View(productlist);
             return View();
         }
 

@@ -1,0 +1,14 @@
+﻿
+CustomFilter-->Index -->OnActionExceuting 	- 25-08-2025 16:54:20
+
+CustomFilter-->Index -->OnActionExceuted 	- 25-08-2025 16:54:20
+
+customfilter-->Index -->OnResultExecuting 	- 25-08-2025 16:54:20
+
+customfilter-->Index -->OnResultExecuted 	- 25-08-2025 16:54:20
+
+CustomFilter-->welcome -->OnActionExceuting 	- 25-08-2025 16:55:29
+
+CustomFilter-->welcome -->OnActionExceuted 	- 25-08-2025 16:55:34
+
+customfilter-->welcome -->OnException 	- 25-08-2025 16:55:34

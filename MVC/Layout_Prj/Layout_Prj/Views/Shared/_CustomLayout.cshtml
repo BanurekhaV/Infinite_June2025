@@ -1,0 +1,28 @@
+﻿
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    @*All Javascripts and Css files that rae required can be reffered here*@
+</head>
+<body>
+    <table border="1" style="width:800px;font-family:Arial">
+        <tr>
+            <td colspan="2" style="text-align:center;background-color:orange;color:white">
+                <h3>Employee Portal</h3>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 200px; background-color: orange; color: white">
+                @Html.ActionLink("Employee List", "Index")
+            </td>
+            <td style="width:600px;">@RenderBody()</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center; font-size: x-small; background-color: orange; color: white">
+               &copy; 2025 Infinite Computers Ltd.
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+

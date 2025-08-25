@@ -1,0 +1,43 @@
+Layouts : View/s that can provide common look and feel
+- .cshtml is the extension, and makes use of Razor engine and syntax
+
+
+
+
+
+
+
+
+
+Filters : are frameworks attributes that allows some logical code on a particular action/result/exception
+ - helps in performing certain functionalities (Caching, Logging, authentication, authorizing etc..) during before/after of action/result declaration/exception
+
+Exceptions : Handling MVC exceptions are done in a larger scale
+  - try catch finally block
+  - Overriding OnException()
+  - Using [HandleError] attribute  (built-in)
+  - Setting up a global exception filter
+  - Handle Application_Error() Event
+  - Extending HandleError Attribute
+
+Available types of filters in ASP.Net MVC
+
+ 1. Authentication Filter   --> IAuthenicationFilter
+ 2. Authorization
+ 3. Action
+ 4. Result
+ 5. Exception
+ 
+Built-in Filters of the above types
+ ValidateInput
+ Authorize
+ HandleError
+ OutPutCache
+
+Apart from the built-in, we can also create custom filters
+-A filter can be applied at 3 different Levels
+
+ 1. Global Level ( applicable to all controllers and action methods of the application)
+ 2. Controller Level (applicable to all action methods of that controller)
+ 3. ActionMethod Level (applicable to specific action methods)
+
