@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewBag.Title = "JustMethod";
+}
+
+<h2>Just Another Method Using partial View</h2>
+@*1. @Html.Partial("productdetails");*@
+
+@{ Html.RenderAction("GetAllProducts", "Product");}
+
