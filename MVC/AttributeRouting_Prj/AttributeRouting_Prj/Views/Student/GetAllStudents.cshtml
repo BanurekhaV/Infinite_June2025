@@ -1,0 +1,29 @@
+﻿@model IEnumerable<AttributeRouting_Prj.Models.Student>
+
+@{
+    ViewBag.Title = "GetAllStudents";
+}
+
+<h2>GetAllStudents</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(m=>m.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m=>m.Name)
+        </th>
+    </tr>
+    @foreach(var item in Model)
+            {
+<tr>
+    <td>
+        @Html.DisplayFor(mi => item.ID)
+    </td>
+    <td>
+        @Html.DisplayFor(mi => item.Name)
+    </td>
+</tr>
+            }
+</table>

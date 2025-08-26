@@ -1,0 +1,39 @@
+Routing : Defines the URL Pattern and the handler information
+
+Conventional Routing :
+
+https://localhost/44336/  ==> search the routeconfig.cs for the pattern
+
+https://localhost/44336/home ==> (action = index, id=optional)
+
+https://localhost/44336/home/index  ==> (id=optional)
+
+https://localhost/44336/home/index/5 ==> retrieves the record 5 of the index of Home
+
+Attribute Routing : Define routes using [Route]
+
+--We have to enable attribute routing in routeconfig.cs
+
+--Decorate with the [Route]
+
+Advantages of attribute based routing
+ 1. It gives us more control. We can create hierarchical URL Pattern
+ (students have courses, orders have products, departments have employees)
+ 2. Reduces the chance of error
+ 3. May decouple the controller and action name 
+ 4. Easy to map 2 routes pointing to same action 
+
+RoutePrefix : is a common attribute placed on a controller, for all the action methods of a controller
+
+--To override the RoutePrefix , use a "~  symbol along with a different route)
+
+--Route Contraints : can be applied on different action methods 
+ - int  - 32 bit integer
+ - alpha - matches upper/lower alphabets
+ - bool - 
+ - datetime 
+ - guid 
+ - length - string with specified length
+ - max, min, minlength, maxlength, long, range, regex
+
+Constraints

@@ -1,0 +1,27 @@
+﻿@model IEnumerable<AttributeRouting_Prj.Models.Trainer>
+@{
+    ViewBag.Title = "GetTrainers";
+}
+
+<h2>GetTrainers</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(m => m.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.Name)
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(mi => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(mi => item.Name)
+            </td>
+        </tr>
+    }
+</table>
