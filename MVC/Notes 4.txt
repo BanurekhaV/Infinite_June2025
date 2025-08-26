@@ -1,12 +1,7 @@
 Layouts : View/s that can provide common look and feel
 - .cshtml is the extension, and makes use of Razor engine and syntax
 
-
-
-
-
-
-
+Layouts can be specified at Action Method , _ViewStart , or individual Views
 
 
 Filters : are frameworks attributes that allows some logical code on a particular action/result/exception
@@ -41,3 +36,22 @@ Apart from the built-in, we can also create custom filters
  2. Controller Level (applicable to all action methods of that controller)
  3. ActionMethod Level (applicable to specific action methods)
 
+HandleError attribute is a class that can handle any unhandled exceptions of the application depending upon where we use it
+- We need to set the custom errors mode on in the web.config file to enable the handleerror attribute
+
+Limitations of HandleError : We cannot log the error anywhere
+ - We cannot handle exceptions raised outside the controller (invalid url)
+- We cannot display errors specific to specific situation.
+
+In order to overcome the above limitations, we need to go for custom handlers by creating custom exception filters
+
+steps for custom filters (exception)
+
+0. Include System.Web.Mvc namespace
+1. Create a class inside the Model that implements IExceptionFilter or we can have a seperate folder to have all customfilters
+2. We can also inherit the customexceptionfilter class from FilterAttribute class, so that we can use our class as an attribute later 
+3. Write a logic for logging the exception/s that occur and also either direct the user to a common error page or specific error pages
+4. Then Register the custom filter in the filterconfig.cs
+5. Apply the cutsom filter on the controller/action/global level
+
+6. Run your application and observe that the exception is handled and also logged in a file.

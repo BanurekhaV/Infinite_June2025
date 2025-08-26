@@ -29,7 +29,7 @@ namespace Filters_Prj.Models
                 filterContext.ExceptionHandled = true;
                 filterContext.Result = new ViewResult()
                 {
-                    ViewName = "Error"
+                    ViewName = "Error"  // redirecting to common error page for all exception types
                 };
             }
         }

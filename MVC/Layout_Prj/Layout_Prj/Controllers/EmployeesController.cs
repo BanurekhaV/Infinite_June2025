@@ -40,7 +40,8 @@ namespace Layout_Prj.Controllers
         public ActionResult Create()
         {
             ViewBag.DepartmentId = new SelectList(db.Departments, "Deptid", "DeptName");
-            return View("Create", "_DifferentLayout");
+            // return View("Create", "_DifferentLayout");
+            return View();
         }
 
         // POST: Employees/Create

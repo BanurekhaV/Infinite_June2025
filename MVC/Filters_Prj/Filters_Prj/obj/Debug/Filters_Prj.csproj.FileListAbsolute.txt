@@ -72,9 +72,7 @@ C:\Banu\Infinite_June25\MVC\Filters_Prj\Filters_Prj\bin\System.Web.WebPages.Razo
 C:\Banu\Infinite_June25\MVC\Filters_Prj\Filters_Prj\bin\Newtonsoft.Json.xml
 C:\Banu\Infinite_June25\MVC\Filters_Prj\Filters_Prj\bin\Antlr3.Runtime.pdb
 C:\Banu\Infinite_June25\MVC\Filters_Prj\Filters_Prj\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Banu\Infinite_June25\MVC\Filters_Prj\Filters_Prj\obj\Debug\Filters_Prj.csproj.AssemblyReference.cache
 C:\Banu\Infinite_June25\MVC\Filters_Prj\Filters_Prj\obj\Debug\Filters_Prj.csproj.CoreCompileInputs.cache
 C:\Banu\Infinite_June25\MVC\Filters_Prj\Filters_Prj\obj\Debug\Filters_Prj.csproj.CopyComplete
 C:\Banu\Infinite_June25\MVC\Filters_Prj\Filters_Prj\obj\Debug\Filters_Prj.dll
 C:\Banu\Infinite_June25\MVC\Filters_Prj\Filters_Prj\obj\Debug\Filters_Prj.pdb
-C:\Banu\Infinite_June25\MVC\Filters_Prj\Filters_Prj\bin\roslyn\web.config

@@ -7,6 +7,7 @@ using Filters_Prj.Models;
 
 namespace Filters_Prj.Controllers
 {
+    //diffrent error pages for different types of errors
    // [HandleError(ExceptionType =typeof(DivideByZeroException),View = "DivideByZero")]
    // [HandleError(ExceptionType=typeof(NullReferenceException),View = "NullReference")]
   //  [HandleError]
@@ -19,6 +20,7 @@ namespace Filters_Prj.Controllers
             //return View();
         }
 
+        //testeing various other error pages
         public ActionResult TestMethod1()
         {
             throw new NullReferenceException();
@@ -28,6 +30,8 @@ namespace Filters_Prj.Controllers
         {
             throw new DivideByZeroException();
         }
+        [Authorize]
+        
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -40,6 +44,24 @@ namespace Filters_Prj.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        [HttpGet]
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(string UserName, string Password, bool Rememberme, string ReturnUrl)
+        {
+            Session["IsAdmin"] = false;
+            if(UserName =="Banurekha" && Password=="banu@123")
+            {
+                Session["IsAdmim"] = true;
+                return Redirect(ReturnUrl);
+            }
+            return View("Login");
         }
     }
 }

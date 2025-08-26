@@ -9,8 +9,9 @@ namespace Filters_Prj
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
            // filters.Add(new HandleErrorAttribute());
-              filters.Add(new TrackExecutions());
+           //   filters.Add(new TrackExecutions());
             filters.Add(new Models.LogCustomException()); // globally registering the custom filters
+            filters.Add(new AdminFilter());
         }
     }
 }
