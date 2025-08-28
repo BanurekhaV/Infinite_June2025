@@ -1,0 +1,66 @@
+Forms Authentication : 
+
+- include System.Web.Security;
+
+steps to implement
+ 1. Set the Authentication mode as Forms in the web.config file
+ 2. We need to use FormsAuthentication.SetAuthCookie for login
+ 3. We need to use FormsAuthentication.SignOut for logout
+
+
+
+SQL for Authentication and Role based Authorization
+----------------------------------------------------
+
+create database MVCSecurityDB
+
+use mvcsecuritydb
+
+--create tables to help authenticate using db sources
+create table Employee(
+E_ID int primary key identity,
+EName varchar(50),
+Designation varchar(50),
+Salary int
+)
+
+Create table Users
+( U_Id int primary key identity,
+UserPassword varchar(50))
+
+alter table Users
+add UserName varchar(50)
+
+--rolemaster table
+create table RoleMaster
+(
+RId int primary key identity,
+RoleName varchar(50))
+
+--user role mapping table
+create table UserRolesMapping
+(
+  ID int primary key,
+  UserId int not null references Users(U_Id), 
+  RoleId int not null references RoleMaster(RId))
+
+  select * from Users
+  select * from RoleMaster
+  select * from UserRolesMapping
+  select * from Employee
+
+  update users set username = 'Admin' where U_Id=2
+
+  insert into users values('Guest','Guests')
+
+  insert into rolemaster values('Admin'),('User'),('Guest'),('Customer')
+
+  insert into UserRolesMapping values(100,1,2),(101,1,4)
+  insert into UserRolesMapping values(102,2,1),(103,2,2),(104,2,3),(105,2,4)
+   insert into UserRolesMapping values(106,3,3),(107,4,4)
+
+   insert into employee values('Naveen','Team Lead', 60000),('Mahesh','Tester',50000)
+
+
+
+
