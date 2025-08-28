@@ -1,0 +1,32 @@
+Fluent API  : based on the Interface Design Pattern
+
+A s/w design pattern that allows method chaining to create more readable, concise and expressive codes
+
+
+
+1. Default names along with the entityname
+
+protected override void OnModelCreating(DbModelBuilder modelBuilder)
+ {
+      modelBuilder.Entity<Employee>().MapToStoredProcedure();
+}
+
+2. User names to stored procedure
+
+ protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Employee>().MapToStoredProcedures(sp => sp.Insert(
+                s => s.HasName("InsertEmployee", "dbo")).Update(
+                s => s.HasName("UpdateEmployee", "dbo")).Delete(
+                s => s.HasName("DeleteEmployee", "dbo")));
+        }
+
+3. map to custom stored procedures of an entity
+
+protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Employee>().MapToStoredProcedures(sp => sp.Insert(
+                s => s.HasName("InsertEmployee", "dbo")).Update(
+                s => s.HasName("UpdateEmployee", "dbo")).Delete(
+                s => s.HasName("DeleteEmployee", "dbo")));
+        }
