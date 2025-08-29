@@ -11,7 +11,7 @@ namespace WebApi_1.Controllers
     [RoutePrefix("api/User")]
     public class PersonController : ApiController
     {
-        List<Person> personlist = new List<Person>()
+       static List<Person> personlist = new List<Person>()
         {
             new Person{Id=1, Personname= "Yudhishter", PersonJob= "King", Gender="Male"},
             new Person{Id=2, Personname= "Draupadi", PersonJob= "Queen", Gender="Female"},
@@ -37,6 +37,53 @@ namespace WebApi_1.Controllers
             ////incase we donot want to send data but only response
             //HttpResponseMessage response = response.Content = new StringContent("Thanks");
             return response;
+        }
+
+        [HttpGet]
+        [Route("ById")]
+        public IHttpActionResult GetPersonNameById(int pId)
+        {
+            string pname = personlist.Where(p => p.Id == pId).SingleOrDefault()?.Personname;
+
+            if(pname == null)
+            {
+                return NotFound();
+            }
+            return Ok(pname);
+        }
+
+        //Post 1
+        [HttpPost]
+        [Route("AllPost")]
+        public List<Person>PostAll([FromBody] Person person)
+        {
+            personlist.Add(person);
+            return personlist;
+        }
+
+        //Post 2
+        [HttpPost]
+        [Route("personPost")]
+        public IEnumerable<Person>PersonPost([FromUri]int Id, string name, string job)
+        {
+            Person person = new Person();
+            person.Id = Id;
+            person.Personname = name;
+            person.PersonJob = job;
+            personlist.Add(person);
+            return personlist;
+        }
+
+        [HttpPut]
+        [Route("updperson")]
+        public Person Put(int pid, [FromUri]string name, string job, string gender)
+        {
+            var pList = personlist[pid - 1];
+            pList.Id = pid;
+            pList.Personname = name;
+            pList.PersonJob = job;
+            pList.Gender = gender;
+            return pList;
         }
     }
 }
