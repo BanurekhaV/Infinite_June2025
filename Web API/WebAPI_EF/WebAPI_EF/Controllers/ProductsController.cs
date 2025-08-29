@@ -19,7 +19,7 @@ namespace WebAPI_EF.Controllers
 
         // GET: api/Products
         public IQueryable<Product> GetProducts()
-        {            
+        {
             return db.Products;
         }
 
@@ -38,17 +38,17 @@ namespace WebAPI_EF.Controllers
 
         // PUT: api/Products/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutProduct(int id, Product product)
+        public IHttpActionResult PutProduct(Product product)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != product.ProductId)
-            {
-                return BadRequest();
-            }
+            //if (id != product.ProductId)
+            //{
+            //    return BadRequest();
+            //}
 
             db.Entry(product).State = EntityState.Modified;
 
@@ -58,48 +58,68 @@ namespace WebAPI_EF.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ProductExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                //if (!ProductExists(id))
+                //{
+                return NotFound();
+                //}
+                //else
+                //{
+                //    throw;
+                //}
             }
 
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Products
-        [ResponseType(typeof(Product))]
-        public IHttpActionResult PostProduct(Product product)
+        // POST: api/Products  -(Scaffolded)
+        //[ResponseType(typeof(Product))]
+        //public IHttpActionResult PostProduct(Product product)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return BadRequest(ModelState);
+        //    }
+
+        //    db.Products.Add(product);
+
+        //    try
+        //    {
+        //        db.SaveChanges();
+        //    }
+        //    catch (DbUpdateException)
+        //    {
+        //        if (ProductExists(product.ProductId))
+        //        {
+        //            return Conflict();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
+
+        //    return CreatedAtRoute("DefaultApi", new { id = product.ProductId }, product);
+        //}
+
+        // Our own Post
+        [HttpPost]
+        public IHttpActionResult PostNewProduct([FromBody] Product p)
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                return BadRequest("Validation Failed");
             }
-
-            db.Products.Add(product);
-
-            try
+            db.Products.Add(new Product()
             {
-                db.SaveChanges();
-            }
-            catch (DbUpdateException)
-            {
-                if (ProductExists(product.ProductId))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return CreatedAtRoute("DefaultApi", new { id = product.ProductId }, product);
+                ProductId = p.ProductId,
+                ProductName = p.ProductName,
+                Price = p.Price,
+                QuantityAvailable = p.QuantityAvailable
+            });
+            db.SaveChanges();
+            return Ok("Success");
         }
+
 
         // DELETE: api/Products/5
         [ResponseType(typeof(Product))]
