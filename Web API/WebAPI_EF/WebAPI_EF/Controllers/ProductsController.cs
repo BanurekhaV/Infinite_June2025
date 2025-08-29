@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -18,7 +19,7 @@ namespace WebAPI_EF.Controllers
 
         // GET: api/Products
         public IQueryable<Product> GetProducts()
-        {
+        {            
             return db.Products;
         }
 
