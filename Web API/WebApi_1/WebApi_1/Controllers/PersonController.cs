@@ -85,5 +85,23 @@ namespace WebApi_1.Controllers
             pList.Gender = gender;
             return pList;
         }
+
+        //put 2
+
+        [HttpPut]
+        [Route("newput")]
+        public IEnumerable<Person>Put(int pid,[FromBody] Person p)
+        {
+            personlist[pid - 1] = p;
+            return personlist;
+        }
+
+        [HttpDelete]
+        [Route("delperson")]
+        public IEnumerable<Person>Delete(int pid)
+        {
+            personlist.RemoveAt(pid - 1);
+            return personlist;
+        }
     }
 }

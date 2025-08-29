@@ -83,3 +83,5 @@ C:\Banu\Infinite_June25\Web API\WebApi_1\WebApi_1\obj\Debug\WebApi_1.csproj.Core
 C:\Banu\Infinite_June25\Web API\WebApi_1\WebApi_1\obj\Debug\WebApi_1.csproj.CopyComplete
 C:\Banu\Infinite_June25\Web API\WebApi_1\WebApi_1\obj\Debug\WebApi_1.dll
 C:\Banu\Infinite_June25\Web API\WebApi_1\WebApi_1\obj\Debug\WebApi_1.pdb
+C:\Banu\Infinite_June25\Web API\WebApi_1\WebApi_1\bin\Swashbuckle.Core.dll
+C:\Banu\Infinite_June25\Web API\WebApi_1\WebApi_1\bin\WebActivatorEx.dll
