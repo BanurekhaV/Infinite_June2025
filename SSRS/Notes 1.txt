@@ -1,0 +1,58 @@
+Data Science : is the science of analyzing raw data using statistics and techniques to conclude/infer the information
+
+Data Visualization : is a graphical representation of information and data, using elements like graphs, charts, maps, dashboards etc. provides a way to see and understand trends, patterns etc 
+
+Types of Visualization :
+ 1. Numerical Data
+ 2. Categorical Data
+
+Importance of Visualization :
+- Discover the trends in data
+- Provides a perspective on the data
+- Put the data in the correct context
+- Save time
+- Tell a Data Story
+
+Tools for Visualization :
+ - Tableau
+ - Power BI
+ - Looker
+ - Zoho Analytics
+ - IBM Cognos
+ - Sisense
+
+SSRS : Sql Server Reporting Services
+
+Why SSRS : is an enhanced tool for reporting (crystal reports)
+- Faster in processing
+- Provides multi dimensional data
+- Helps id DSS
+- Export of reports in various formats
+- Access reports over the net
+- Can have a host of security features
+
+Report Builder : Is an adhoc report publishing tool that can be executed on a client, using easy drag and drop interface
+
+Report Designer : Tools that help in designing all types of reports (VS)
+
+Report Manager : Checks reports, match it with the requirements and take decisions
+
+Report Server : Uses SQL database to store the Meta Data
+
+Report Server Database : Stores meta data, report definitions, resources, security settings, delivery of data
+
+Life Cycle :
+- Authoring  - Defines Layout and syntax of the data (SSRS tools)
+- Management - Publishing the report on to the websites, access controls can be defined
+- Delivery - Schedule of the reports to the customer
+
+RDL extension : report definition language( all descriptions of the elements of the report are stored using XML Grammar, and validated by XML Schema)
+
+Types of Reports :
+1. Parameterized Reports
+2. Linked Reports
+3. Snapshot Reports  : Data at a given point in time
+4. Cached Reports
+5. Drill Down Reports
+6. Drill Thru Reports
+
