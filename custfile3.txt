@@ -1,0 +1,3 @@
+custid,name,petname
+7,AmithTripati,amith
+5,ChetanBhagat,chethan
